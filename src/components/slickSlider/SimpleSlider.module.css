@@ -1,0 +1,13 @@
+.myVideo {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    float: left;
+    padding: 0;
+    position: relative;
+}
+.videoTitle{
+    position: absolute;
+    bottom: 80px;
+    left: 40px;
+}
