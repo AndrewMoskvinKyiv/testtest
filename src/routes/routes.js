@@ -14,15 +14,15 @@ export const router = createBrowserRouter([
         errorElement: <ErrorPage />,
     },
     {
-        path: "/contacts",
+        path: "/testtest/contacts",
         element: <Contacts />,
     },
     {
-        path: "/projects",
+        path: "/testtest/projects",
         element: <Projects />,
     },
     {
-        path: "/team",
+        path: "/testtest/team",
         element: <Team />,
     },
     // {
