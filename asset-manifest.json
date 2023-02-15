@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/apex_test/static/css/main.073c9b0a.css",
+    "main.js": "/apex_test/static/js/main.e6e6cce2.js",
+    "static/js/787.73610cfe.chunk.js": "/apex_test/static/js/787.73610cfe.chunk.js",
+    "static/media/logo.svg": "/apex_test/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/apex_test/index.html",
+    "main.073c9b0a.css.map": "/apex_test/static/css/main.073c9b0a.css.map",
+    "main.e6e6cce2.js.map": "/apex_test/static/js/main.e6e6cce2.js.map",
+    "787.73610cfe.chunk.js.map": "/apex_test/static/js/787.73610cfe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.e6e6cce2.js"
+  ]
+}
