@@ -18,7 +18,7 @@ export default function  NavigationPanel() {
                     <Link className={S.headerLink} to={`/testtest/projects`}>projects</Link>
                 </li>
                 <li>
-                    <Link className={S.headerLink} to={`/testtest/team`}>team</Link>
+                    <Link className={S.headerLink} to={`/testtest/team`}>about</Link>
                 </li>
                 <li>
                     <Link className={S.headerLink} to={`/testtest/contacts`}>contacts</Link>

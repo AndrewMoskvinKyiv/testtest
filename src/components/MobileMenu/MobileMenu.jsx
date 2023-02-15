@@ -1,5 +1,5 @@
 import S from './MobileMenu.module.css'
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import * as React from "react";
 
 export const MobileMenu = () => {
@@ -7,33 +7,16 @@ export const MobileMenu = () => {
         <div className={S.mobileMenuContainer}>
             <ul className={S.linksWrapper}>
                 <li>
-                    <NavLink className={S.menuLink}
-                             to="projects">
-                        projects
-                    </NavLink>
+                    <Link className={S.menuLink} to={`/testtest/projects`}>projects</Link>
                 </li>
                 <li>
-                    <NavLink to="tasks"
-                             className={S.menuLink}
-                    >
-                        about
-                    </NavLink>
+                    <Link className={S.menuLink} to={`/testtest/team`}>about</Link>
                 </li>
                 <li>
-                    <NavLink to="tasks">
-                        <span className={S.menuLink}>
-                contacts
-              </span>
-
-                    </NavLink>
+                    <Link className={S.menuLink} to={`/testtest/contacts`}>contacts</Link>
                 </li>
                 <li>
-                    <NavLink to="tasks">
-                        <span className={S.menuLink}>
-               news+awards
-              </span>
-
-                    </NavLink>
+                    <Link className={S.menuLink} to={`/testtest/tasks`}>news+awards</Link>
                 </li>
 
             </ul>
