@@ -31,13 +31,13 @@ import {Header} from "./components/common/Header/Header";
 import {useState} from "react";
 
 export default function App() {
-  const [menuView, setMenuView] = useState(false);
+    const [menuView, setMenuView] = useState(false);
 
-  return (
-      <div className={S.root}>
-        <Header setMenuView={setMenuView} menuView={menuView}/>
-        {menuView ? <MobileMenu/> : <SimpleSlider/> }
-      </div>)
+    return (
+        <div className={S.root}>
+            <Header setMenuView={setMenuView} menuView={menuView}/>
+            {menuView ? <MobileMenu/> : <SimpleSlider/> }
+        </div>)
 
 
 }

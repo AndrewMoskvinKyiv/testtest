@@ -1,6 +1,8 @@
 import * as React from "react";
-import {NavLink} from "react-router-dom";
+import {NavLink, Route} from "react-router-dom";
 import S from "./NavigationPanel.module.css"
+import {Team} from "../../pages/Team/Team";
+import App from "../../App";
 
 export default function  NavigationPanel() {
     let activeStyle = {
@@ -10,7 +12,10 @@ export default function  NavigationPanel() {
     let activeClassName = "underline";
     return (
         <nav className={S.navContainer}>
+
             <ul>
+              {/*  <li>   <Route path={'/'} render={()=><App/>}/></li>*/}
+              {/*<li>  <Route exact path={'/team'} render={() => <Team />}/></li>*/}
                 <li>
                     <NavLink
                         className={S.headerLink}
