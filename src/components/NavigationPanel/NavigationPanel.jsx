@@ -1,5 +1,5 @@
 import * as React from "react";
-import {NavLink, Route} from "react-router-dom";
+import {Link, NavLink, Route} from "react-router-dom";
 import S from "./NavigationPanel.module.css"
 import {Team} from "../../pages/Team/Team";
 import App from "../../App";
@@ -14,57 +14,17 @@ export default function  NavigationPanel() {
         <nav className={S.navContainer}>
 
             <ul>
-              {/*  <li>   <Route path={'/'} render={()=><App/>}/></li>*/}
-              {/*<li>  <Route exact path={'/team'} render={() => <Team />}/></li>*/}
                 <li>
-                    <NavLink
-                        className={S.headerLink}
-                        to="projects"
-                        style={({ isActive }) =>
-                            isActive ? activeStyle : undefined
-                        }
-                    >
-                        projects
-                    </NavLink>
+                    <Link className={S.headerLink} to={`/testtest/projects`}>projects</Link>
                 </li>
                 <li>
-                    <NavLink
-                        to="team"
-                        className={S.headerLink}
-                        style={({ isActive }) =>
-                            isActive ? activeClassName : undefined
-                        }
-                    >
-                        about
-                    </NavLink>
+                    <Link className={S.headerLink} to={`/testtest/team`}>team</Link>
                 </li>
                 <li>
-                    <NavLink to="contacts">
-                        {({ isActive }) => (
-                            <span
-                                className={S.headerLink}
-                                style={
-                                    isActive ? activeClassName : undefined
-                                }
-                            >
-                contacts
-              </span>
-                        )}
-                    </NavLink>
+                    <Link className={S.headerLink} to={`/testtest/contacts`}>contacts</Link>
                 </li>
                 <li>
-                    <NavLink to="tasks">
-                        {({ isActive }) => (
-                            <span
-                                className={S.headerLink}
-                                style={
-                                    isActive ? activeClassName : undefined
-                                }
-                            >
-               news+awards
-              </span>
-                        )}
-                    </NavLink>
+                    <Link className={S.headerLink} to={`/testtest/tasks`}>news+awards</Link>
                 </li>
 
             </ul>
