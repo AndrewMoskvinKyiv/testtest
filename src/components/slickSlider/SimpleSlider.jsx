@@ -32,7 +32,11 @@ export const SimpleSlider = () => {
         // </div>
         <Slider {...settings}>
             <div>
-                <video autoPlay muted loop className={S.myVideo}>
+                <video
+                    className={S.myVideo}
+                    controls ="controls"
+                    controls preload="auto"
+                    autoPlay="autoplay" muted loop playsInline>
                     <source src="https://apextest12.b-cdn.net/vid4.mp4" type="video/mp4"/>
                 </video>
                 <div className={S.videoTitle}>
@@ -40,7 +44,9 @@ export const SimpleSlider = () => {
                 </div>
             </div>
             <div>
-                <video autoPlay muted loop className={S.myVideo}>
+                <video controls ="controls"
+                       controls preload="auto"
+                       autoPlay="autoplay" muted loop playsInline className={S.myVideo}>
                     <source src="https://apextest12.b-cdn.net/vid5.mp4" type="video/mp4"/>
                 </video>
                 <div className={S.videoTitle}>
@@ -48,7 +54,9 @@ export const SimpleSlider = () => {
                 </div>
             </div>
             <div>
-                <video autoPlay muted loop className={S.myVideo}>
+                <video controls ="controls"
+                       controls preload="auto"
+                       autoPlay="autoplay" muted loop playsInline className={S.myVideo}>
                     <source src="https://apextest12.b-cdn.net/vid7.mp4" type="video/mp4"/>
                 </video>
                 <div className={S.videoTitle}>
