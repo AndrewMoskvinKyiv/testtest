@@ -49,7 +49,15 @@ export const PersonDescription = {
         "Financial Analysis from Keller Graduate School. Olga’s has willingness\n" +
         "to step in and help any member of the APEX team. She works tirelessly to\n" +
         "ensure the administration responsibilities and project accounting\n" +
-        "responsibilities at APEX are completed efficiently.",
+        "responsibilities at APEX are completed efficiently. Olga has 8 years of construction administrative and project account\n" +
+        "experience. Starting at Apex after earning her Bachelor’s degree in\n" +
+        "Business Administration, a Master of Science in Finance from the Donetsk\n" +
+        "University of Economy and Trade and has also earned a Master of\n" +
+        "Accounting &amp;Olga has 8 years of construction administrative and project account\n" +
+        "experience. Starting at Apex after earning her Bachelor’s degree in\n" +
+        "Business Administration, a Master of Science in Finance from the Donetsk\n" +
+        "University of Economy and Trade and has also earned a Master of\n" +
+        "Accounting &amp;",
 }
  export const PersonBottomDescription = {
     ValentinoCaushi: "University of Prishtina, Kosova 1988 – 1992\n" +

@@ -3,9 +3,14 @@ import {Header} from "../../components/common/Header/Header";
 import S from "./Team.module.css"
 import {PersonBottomDescription, PersonDescription} from "../../data/stringConsts";
 import {PersonalCard} from "../../components/PersonalCard/PersonalCard";
-import { v4 as uuidv4 } from 'uuid';
+import {v4 as uuidv4} from 'uuid';
+import {ModalWindow} from "../../components/ModalWindow/ModalWindow";
+import {useState} from "react";
+
 
 export const Team = () => {
+    const [openModal, setOpenModal] = useState(false);
+    const [showedBio, setShowedBio] = useState({});
     const teamArr = [
         {
             id: uuidv4(),
@@ -40,6 +45,15 @@ export const Team = () => {
             photo: "https://apextest12.b-cdn.net/teamFaces/Noah%20Morkunas.jpeg"
         },
     ];
+
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const screenHeight = window.screen.height
+    const modalPosition = screenHeight / 100 * 10 + winScroll
+
+
+
+
+
     return (
         <div className={S.teamContainer}>
             <Header/>
@@ -57,10 +71,29 @@ export const Team = () => {
 
             <section className={S.teamPhotos}>
                 <picture>
-                    <img className={S.generalPhoto} src={"https://apextest12.b-cdn.net/generalPhotosApex/groupPhoto.jpeg"} alt={'generalPhoto'}/>
+                    <img className={S.generalPhoto}
+                         src={"https://apextest12.b-cdn.net/generalPhotosApex/groupPhoto.jpeg"} alt={'generalPhoto'}/>
                 </picture>
-                {teamArr.map((card) => <PersonalCard key={card.id} card={card}/>)}
+                {teamArr.map((card) =>
+                    <PersonalCard
+                        key={card.id}
+                        card={card}
+                        setOpenModal={setOpenModal}
+                        setShowedBio={setShowedBio}
+                        openModal={openModal}/>)
+                }
+
             </section>
+            {openModal && showedBio &&
+                <div className={S.overlay}>
+                <ModalWindow
+                    setOpenModal={setOpenModal}
+                    setShowedBio={setShowedBio}
+                    showedBio={showedBio}
+                    topPosition={modalPosition}
+                    winScroll={winScroll}
+                    screenHeight={screenHeight}
+                /></div>}
         </div>
     )
 }

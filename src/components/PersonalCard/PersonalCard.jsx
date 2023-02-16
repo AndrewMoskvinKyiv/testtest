@@ -4,7 +4,7 @@ import {useState} from "react";
 import {PopUpTitleWithSlowUnderline} from "../common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline";
 
 
-export const PersonalCard = ({card}) => {
+export const PersonalCard = ({card, setOpenModal, setShowedBio, openModal}) => {
     const [mouseOverId, setMouseOverId] = useState("");
     const onPersonCardHover = () => {
         setMouseOverId(card.id);
@@ -12,12 +12,17 @@ export const PersonalCard = ({card}) => {
     const onMouseLeaveHandler = () => {
         setMouseOverId("");
     }
-
+    const onClickHandler = () => {
+        setOpenModal(true);
+        setShowedBio(card);
+        document.body.style.overflow = 'hidden';
+    }
     return (
         <div className={S.personalCardContainer}
              style={{backgroundImage: `url(${card.photo})`}}
              onMouseOver={onPersonCardHover}
              onMouseLeave={onMouseLeaveHandler}
+             onClick={onClickHandler}
         >
             <div className={S.personalCardContainerHover}
                  style={{opacity: mouseOverId === card.id ? '80%' : '0%'}}></div>
