@@ -1,8 +1,8 @@
-.PopUpTitleWrapper{
-
+.PopUpTitleWrapper {
 }
-.title{
-    font-family: Apexnewweb,sans-serif;
+
+.title {
+    font-family: Apexnewweb, sans-serif;
     font-size: 24px;
     line-height: 30px;
     font-weight: 500;
@@ -12,6 +12,7 @@
     animation-duration: 1s;
     position: relative;
 }
+
 .divider {
     position: absolute;
     width: 100%;
@@ -23,12 +24,13 @@
     transform-origin: bottom left;
     transition: transform 0.7s ease-out;
 }
-.text{
+
+.text {
     position: absolute;
     bottom: -30px;
     left: 0;
     margin-top: 10px;
-    font-family: Apexnewweb,sans-serif;
+    font-family: Apexnewweb, sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: 300;
@@ -37,7 +39,8 @@
     color: white;
     animation-duration: 1s;
 }
-.titleBtn{
+
+.titleBtn {
     position: absolute;
     left: 0;
     background-color: transparent;

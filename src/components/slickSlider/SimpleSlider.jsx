@@ -7,18 +7,15 @@ import * as React from "react";
 import {PopUpTitleWithSlowUnderline} from "../common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline";
 
 
-
 export const SimpleSlider = () => {
     const settings = {
-        dots: false,
+        dots: true,
         infinite: true,
-        speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 4000,
         fade: true,
-        lazyLoad: true,
         className: "center",
         nextArrow: <SampleNextArrow/>,
         prevArrow: <SamplePrevArrow/>
@@ -34,25 +31,35 @@ export const SimpleSlider = () => {
         //     </div>
         // </div>
         <Slider {...settings}>
-                <div>
-                    <video autoPlay muted loop className={S.myVideo}>
-                        <source src="https://apextest12.b-cdn.net/vid4.mp4" type="video/mp4"/>
-                    </video>
+            <div>
+                <video autoPlay muted loop className={S.myVideo}>
+                    <source src="https://apextest12.b-cdn.net/vid4.mp4" type="video/mp4"/>
+                </video>
+                <div className={S.videoTitle}>
+                    <PopUpTitleWithSlowUnderline title={'Waterfall'} text={'Chicago,il'} buttonName={'view project'}/>
                 </div>
-                <div>
-                    <video autoPlay muted loop className={S.myVideo} >
-                        <source src="https://apextest12.b-cdn.net/vid5.mp4" type="video/mp4"/>
-                    </video>
+            </div>
+            <div>
+                <video autoPlay muted loop className={S.myVideo}>
+                    <source src="https://apextest12.b-cdn.net/vid5.mp4" type="video/mp4"/>
+                </video>
+                <div className={S.videoTitle}>
+                    <PopUpTitleWithSlowUnderline title={'Video2'} text={'SliderTest'} buttonName={'view project'}/>
                 </div>
-                <div>
-                    <video autoPlay muted loop className={S.myVideo} >
-                        <source src="https://apextest12.b-cdn.net/vid7.mp4" type="video/mp4"/>
-                    </video>
+            </div>
+            <div>
+                <video autoPlay muted loop className={S.myVideo}>
+                    <source src="https://apextest12.b-cdn.net/vid7.mp4" type="video/mp4"/>
+                </video>
+                <div className={S.videoTitle}>
+                    <PopUpTitleWithSlowUnderline title={'Video3'} text={'SliderTest1'} buttonName={'view project'}/>
                 </div>
-            </Slider>
+            </div>
+        </Slider>
 
     )
 }
+
 function SampleNextArrow(props) {
     const {className, style, onClick} = props;
     return (
