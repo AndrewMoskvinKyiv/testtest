@@ -4,7 +4,7 @@ import {useState} from "react";
 import {PopUpTitleWithSlowUnderline} from "../common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline";
 
 
-export const PersonalCard = ({card, setOpenModal, setShowedBio, openModal}) => {
+export const PersonalCard = ({card, setOpenModal, setShowedBio}) => {
     const [mouseOverId, setMouseOverId] = useState("");
     const onPersonCardHover = () => {
         setMouseOverId(card.id);

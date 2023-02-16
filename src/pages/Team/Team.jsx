@@ -6,9 +6,12 @@ import {PersonalCard} from "../../components/PersonalCard/PersonalCard";
 import {v4 as uuidv4} from 'uuid';
 import {ModalWindow} from "../../components/ModalWindow/ModalWindow";
 import {useState} from "react";
+import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
+import {SimpleSlider} from "../../components/slickSlider/SimpleSlider";
 
 
 export const Team = () => {
+    const [menuView, setMenuView] = useState(false);
     const [openModal, setOpenModal] = useState(false);
     const [showedBio, setShowedBio] = useState({});
     const teamArr = [
@@ -51,49 +54,57 @@ export const Team = () => {
     const modalPosition = screenHeight / 100 * 10 + winScroll
 
 
-
-
-
     return (
-        <div className={S.teamContainer}>
-            <Header/>
-            <section className={S.teamTop}>
-                <div className={S.teamTopOverlay}>
-                    <div className={S.shadowBar}></div>
-                    <h1 className={S.teamTitle}>The Apex team</h1>
-                    <p className={S.teamTitleBottom}>
-                        We are a team of architects, designers, and planners who
-                        value collaboration, innovation, and create impactful
-                        environments around the world.
-                    </p>
+        menuView ?
+                <div className={S.teamContainer}>
+                    <Header setMenuView={setMenuView} menuView={menuView}/>
+                    <MobileMenu/>
                 </div>
-            </section>
+                :
 
-            <section className={S.teamPhotos}>
-                <picture>
-                    <img className={S.generalPhoto}
-                         src={"https://apextest12.b-cdn.net/generalPhotosApex/groupPhoto.jpeg"} alt={'generalPhoto'}/>
-                </picture>
-                {teamArr.map((card) =>
-                    <PersonalCard
-                        key={card.id}
-                        card={card}
-                        setOpenModal={setOpenModal}
-                        setShowedBio={setShowedBio}
-                        openModal={openModal}/>)
-                }
+                <div className={S.teamContainer}>
+                    <Header setMenuView={setMenuView} menuView={menuView}/>
 
-            </section>
-            {openModal && showedBio &&
-                <div className={S.overlay}>
-                <ModalWindow
-                    setOpenModal={setOpenModal}
-                    setShowedBio={setShowedBio}
-                    showedBio={showedBio}
-                    topPosition={modalPosition}
-                    winScroll={winScroll}
-                    screenHeight={screenHeight}
-                /></div>}
-        </div>
+                    <section className={S.teamTop}>
+                        <div className={S.teamTopOverlay}>
+                            <div className={S.shadowBar}></div>
+                            <h1 className={S.teamTitle}>The Apex team</h1>
+                            <p className={S.teamTitleBottom}>
+                                We are a team of architects, designers, and planners who
+                                value collaboration, innovation, and create impactful
+                                environments around the world.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section className={S.teamPhotos}>
+                        <picture>
+                            <img className={S.generalPhoto}
+                                 src={"https://apextest12.b-cdn.net/generalPhotosApex/groupPhoto.jpeg"}
+                                 alt={'generalPhoto'}/>
+                        </picture>
+                        {teamArr.map((card) =>
+                            <PersonalCard
+                                key={card.id}
+                                card={card}
+                                setOpenModal={setOpenModal}
+                                setShowedBio={setShowedBio}
+                                openModal={openModal}/>)
+                        }
+
+                    </section>
+                    {openModal && showedBio &&
+                        <div className={S.overlay}>
+                            <ModalWindow
+                                setOpenModal={setOpenModal}
+                                setShowedBio={setShowedBio}
+                                showedBio={showedBio}
+                                topPosition={modalPosition}
+                                winScroll={winScroll}
+                                screenHeight={screenHeight}
+                            /></div>}
+
+                </div>
+
     )
 }
