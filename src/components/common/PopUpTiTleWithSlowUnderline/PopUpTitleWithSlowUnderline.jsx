@@ -1,11 +1,12 @@
 import S from "./PopUpTitleWithSlowUnderline.module.css"
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import 'animate.css'
 
-export const PopUpTitleWithSlowUnderline = ({title, text, buttonName, delay = 100}) => {
+export const PopUpTitleWithSlowUnderline = ({title, text, buttonName, delay=100}) => {
+    console.log('PopUpTitleWithSlowUnderline');
     const [showDivider, setShowDivider] = useState(false);
     const [showBtn, setShowBtn] = useState(false);
-    useState(() => {
+    useEffect(() => {
         const timer = setTimeout(() => {
             setShowDivider(true);
             clearTimeout(timer)
@@ -14,7 +15,7 @@ export const PopUpTitleWithSlowUnderline = ({title, text, buttonName, delay = 10
             setShowBtn(true);
             clearTimeout(timer2)
         }, delay * 2);
-    }, [])
+    }, [title])
     return (
         <div className={S.PopUpTitleWrapper}>
             <p className={`${S.title} animate__fadeInUp`}

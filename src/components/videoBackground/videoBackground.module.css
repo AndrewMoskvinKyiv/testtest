@@ -1,0 +1,5 @@
+video{
+    object-fit: cover !important;
+    height: 100vh !important;
+    background-color: #f3f3f3;
+}

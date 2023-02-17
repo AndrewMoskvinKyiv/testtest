@@ -13,6 +13,7 @@
     height: 100px;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .headerImg{
@@ -32,6 +33,10 @@
     }
     .menuBars{
         display: flex;
+        margin-bottom: 10px;
+    }
+    .headerImg{
+        max-width: 110px;
     }
 }
 
