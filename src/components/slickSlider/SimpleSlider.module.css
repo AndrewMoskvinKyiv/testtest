@@ -1,10 +1,17 @@
+.myVideo {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    float: left;
+    padding: 0;
+    position: relative;
+}
 .videoTitle{
     position: absolute;
     bottom: 80px;
     left: 40px;
-    width: 250px;
-
 }
+
 /*.videoMainContainer{*/
 /*    position: absolute;*/
 /*    top:0;*/
@@ -15,14 +22,14 @@
 /*    z-index: 300;*/
 /*    transition: opacity 2s;*/
 /*}*/
-.videoMainContainer{
-    position: relative;
-}
-.arrowRight{
-    z-index: 360;
-    position: absolute;
-    top:50%;
-    right: 0;
-    width: 40px;
-    cursor: pointer;
-}
+/*.videoMainContainer{*/
+/*    position: relative;*/
+/*}*/
+/*.arrowRight{*/
+/*    z-index: 360;*/
+/*    position: absolute;*/
+/*    top:50%;*/
+/*    right: 0;*/
+/*    width: 40px;*/
+/*    cursor: pointer;*/
+/*}*/

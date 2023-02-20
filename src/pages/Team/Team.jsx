@@ -47,6 +47,46 @@ export const Team = () => {
             bottomDescription: PersonBottomDescription.NoahMorkunas,
             photo: "https://apextest12.b-cdn.net/teamFaces/Noah%20Morkunas.jpeg"
         },
+        {
+            id: uuidv4(),
+            name: "Djordje Djanjus",
+            position: " Director Of PreConstruction",
+            aboutPerson: PersonDescription.DjordjeDjanjus,
+            bottomDescription: '',
+            photo: "https://apextest12.b-cdn.net/teamFaces/Djordje%20Janjus.jpeg"
+        },
+        {
+            id: uuidv4(),
+            name: "Bashkim Tafilaj",
+            position: "Superintendent",
+            aboutPerson: PersonDescription.BashkimTafilaj,
+            bottomDescription: '',
+            photo: "https://apextest12.b-cdn.net/teamFaces/Bashkim%20Tafiliaj.jpeg"
+        },
+        {
+            id: uuidv4(),
+            name: "Giovanna Caushi",
+            position: "Human Resource Specialist",
+            aboutPerson: PersonDescription.GiovannaCaushi,
+            bottomDescription: PersonBottomDescription.GiovannaCaushi,
+            photo: "https://apextest12.b-cdn.net/teamFaces/Giovanna%20Caushi.webp"
+        },
+        {
+            id: uuidv4(),
+            name: "Erik Olson",
+            position: "Project Engineer",
+            aboutPerson: PersonDescription.ErikOlson,
+            bottomDescription:"",
+            photo: "https://apextest12.b-cdn.net/teamFaces/Erik%20Olson.jpeg"
+        },
+        {
+            id: uuidv4(),
+            name: "Dharmentra Choudary",
+            position: "Scheduler / Project Engineer",
+            aboutPerson: PersonDescription.DharmentraChoudary,
+            bottomDescription:PersonBottomDescription.DharmentraChoudary,
+            photo: "https://apextest12.b-cdn.net/teamFaces/Dharmendra%20Choudhary.jpeg"
+        },
     ];
 
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;

@@ -5,20 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c72a8764-17d8-4c96-8bde-33881bc70f82" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/arrow-thin-chevron-right-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/videoBackground/videoBackground.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/videoBackground/videoBackground.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MobileMenu/MobileMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MobileMenu/MobileMenu.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Header/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindow.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindow.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/slickSlider/SimpleSlider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slickSlider/SimpleSlider.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/slickSlider/SimpleSlider.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slickSlider/SimpleSlider.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/stringConsts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/stringConsts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Team/Team.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Team/Team.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,21 +29,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Projects/testTasks/24slides/test-task/src/pages/photo-annotations/PhotoAnnotations.tsx&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Apex/apex__web/src/components/slickSlider/SimpleSlider.module.css",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Apex\apex_test\src\assets\fonts" />
@@ -71,7 +64,8 @@
       <workItem from="1676463245839" duration="794000" />
       <workItem from="1676464560560" duration="3207000" />
       <workItem from="1676535820125" duration="22469000" />
-      <workItem from="1676622803468" duration="21666000" />
+      <workItem from="1676622803468" duration="22500000" />
+      <workItem from="1676906518674" duration="5210000" />
     </task>
     <servers />
   </component>

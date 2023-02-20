@@ -60,7 +60,31 @@ export const PersonDescription = {
         "Business Administration, a Master of Science in Finance from the Donetsk\n" +
         "University of Economy and Trade and has also earned a Master of\n" +
         "Accounting &amp;",
+        DjordjeDjanjus: "",
+        BashkimTafilaj: "As Superintendent Bashkhim manages the scope, schedule, and manpower for\n" +
+        "the plumbing, excavation, and concrete subcontractors and laborers. He\n" +
+        "has an 18-year career in the construction industry and been with APEX\n" +
+        "for 6 years. Bashkhim has the diligence and fortitude when managing the\n" +
+        "subcontractor team, coupled with a positive personality he is able to\n" +
+        "effectively produce on-time, quality work. He is respected and revered\n" +
+        "by his APEX and subcontractor team.",
+        GiovannaCaushi:"Giovanna has 2 years of Human Resource experience and earned her" +
+            " Bachelor’s degree in Human Resources Development with a minor in Human Resources" +
+            " Management from Purdue University. Giovanna’s eagerness to not only help the Apex" +
+            " team but also learn is what makes her an astounding employee.",
+    ErikOlson:"Erik joined the APEX team in January or 2016. He immediately showed initiative, helping handle complex project tasks and aiding the project team in the successful management of many projects. His hands-on\n" +
+        "approach and willingness to help in any area needed is a benefit to\n" +
+        "keeping our jobs on schedule. Erik is adept at effective communication\n" +
+        "between personnel and suppliers. His desire to be an influential part of\n" +
+        "a team has gained him additional responsibilities such as: assisting\n" +
+        "the project manager in managing costs, schedule and project performance,\n" +
+        "contractor scope and materials procurement.",
+    DharmentraChoudary: "Dharmendra has been working with Apex since 2018. He has a MS degree in Construction" +
+        " Engineering and Management from the University of Illinois, Urbana-Champaign. He began his" +
+        " career with Apex from two back to back summer and fall internship during his grad school."
+
 }
+
  export const PersonBottomDescription = {
     ValentinoCaushi: "University of Prishtina, Kosova 1988 – 1992\n" +
         "B.S. Building Engineering",
@@ -68,7 +92,20 @@ export const PersonDescription = {
          " on construction management, is a highly skilled, meticulous project manager.",
      OlgaPodoba:"What is your role at Apex?\n" +
          "Above managing the office, I work with the project team to complete the project" +
-         " accounting, compliance, and certified payroll."
+         " accounting, compliance, and certified payroll.",
+     GiovannaCaushi: "<strong>What is your role at Apex?\n</strong><br/>" +
+         "\n" +
+         "My role at Apex involves: Preparing and maintaining employment records, overseeing the hiring" +
+         " process, ensuring new hire paperwork is completed and processed, communicating job duties," +
+         " responsibilities, and schedules to new and current employees, and addressing employee relation" +
+         " issues",
+     DharmentraChoudary:"<br/>As a Scheduler, he works with the entire project team to create the project" +
+         " schedule and update it on a regular basis. Dharmendra also reviews the subcontractor proposals," +
+         " prepares submittals, processes RFI’s and change orders, and helps with payment applications." +
+         " He currently holds OSHA 30 Hours and CMIT (Construction Manager-In-Training) certification and is" +
+         " affiliated with American Society of Civil Engineers and Construction Management Association of America."
+
+
  }
 
  export const videoBgArray = [{

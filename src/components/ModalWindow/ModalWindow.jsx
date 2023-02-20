@@ -25,6 +25,8 @@ export const ModalWindow = ({setOpenModal, setShowedBio, showedBio, topPosition,
                         </div>
                         <div className={S.body}>
                             <p className={S.modalText}>{showedBio.aboutPerson}</p>
+                            <br/>
+                            <p dangerouslySetInnerHTML={{__html: showedBio.bottomDescription}} className={S.modalText}/>
                         </div>
                         <div className={S.footer}></div>
                     </div>
