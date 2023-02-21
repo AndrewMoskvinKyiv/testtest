@@ -3,8 +3,6 @@ import S from "./CustomButton.module.css"
 
 export const CustomButton = ({name}) => {
     return (
-        <div className={S.buttonContainer}>
-            <button className={S.customButton}>{name}</button>
-        </div>
+        <button className={S.customButton}>{name}</button>
     )
 }
