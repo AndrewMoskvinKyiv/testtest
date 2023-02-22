@@ -1,9 +1,6 @@
 import * as React from "react";
 import S from "./Projects.module.css"
-import { Turn as Hamburger } from 'hamburger-react'
-import {CustomButton} from "../../components/common/CustomButton/CustomButton";
-import logo from "../../assets/logo.webp";
-import NavigationPanel from "../../components/NavigationPanel/NavigationPanel";
+import {CustomButton} from "../../components/common/CustomButtons/CustomButton/CustomButton";
 import {useState} from "react";
 import {Header} from "../../components/common/Header/Header";
 

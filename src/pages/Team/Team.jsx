@@ -7,7 +7,7 @@ import {v4 as uuidv4} from 'uuid';
 import {ModalWindow} from "../../components/ModalWindow/ModalWindow";
 import {useState} from "react";
 import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
-import {SimpleSlider} from "../../components/slickSlider/SimpleSlider";
+import {FooterBlock} from "../../components/common/Footer/Footer";
 
 
 export const Team = () => {
@@ -143,7 +143,7 @@ export const Team = () => {
                                 winScroll={winScroll}
                                 screenHeight={screenHeight}
                             /></div>}
-
+                <FooterBlock/>
                 </div>
 
     )

@@ -14,8 +14,8 @@ code {
 .SimpleSlider_myVideo__SQ93Y{
   height: 100vh !important;
 }
-.video-js .vjs-tech{
-  height: 100vh !important;
-  background-color: #f1eaea;
-  transition: all 0.5s;
+.slick-dots{
+  position: absolute;
+  top: 95%;
+  left:0;
 }
