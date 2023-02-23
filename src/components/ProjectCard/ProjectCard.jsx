@@ -2,6 +2,7 @@ import * as React from "react";
 import S from "./ProjectCard.module.css";
 import {useState} from "react";
 import 'animate.css'
+import {redirect} from "react-router-dom";
 
 
 export const ProjectCard = ({project}) => {
@@ -15,14 +16,20 @@ export const ProjectCard = ({project}) => {
         setMouseOverId("");
     };
     const locationCreator = (state, city) => {
-        const shortState = state.split('').slice(0, 2).join('').toUpperCase();
-        return `${city}, ${shortState}`
+        return `${city}, ${state}`
+    };
+    const onClickHandler = (mouseOverId) => {
+        if (mouseOverId) {
+            window.location.pathname = `${window.location.pathname}/project_vue/${project.id}`;
+        }
     };
     return (
         <div className={S.projectCardContainer}
              style={{backgroundImage: `url(${project.mainPhoto})`}}
              onMouseOver={onProjectCardHover}
-             onMouseLeave={onProjectLeaveHandler}>
+             onMouseLeave={onProjectLeaveHandler}
+             onClick={onClickHandler}
+        >
             <div className={S.projectContainerHover}
                  style={{opacity: mouseOverId === project.id ? '80%' : '0%'}}>
             </div>
@@ -41,3 +48,4 @@ export const ProjectCard = ({project}) => {
         </div>
     )
 }
+
