@@ -1,5 +1,5 @@
 import * as React from "react";
-import S from "./root.module.css"
+import S from "./App.css"
 import {SimpleSlider} from "./components/slickSlider/SimpleSlider";
 import {MobileMenu} from "./components/MobileMenu/MobileMenu";
 import {Header} from "./components/common/Header/Header";

@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 import 'animate.css'
 
 export const PopUpTitleWithSlowUnderline = ({title, text, buttonName, delay=100}) => {
-    console.log('PopUpTitleWithSlowUnderline');
     const [showDivider, setShowDivider] = useState(false);
     const [showBtn, setShowBtn] = useState(false);
     useEffect(() => {
@@ -22,8 +21,7 @@ export const PopUpTitleWithSlowUnderline = ({title, text, buttonName, delay=100}
                style={{display: showDivider ? 'inline-block' : 'none'}}
             >{title}</p>
             <div className={S.divider} style={{transform: showDivider ? 'scaleX(1)' : 'scaleX(0)'}}></div>
-            <p
-                className={`${S.text} animate__fadeInDown`}
+            <p className={`${S.text} animate__fadeInDown`}
                 style={{display: showDivider ? 'inline-block' : 'none'}}
             >{text}
             </p>

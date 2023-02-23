@@ -46,7 +46,7 @@ export const SimpleSlider = () => {
                     <source src="https://assets.website-files.com/5dc103431d958bfe587c36ad/5fbe76769bb83cd1b3446c00_Emme-01-transcode.mp4" type="video/mp4"/>
                 </video>
                 <div className={S.videoTitle}>
-                    <PopUpTitleWithSlowUnderline title={'constructionVideo1'} text={'Chicago,il'} buttonName={'view project'}/>
+                    <PopUpTitleWithSlowUnderline title={'constructionVideo1'} text={'Chicago,il'} buttonName={'view ProjectCard'}/>
                 </div>
             </div>
             <div>
@@ -56,7 +56,7 @@ export const SimpleSlider = () => {
                     <source src="https://assets.website-files.com/5dc103431d958bfe587c36ad/5eecec891b18c0b4ad9d57ee_One%20Bennett-transcode.mp4" type="video/mp4"/>
                 </video>
                 <div className={S.videoTitle}>
-                    <PopUpTitleWithSlowUnderline title={'constructionVideo2'} text={'Chicago,il'} buttonName={'view project'}/>
+                    <PopUpTitleWithSlowUnderline title={'constructionVideo2'} text={'Chicago,il'} buttonName={'view ProjectCard'}/>
                 </div>
             </div>
             <div>
@@ -66,7 +66,7 @@ export const SimpleSlider = () => {
                     <source src="https://apextest12.b-cdn.net/vid4.mp4" type="video/mp4"/>
                 </video>
                 <div className={S.videoTitle}>
-                    <PopUpTitleWithSlowUnderline title={'constructionVideo3'} text={'Chicago,il'} buttonName={'view project'}/>
+                    <PopUpTitleWithSlowUnderline title={'constructionVideo3'} text={'Chicago,il'} buttonName={'view ProjectCard'}/>
                 </div>
             </div>
 

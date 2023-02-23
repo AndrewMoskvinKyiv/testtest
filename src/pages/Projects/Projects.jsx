@@ -3,14 +3,24 @@ import S from "./Projects.module.css"
 import {CustomButton} from "../../components/common/CustomButtons/CustomButton/CustomButton";
 import {useState} from "react";
 import {Header} from "../../components/common/Header/Header";
+import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
+import {ProjectCard} from "../../components/ProjectCard/ProjectCard";
+import {projects} from "../../data/projects";
+
 
 export const Projects = () => {
     const [menuView, setMenuView] = useState(false);
 
     return (
+        menuView ?
+            <div className={S.projectsContainer}>
+                <Header setMenuView={setMenuView} menuView={menuView}/>
+                <MobileMenu/>
+            </div>
+            :
         <div className={S.projectsContainer}>
             <Header setMenuView={setMenuView} menuView={menuView}/>
-            <div className={S.topWrapper}>
+            <section className={S.topWrapper}>
 
                 <div className={S.videoWrapper}>
                     <div className={S.overlay}></div>
@@ -23,7 +33,17 @@ export const Projects = () => {
                    <CustomButton name={'PROJECT TYPE'}/>
                    <CustomButton name={'LOCATION'}/>
                 </div>
-        </div>
+        </section>
+
+
+            <section className={S.projectBody}>
+                {projects.map((project) =>
+                    <ProjectCard
+                        key={project.id}
+                        project={project}
+                       />)
+                }
+            </section>
         </div>
     )
 }
