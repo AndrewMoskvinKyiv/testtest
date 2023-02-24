@@ -8,7 +8,7 @@ export const teamArr = [
         position: "Lead Estimator / Architectural Designer",
         aboutPerson: PersonDescription.PaolaPlacko,
         bottomDescription: "",
-        photo: "https://apextest12.b-cdn.net/teamFaces/Paola%20Placko.jpeg"
+        photo: "https://apextest12.b-cdn.net/teamFaces/Paola%20Placko.jpg"
     },
     {
         id: uuidv4(),
@@ -16,7 +16,7 @@ export const teamArr = [
         position: "Human Resource Specialist",
         aboutPerson: PersonDescription.OlgaPodoba,
         bottomDescription: PersonBottomDescription.OlgaPodoba,
-        photo: "https://apextest12.b-cdn.net/teamFaces/Olga%20Podoba.jpeg"
+        photo: "https://apextest12.b-cdn.net/teamFaces/Olga%20Podoba.jpg"
     },
     {
         id: uuidv4(),
@@ -24,7 +24,7 @@ export const teamArr = [
         position: "Vice President",
         aboutPerson: PersonDescription.AdrianCaushi,
         bottomDescription: "",
-        photo: "https://apextest12.b-cdn.net/teamFaces/Adrian%20Caushi.jpeg"
+        photo: "https://apextest12.b-cdn.net/teamFaces/Adrian%20Caushi.jpg"
     },
     {
         id: uuidv4(),
@@ -32,7 +32,7 @@ export const teamArr = [
         position: "Estimator/ Pre Construction Manager",
         aboutPerson: PersonDescription.NoahMorkunas,
         bottomDescription: PersonBottomDescription.NoahMorkunas,
-        photo: "https://apextest12.b-cdn.net/teamFaces/Noah%20Morkunas.jpeg"
+        photo: "https://apextest12.b-cdn.net/teamFaces/Noah%20Morkunas.jpg"
     },
     {
         id: uuidv4(),
@@ -40,7 +40,7 @@ export const teamArr = [
         position: " Director Of PreConstruction",
         aboutPerson: PersonDescription.DjordjeDjanjus,
         bottomDescription: '',
-        photo: "https://apextest12.b-cdn.net/teamFaces/Djordje%20Janjus.jpeg"
+        photo: "https://apextest12.b-cdn.net/teamFaces/Djordje%20Janjus.jpg"
     },
     {
         id: uuidv4(),
@@ -48,7 +48,7 @@ export const teamArr = [
         position: "Superintendent",
         aboutPerson: PersonDescription.BashkimTafilaj,
         bottomDescription: '',
-        photo: "https://apextest12.b-cdn.net/teamFaces/Bashkim%20Tafiliaj.jpeg"
+        photo: "https://apextest12.b-cdn.net/teamFaces/Bashkim%20Tafiliaj.jpg"
     },
     {
         id: uuidv4(),
@@ -56,7 +56,7 @@ export const teamArr = [
         position: "Human Resource Specialist",
         aboutPerson: PersonDescription.GiovannaCaushi,
         bottomDescription: PersonBottomDescription.GiovannaCaushi,
-        photo: "https://apextest12.b-cdn.net/teamFaces/Giovanna%20Caushi.webp"
+        photo: "https://apextest12.b-cdn.net/teamFaces/Giovanna%20Caushi.jpg"
     },
     {
         id: uuidv4(),
@@ -64,7 +64,7 @@ export const teamArr = [
         position: "ProjectCard Engineer",
         aboutPerson: PersonDescription.ErikOlson,
         bottomDescription:"",
-        photo: "https://apextest12.b-cdn.net/teamFaces/Erik%20Olson.jpeg"
+        photo: "https://apextest12.b-cdn.net/teamFaces/Erik%20Olson.jpg"
     },
     {
         id: uuidv4(),
@@ -72,6 +72,6 @@ export const teamArr = [
         position: "Scheduler / ProjectCard Engineer",
         aboutPerson: PersonDescription.DharmentraChoudary,
         bottomDescription:PersonBottomDescription.DharmentraChoudary,
-        photo: "https://apextest12.b-cdn.net/teamFaces/Dharmendra%20Choudhary.jpeg"
+        photo: "https://apextest12.b-cdn.net/teamFaces/Dharmendra%20Choudhary.jpg"
     },
 ];

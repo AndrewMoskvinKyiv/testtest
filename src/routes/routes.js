@@ -6,7 +6,7 @@ import ErrorPage from "../pages/404";
 import {Projects} from "../pages/Projects/Projects";
 import {Team} from "../pages/Team/Team";
 import App from "../App";
-import {ProjectVue} from "../pages/ProjectVue/ProjectVue";
+import {ProjectView} from "../pages/ProjectView/ProjectView";
 
 export const router = createBrowserRouter([
     {
@@ -27,8 +27,8 @@ export const router = createBrowserRouter([
         element: <Team />,
     },
     {
-        path: "/testtest/projects/project_vue/:id",
-        element: <ProjectVue />,
+        path: "/testtest/projects/project_view/:id",
+        element: <ProjectView/>,
     },
     // {
     //     path: "*",

@@ -6,11 +6,18 @@ import {PopUpTitleWithSlowUnderline} from "../common/PopUpTiTleWithSlowUnderline
 
 export const PersonalCard = ({card, setOpenModal, setShowedBio}) => {
     const [mouseOverId, setMouseOverId] = useState("");
+    const [showTitle, setShowTitle] = useState(false);
     const onPersonCardHover = () => {
         setMouseOverId(card.id);
+        let timer = setTimeout(()=> {
+            setShowTitle(true);
+            clearTimeout(timer);
+        },200)
+
     }
     const onMouseLeaveHandler = () => {
         setMouseOverId("");
+        setShowTitle(false);
     }
     const onClickHandler = () => {
         setOpenModal(true);
@@ -22,14 +29,10 @@ export const PersonalCard = ({card, setOpenModal, setShowedBio}) => {
              style={{backgroundImage: `url(${card.photo})`}}
              onMouseOver={onPersonCardHover}
              onMouseLeave={onMouseLeaveHandler}
-             onClick={onClickHandler}
-        >
-            <div className={S.personalCardContainerHover}
-                 style={{opacity: mouseOverId === card.id ? '80%' : '0%'}}></div>
+             onClick={onClickHandler}>
+
             <div className={S.personalCardTitle}>
-                {mouseOverId === card.id ? <PopUpTitleWithSlowUnderline title={card.name} buttonName={'view bio'} /> :
-                    null
-                }
+                {mouseOverId === card.id && <PopUpTitleWithSlowUnderline title={card.name} buttonName={'view bio'} showDivider={showTitle}/>}
             </div>
         </div>
     )

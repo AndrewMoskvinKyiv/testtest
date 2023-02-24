@@ -45,7 +45,7 @@ export const Team = () => {
                     <section className={S.teamPhotos}>
                         <picture>
                             <img className={S.generalPhoto}
-                                 src={"https://apextest12.b-cdn.net/generalPhotosApex/groupPhoto.jpeg"}
+                                 src={"https://apextest12.b-cdn.net/generalPhotosApex/groupPhotoS.jpg"}
                                  alt={'generalPhoto'}/>
                         </picture>
                         {teamArr.map((card) =>

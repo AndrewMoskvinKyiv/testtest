@@ -20,7 +20,7 @@ export const ProjectCard = ({project}) => {
     };
     const onClickHandler = (mouseOverId) => {
         if (mouseOverId) {
-            window.location.pathname = `${window.location.pathname}/project_vue/${project.id}`;
+            window.location.pathname = `${window.location.pathname}/project_view/${project.id}`;
         }
     };
     return (

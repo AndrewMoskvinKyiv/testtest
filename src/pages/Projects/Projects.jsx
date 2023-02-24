@@ -25,7 +25,7 @@ export const Projects = () => {
                 <div className={S.videoWrapper}>
                     <div className={S.overlay}></div>
                 <video autoPlay muted loop className={S.projectsBlockVideoBg}>
-                    <source src="https://apextest12.b-cdn.net/vid5.mp4" type="video/mp4"/>
+                    <source src="https://apextest12.b-cdn.net/vid5%20(1).mp4" type="video/mp4"/>
                 </video>
                     <h1 className={S.projectTitle}>ALL PROJECTS</h1>
                 </div>
