@@ -15,16 +15,16 @@ export default function  NavigationPanel() {
 
             <ul>
                 <li>
-                    <Link className={S.headerLink} to={`/testtest/projects`}>projects</Link>
+                    <Link className={S.headerLink} to={`/projects`}>projects</Link>
                 </li>
                 <li>
-                    <Link className={S.headerLink} to={`/testtest/team`}>about</Link>
+                    <Link className={S.headerLink} to={`/team`}>about</Link>
                 </li>
                 <li>
-                    <Link className={S.headerLink} to={`/testtest/contacts`}>contacts</Link>
+                    <Link className={S.headerLink} to={`/contacts`}>contacts</Link>
                 </li>
                 <li>
-                    <Link className={S.headerLink} to={`/testtest/tasks`}>news+awards</Link>
+                    <Link className={S.headerLink} to={`/tasks`}>news+awards</Link>
                 </li>
 
             </ul>

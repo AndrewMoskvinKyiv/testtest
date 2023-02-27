@@ -7,16 +7,16 @@ export const MobileMenu = () => {
         <div className={S.mobileMenuContainer}>
             <ul className={S.linksWrapper}>
                 <li>
-                    <Link className={S.menuLink} to={`/testtest/projects`}>projects</Link>
+                    <Link className={S.menuLink} to={`/projects`}>projects</Link>
                 </li>
                 <li>
-                    <Link className={S.menuLink} to={`/testtest/team`}>about</Link>
+                    <Link className={S.menuLink} to={`/team`}>about</Link>
                 </li>
                 <li>
-                    <Link className={S.menuLink} to={`/testtest/contacts`}>contacts</Link>
+                    <Link className={S.menuLink} to={`/contacts`}>contacts</Link>
                 </li>
                 <li>
-                    <Link className={S.menuLink} to={`/testtest/tasks`}>news+awards</Link>
+                    <Link className={S.menuLink} to={`/tasks`}>news+awards</Link>
                 </li>
 
             </ul>

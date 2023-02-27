@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c72a8764-17d8-4c96-8bde-33881bc70f82" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindow.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PersonalCard/PersonalCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PersonalCard/PersonalCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PersonalCard/PersonalCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PersonalCard/PersonalCard.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProjectCard/ProjectCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectCard/ProjectCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProjectCard/ProjectCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectCard/ProjectCard.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/slickSlider/SimpleSlider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slickSlider/SimpleSlider.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/teamMembers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/teamMembers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProjectVue/ProjectVue.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProjectVue/ProjectVue.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Projects/Projects.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Projects/Projects.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Team/Team.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Team/Team.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +29,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Projects/The way of samurai/my-app/src/App.tsx",
+    "last_opened_file_path": "C:/Apex/apex_test",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -81,7 +65,9 @@
       <workItem from="1676622803468" duration="22500000" />
       <workItem from="1676906518674" duration="13821000" />
       <workItem from="1676982571340" duration="7369000" />
-      <workItem from="1677053561870" duration="51766000" />
+      <workItem from="1677053561870" duration="52214000" />
+      <workItem from="1677251889718" duration="105000" />
+      <workItem from="1677479657991" duration="900000" />
     </task>
     <servers />
   </component>

@@ -10,24 +10,24 @@ import {ProjectView} from "../pages/ProjectView/ProjectView";
 
 export const router = createBrowserRouter([
     {
-        path: "/testtest",
+        path: "/",
         element: <App/>,
         errorElement: <ErrorPage />,
     },
     {
-        path: "/testtest/contacts",
+        path: "/contacts",
         element: <Contacts />,
     },
     {
-        path: "/testtest/projects",
+        path: "/projects",
         element: <Projects />,
     },
     {
-        path: "/testtest/team",
+        path: "/team",
         element: <Team />,
     },
     {
-        path: "/testtest/projects/project_view/:id",
+        path: "/projects/project_view/:id",
         element: <ProjectView/>,
     },
     // {
@@ -35,4 +35,4 @@ export const router = createBrowserRouter([
     //     element: <div>404</div>
     // },
 
-]);
+],{basename: "/testtest"});
