@@ -35,9 +35,9 @@ export const Team = () => {
                             <div className={S.shadowBar}></div>
                             <h1 className={S.teamTitle}>The Apex team</h1>
                             <p className={S.teamTitleBottom}>
-                                We are a team of architects, designers, and planners who
-                                value collaboration, innovation, and create impactful
-                                environments around the world.
+                                Every APEX project starts with a team of experienced, determined professionals.
+                                These individuals are eager to develop their skills and collaborate to create
+                                seamless building projects for our clients.
                             </p>
                         </div>
                     </section>

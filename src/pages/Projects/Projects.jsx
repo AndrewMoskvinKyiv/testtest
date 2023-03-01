@@ -6,6 +6,7 @@ import {Header} from "../../components/common/Header/Header";
 import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
 import {ProjectCard} from "../../components/ProjectCard/ProjectCard";
 import {projects} from "../../data/projects";
+import {FooterBlock} from "../../components/common/Footer/Footer";
 
 
 export const Projects = () => {
@@ -30,8 +31,8 @@ export const Projects = () => {
                     <h1 className={S.projectTitle}>ALL PROJECTS</h1>
                 </div>
                 <div className={S.buttonsContainer}>
-                   <CustomButton name={'PROJECT TYPE'}/>
-                   <CustomButton name={'LOCATION'}/>
+                   <CustomButton name={'PROJECT TYPE'} color={'#8d9382'}/>
+                   <CustomButton name={'LOCATION'} color={'#8d9382'}/>
                 </div>
         </section>
 
@@ -44,6 +45,7 @@ export const Projects = () => {
                        />)
                 }
             </section>
+            <FooterBlock/>
         </div>
     )
 }

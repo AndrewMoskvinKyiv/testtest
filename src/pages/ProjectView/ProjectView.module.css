@@ -1,5 +1,29 @@
+.projectViewContainer{
+    position: relative;
+}
+.detailBlockExtention{
+    position: fixed;
+    rotate: 90deg;
+    top:58%;
+    left:-50px;
+    width: 150px;
+    height: 50px;
+    background: #8d9382;
+    z-index: 2;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Apexnewweb,sans-serif;
+    color: #f0f1ef;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
 .topBlock{
     background-size: cover;
+    background-repeat: no-repeat;
     background-position-y: -150px;
     height: 100vh;
     display: flex;
@@ -34,7 +58,7 @@
     text-transform: uppercase;
     max-width: 70%;
     width: 100%;
-    z-index: 5;
+    z-index: 1;
 }
 .topLocaton{
     font-family: 'Apexnewweb book',sans-serif;
@@ -62,4 +86,11 @@
     color: #fff;
     text-align: center;
     z-index: 5;
+}
+.bodyWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap:10px;
 }

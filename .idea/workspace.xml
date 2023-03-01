@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c72a8764-17d8-4c96-8bde-33881bc70f82" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/PanePanel/PanePanel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PanePanel/PanePanel.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Projects/ProjectPhoto/ProjectPhoto.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MobileMenu/MobileMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MobileMenu/MobileMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MobileMenu/MobileMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MobileMenu/MobileMenu.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/CustomButtons/CustomButton/CustomButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CustomButtons/CustomButton/CustomButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/videoBackground/videoBackground.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/videoBackground/videoBackground.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/projects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Projects/Projects.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Projects/Projects.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Team/Team.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Team/Team.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Team/Team.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Team/Team.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +46,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Apex/apex_test",
+    "last_opened_file_path": "C:/cash/сайт SF/Сучасний факторинг/src/App.vue",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,7 +84,9 @@
       <workItem from="1676982571340" duration="7369000" />
       <workItem from="1677053561870" duration="52214000" />
       <workItem from="1677251889718" duration="105000" />
-      <workItem from="1677479657991" duration="900000" />
+      <workItem from="1677479657991" duration="2037000" />
+      <workItem from="1677486685881" duration="2387000" />
+      <workItem from="1677500464645" duration="28457000" />
     </task>
     <servers />
   </component>

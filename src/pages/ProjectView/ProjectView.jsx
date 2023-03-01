@@ -5,10 +5,21 @@ import {useEffect, useState} from "react";
 import S from "./ProjectView.module.css"
 import {Header} from "../../components/common/Header/Header";
 import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
+import {FooterBlock} from "../../components/common/Footer/Footer";
+import {PanePanel} from "../../components/PanePanel/PanePanel";
+import {ProjectPhoto} from "../Projects/ProjectPhoto/ProjectPhoto";
+
+
 
 export const ProjectView = () => {
+
     const [menuView, setMenuView] = useState(false);
-    const [element, setElement] = useState({})
+    const [element, setElement] = useState({});
+
+    const [extendedBlock, setExtendedBlock] = useState({
+        isPaneOpen: false,
+        isPaneOpenLeft: false,
+    });
     const { id } = useParams();
 
    useEffect(() => {
@@ -25,10 +36,10 @@ export const ProjectView = () => {
             </div>
             :
             <div className={S.projectViewContainer}>
-                <Header setMenuView={setMenuView} menuView={menuView}/>
-                <section className={S.topWrapper}>
 
-                    {/*<div className={S.overlay}></div>*/}
+                <Header setMenuView={setMenuView} menuView={menuView}/>
+                <div className={S.detailBlockExtention} onClick={() => setExtendedBlock({ isPaneOpenLeft: true })}>Details</div>
+                <section className={S.topWrapper}>
 
                     <div className={S.topBlock}
                          style={{backgroundImage: `url(${element.mainPhoto})`}}>
@@ -38,7 +49,17 @@ export const ProjectView = () => {
                         <p className={S.topText}>{element.description}</p>
                     </div>
 
+                    <PanePanel state={extendedBlock} setState={setExtendedBlock} element={element}/>
                 </section>
-        </div>
+                <section className={S.bodyWrapper}>
+                    {element.photos && element.photos.map((photo)=>
+                        <ProjectPhoto photo={photo}
+
+                        />
+                    )}
+
+                </section>
+                <FooterBlock/>
+            </div>
     )
 }

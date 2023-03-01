@@ -1,5 +1,6 @@
 .mobileMenuContainer{
-    background-color: #a61730;
+    background: rgb(242,116,116);
+    background: linear-gradient(310deg, rgba(242,116,116,1) 37%, rgba(255,0,0,1) 94%);
     width: 100%;
     height: 100vh;
     display: flex;
