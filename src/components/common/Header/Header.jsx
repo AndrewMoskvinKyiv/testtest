@@ -11,10 +11,13 @@ export const Header = ({setMenuView, menuView}) => {
         setMenuView(!menuView);
         setOpen(!isOpen);
     }
+    const onLogoClickHandler = () => {
+        window.location.pathname = '/testtest';
+    }
     return (
         <section className={S.header}>
             <picture>
-                <img className={S.headerImg} src={logo} alt='ApexLogo'/>
+                <img className={S.headerImg} onClick={onLogoClickHandler} src={logo} alt='ApexLogo'/>
             </picture>
             <div className={S.menuNav}> <NavigationPanel/></div>
             <div className={S.menuBars}>

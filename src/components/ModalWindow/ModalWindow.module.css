@@ -44,7 +44,7 @@
      flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    animation-delay: 500ms;
 
 }
 
@@ -76,5 +76,5 @@
     top:30px;
     right: 30px;
     cursor: pointer;
-
+    z-index: 10;
 }

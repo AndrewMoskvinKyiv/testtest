@@ -5,25 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c72a8764-17d8-4c96-8bde-33881bc70f82" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/PanePanel/PanePanel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PanePanel/PanePanel.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Projects/ProjectPhoto/ProjectPhoto.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MobileMenu/MobileMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MobileMenu/MobileMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MobileMenu/MobileMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MobileMenu/MobileMenu.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/CustomButtons/CustomButton/CustomButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CustomButtons/CustomButton/CustomButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindow.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindow.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProjectCard/ProjectCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectCard/ProjectCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProjectCard/ProjectCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectCard/ProjectCard.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Header/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/videoBackground/videoBackground.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/videoBackground/videoBackground.module.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/projects.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Projects/Projects.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Projects/Projects.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Team/Team.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Team/Team.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Team/Team.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Team/Team.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Projects/ProjectPhoto/ProjectPhoto.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Projects/ProjectPhoto/ProjectPhoto.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,21 +32,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/cash/сайт SF/Сучасний факторинг/src/App.vue",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Apex/apex_test&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.3.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Apex\apex_test\src\assets" />
@@ -86,7 +77,9 @@
       <workItem from="1677251889718" duration="105000" />
       <workItem from="1677479657991" duration="2037000" />
       <workItem from="1677486685881" duration="2387000" />
-      <workItem from="1677500464645" duration="28457000" />
+      <workItem from="1677500464645" duration="38932000" />
+      <workItem from="1677747466148" duration="3916000" />
+      <workItem from="1677753077525" duration="8631000" />
     </task>
     <servers />
   </component>

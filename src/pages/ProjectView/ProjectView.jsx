@@ -52,12 +52,7 @@ export const ProjectView = () => {
                     <PanePanel state={extendedBlock} setState={setExtendedBlock} element={element}/>
                 </section>
                 <section className={S.bodyWrapper}>
-                    {element.photos && element.photos.map((photo)=>
-                        <ProjectPhoto photo={photo}
-
-                        />
-                    )}
-
+                    {element.photos && element.photos.map((photo)=> <ProjectPhoto photo={photo}/>)}
                 </section>
                 <FooterBlock/>
             </div>

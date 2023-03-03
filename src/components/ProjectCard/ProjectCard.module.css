@@ -15,11 +15,11 @@
 .projectCardContainer::before {
     content: "";
     position: absolute;
+    top:60%;
+    left: 15%;
     display: block;
     width: 70%;
     height: 1px;
-    top:60%;
-    left: 15%;
     background-color: #fdfdfd;
     transform: scaleX(0);
     transition: transform 0.5s ease;
@@ -54,6 +54,8 @@
     padding-right: 15px;
     padding-left: 15px;
     z-index: 1000;
+    text-align: center;
+    width: 100%;
 }
 .projectTitle{
     text-align: center;
@@ -80,4 +82,5 @@
     opacity: 0;
     transition: opacity 0.4s;
     transition-delay: 0.7s;
+    margin-top: 30px;
 }

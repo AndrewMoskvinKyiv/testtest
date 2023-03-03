@@ -1,12 +1,14 @@
 import * as React from "react";
 import S from "./ProjectCard.module.css";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import 'animate.css'
-import {redirect} from "react-router-dom";
+
 
 
 export const ProjectCard = ({project}) => {
     const [mouseOverId, setMouseOverId] = useState("");
+
+
 
     const onProjectCardHover = () => {
         setMouseOverId(project.id);
@@ -23,6 +25,7 @@ export const ProjectCard = ({project}) => {
             window.location.pathname = `${window.location.pathname}/project_view/${project.id}`;
         }
     };
+
     return (
         <div className={S.projectCardContainer}
              style={{backgroundImage: `url(${project.mainPhoto})`}}
