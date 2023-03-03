@@ -6,15 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c72a8764-17d8-4c96-8bde-33881bc70f82" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindow.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ModalWindow/ModalWindow.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProjectCard/ProjectCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectCard/ProjectCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProjectCard/ProjectCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectCard/ProjectCard.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Header/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Projects/ProjectPhoto/ProjectPhoto.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Projects/ProjectPhoto/ProjectPhoto.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +70,7 @@
       <workItem from="1677486685881" duration="2387000" />
       <workItem from="1677500464645" duration="38932000" />
       <workItem from="1677747466148" duration="3916000" />
-      <workItem from="1677753077525" duration="8631000" />
+      <workItem from="1677753077525" duration="10182000" />
     </task>
     <servers />
   </component>
