@@ -1,4 +1,4 @@
-import {createBrowserRouter} from "react-router-dom";
+import {createBrowserRouter, createHashRouter} from "react-router-dom";
 
 import Contacts from "../pages/Contacts";
 import React from "react";
@@ -8,7 +8,7 @@ import {Team} from "../pages/Team/Team";
 import App from "../App";
 import {ProjectView} from "../pages/ProjectView/ProjectView";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
     {
         path: "/",
         element: <App/>,
