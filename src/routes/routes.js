@@ -35,4 +35,4 @@ export const router = createHashRouter([
     //     element: <div>404</div>
     // },
 
-],{basename: "/testtest"});
+],{basename: "/"});
