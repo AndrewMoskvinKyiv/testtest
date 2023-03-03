@@ -2,13 +2,14 @@ import * as React from "react";
 import S from "./ProjectCard.module.css";
 import {useEffect, useState} from "react";
 import 'animate.css'
+import {useNavigate} from "react-router-dom";
 
 
 
 export const ProjectCard = ({project}) => {
     const [mouseOverId, setMouseOverId] = useState("");
 
-
+    const navigate = useNavigate();
 
     const onProjectCardHover = () => {
         setMouseOverId(project.id);
@@ -22,7 +23,8 @@ export const ProjectCard = ({project}) => {
     };
     const onClickHandler = (mouseOverId) => {
         if (mouseOverId) {
-            window.location.pathname = `${window.location.pathname}/project_view/${project.id}`;
+            navigate(`/projects/project_view/${project.id}`)
+            // window.location.pathname = `${window.location.pathname}/project_view/${project.id}`;
         }
     };
 

@@ -19,6 +19,10 @@ export const router = createHashRouter([
         element: <Contacts />,
     },
     {
+        path: "/projects/project_view/:id",
+        element: <ProjectView/>,
+    },
+    {
         path: "/projects",
         element: <Projects />,
     },
@@ -26,13 +30,10 @@ export const router = createHashRouter([
         path: "/team",
         element: <Team />,
     },
-    {
-        path: "/projects/project_view/:id",
-        element: <ProjectView/>,
-    },
+
     // {
     //     path: "*",
     //     element: <div>404</div>
     // },
 
-],{basename: "/"});
+]);
