@@ -24,7 +24,6 @@ export const ProjectCard = ({project}) => {
     const onClickHandler = (mouseOverId) => {
         if (mouseOverId) {
             navigate(`/projects/project_view/${project.id}`)
-            // window.location.pathname = `${window.location.pathname}/project_view/${project.id}`;
         }
     };
 

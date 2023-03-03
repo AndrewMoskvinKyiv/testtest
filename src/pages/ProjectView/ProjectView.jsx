@@ -8,6 +8,7 @@ import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
 import {FooterBlock} from "../../components/common/Footer/Footer";
 import {PanePanel} from "../../components/PanePanel/PanePanel";
 import {ProjectPhoto} from "../Projects/ProjectPhoto/ProjectPhoto";
+import {scrollUpFast} from "../../App";
 
 
 
@@ -23,6 +24,7 @@ export const ProjectView = () => {
     const { id } = useParams();
 
    useEffect(() => {
+       scrollUpFast();
        let currentProgect = projects.find((el)=> el.id === +id);
        setElement(currentProgect)
        }, [])

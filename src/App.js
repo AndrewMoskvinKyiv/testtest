@@ -3,11 +3,18 @@ import S from "./App.css"
 import {SimpleSlider} from "./components/slickSlider/SimpleSlider";
 import {MobileMenu} from "./components/MobileMenu/MobileMenu";
 import {Header} from "./components/common/Header/Header";
-import {useState} from "react";
-
+import {useEffect, useState} from "react";
+export const scrollUpFast = () => {
+        let t, s;
+        s=document.body.scrollTop||window.pageYOffset;
+        t=setInterval(function(){if(s>0)window.scroll(0,s=s-1000);else clearInterval(t)},1);
+        return!1
+    }
 export default function App() {
     const [menuView, setMenuView] = useState(false);
-
+   useEffect(()=> {
+       scrollUpFast()
+   } , [])
 
     return (
         <div className={S.root}>

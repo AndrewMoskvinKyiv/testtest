@@ -3,16 +3,18 @@ import logo from "../../../assets/logo.webp";
 import NavigationPanel from "../../NavigationPanel/NavigationPanel";
 import Hamburger from 'hamburger-react'
 import React, {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 export const Header = ({setMenuView, menuView}) => {
     const [isOpen, setOpen] = useState(false)
-
+    const navigate = useNavigate();
     const onMenuBarsHandler = () => {
         setMenuView(!menuView);
         setOpen(!isOpen);
     }
     const onLogoClickHandler = () => {
-        window.location.pathname = '/testtest';
+        navigate('/');
+        // window.location.pathname = '/testtest';
     }
     return (
         <section className={S.header}>
