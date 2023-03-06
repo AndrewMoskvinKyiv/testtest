@@ -19,33 +19,34 @@ export const Projects = () => {
                 <MobileMenu/>
             </div>
             :
-        <div className={S.projectsContainer}>
-            <Header setMenuView={setMenuView} menuView={menuView}/>
-            <section className={S.topWrapper}>
-
-                <div className={S.videoWrapper}>
-                    <div className={S.overlay}></div>
-                <video autoPlay muted loop className={S.projectsBlockVideoBg}>
-                    <source src="https://apextest12.b-cdn.net/vid5%20(1).mp4" type="video/mp4"/>
-                </video>
+            <div>
+                <Header setMenuView={setMenuView} menuView={menuView}/>
+                <div className={S.topWrapper}>
+                    <div className={S.videoBlockWrapper}>
+                        <div className={S.videoBlockOverlayWrapper}></div>
+                        <video autoPlay muted loop className={S.projectsBlockVideoBg}>
+                            <source src="https://apextest12.b-cdn.net/newEnglandstreched.mp4" type="video/mp4"/>
+                        </video>
+                    </div>
                     <h1 className={S.projectTitle}>ALL PROJECTS</h1>
-                </div>
-                <div className={S.buttonsContainer}>
-                   <CustomButton name={'PROJECT TYPE'} color={'#8d9382'}/>
-                   <CustomButton name={'LOCATION'} color={'#8d9382'}/>
-                </div>
-        </section>
 
 
-            <section className={S.projectBody}>
-                {projects.map((project) =>
-                    <ProjectCard
-                        key={project.id}
-                        project={project}
-                       />)
-                }
-            </section>
-            <FooterBlock/>
-        </div>
+                    <div className={S.buttonsContainer}>
+                        <CustomButton name={'PROJECT TYPE'} color={'#8d9382'}/>
+                        <CustomButton name={'LOCATION'} color={'#8d9382'}/>
+                    </div>
+                </div>
+
+
+                <section className={S.projectBody}>
+                    {projects.map((project) =>
+                        <ProjectCard
+                            key={project.id}
+                            project={project}
+                        />)
+                    }
+                </section>
+                <FooterBlock/>
+            </div>
     )
 }

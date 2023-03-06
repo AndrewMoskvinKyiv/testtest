@@ -1,8 +1,8 @@
 import * as React from "react";
-import S from "./App.css"
-import {SimpleSlider} from "./components/slickSlider/SimpleSlider";
-import {MobileMenu} from "./components/MobileMenu/MobileMenu";
-import {Header} from "./components/common/Header/Header";
+import S from "./Home.css"
+import {SimpleSlider} from "../../components/slickSlider/SimpleSlider";
+import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
+import {Header} from "../../components/common/Header/Header";
 import {useEffect, useState} from "react";
 export const scrollUpFast = () => {
         let t, s;
@@ -10,7 +10,7 @@ export const scrollUpFast = () => {
         t=setInterval(function(){if(s>0)window.scroll(0,s=s-1000);else clearInterval(t)},1);
         return!1
     }
-export default function App() {
+export default function Home() {
     const [menuView, setMenuView] = useState(false);
    useEffect(()=> {
        scrollUpFast()

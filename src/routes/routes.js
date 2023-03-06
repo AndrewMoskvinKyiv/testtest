@@ -1,17 +1,16 @@
-import {createBrowserRouter, createHashRouter} from "react-router-dom";
-
-import Contacts from "../pages/Contacts";
+import {createHashRouter} from "react-router-dom";
+import Contacts from "../pages/Contacts/Contacts";
 import React from "react";
-import ErrorPage from "../pages/404";
+import ErrorPage from "../pages/NotFound/404";
 import {Projects} from "../pages/Projects/Projects";
 import {Team} from "../pages/Team/Team";
-import App from "../App";
 import {ProjectView} from "../pages/ProjectView/ProjectView";
+import Home from "../pages/Home/Home";
 
 export const router = createHashRouter([
     {
         path: "/",
-        element: <App/>,
+        element: <Home/>,
         errorElement: <ErrorPage />,
     },
     {

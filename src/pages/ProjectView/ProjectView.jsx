@@ -8,8 +8,7 @@ import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
 import {FooterBlock} from "../../components/common/Footer/Footer";
 import {PanePanel} from "../../components/PanePanel/PanePanel";
 import {ProjectPhoto} from "../Projects/ProjectPhoto/ProjectPhoto";
-import {scrollUpFast} from "../../App";
-
+import {scrollUpFast} from "../Home/Home";
 
 
 export const ProjectView = () => {
@@ -21,13 +20,13 @@ export const ProjectView = () => {
         isPaneOpen: false,
         isPaneOpenLeft: false,
     });
-    const { id } = useParams();
+    const {id} = useParams();
 
-   useEffect(() => {
-       scrollUpFast();
-       let currentProgect = projects.find((el)=> el.id === +id);
-       setElement(currentProgect)
-       }, [])
+    useEffect(() => {
+        scrollUpFast();
+        let currentProgect = projects.find((el) => el.id === +id);
+        setElement(currentProgect)
+    }, [])
 
 
     return (
@@ -40,21 +39,31 @@ export const ProjectView = () => {
             <div className={S.projectViewContainer}>
 
                 <Header setMenuView={setMenuView} menuView={menuView}/>
-                <div className={S.detailBlockExtention} onClick={() => setExtendedBlock({ isPaneOpenLeft: true })}>Details</div>
-                <section className={S.topWrapper}>
+                <div className={S.detailBlockExtention}
+                     onClick={() => setExtendedBlock({isPaneOpenLeft: true})}>Details
+                </div>
 
-                    <div className={S.topBlock}
-                         style={{backgroundImage: `url(${element.mainPhoto})`}}>
 
-                        <p className={S.topLocaton}>{element.locationCity}, {element.locationState}</p>
+
+                <section className={S.topWrapper}
+                style={{backgroundImage: `url(${element.mainPhoto})`}}>
+                    <div className={S.topBlockTextWrapper}>
+                        <div className={S.topWrapper_cityContainer}>
+                            <div className={S.topBlockHr}></div>
+                            <p className={S.topLocaton}>{element.locationCity}, {element.locationState}</p>
+                            <div className={S.topBlockHr}></div>
+                        </div>
+
                         <h1 className={S.topTitle}>{element.title}</h1>
                         <p className={S.topText}>{element.description}</p>
                     </div>
-
                     <PanePanel state={extendedBlock} setState={setExtendedBlock} element={element}/>
                 </section>
+
+
+
                 <section className={S.bodyWrapper}>
-                    {element.photos && element.photos.map((photo)=> <ProjectPhoto photo={photo}/>)}
+                    {element.photos && element.photos.map((photo) => <ProjectPhoto photo={photo}/>)}
                 </section>
                 <FooterBlock/>
             </div>

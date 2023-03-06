@@ -5,22 +5,23 @@ export const PopUpTitleWithSlowUnderline = ({title, text, buttonName, showDivide
     return (
         <div className={S.PopUpTitleWrapper} style={{visibility: showDivider? "visible" : "hidden"}}>
             <p className={S.title}
-               style={{opacity: showDivider ? '100' : '0'}}
-            >{title}
+               style={{opacity: showDivider ? '100' : '0'}}>
+                {title}
             </p>
-            <div className={S.divider}
-                  style={{transform: showDivider ? 'scaleX(1)' : 'scaleX(0)'}}></div>
 
+            <div className={S.divider}
+                  style={{transform: showDivider ? 'scaleX(1)' : 'scaleX(0)'}}>
+
+            </div>
 
             <p className={S.text}
-               style={{opacity: showDivider ? '100' : '0'}}
-            >{text}
+               style={{opacity: showDivider ? '100' : '0'}}>
+                {text}
             </p>
             <button
                 style={{opacity: showDivider ? '100' : '0'}}
-                className={S.titleBtn}
-
-            >{buttonName}
+                className={S.titleBtn}>
+                 {buttonName}
             </button>
         </div>
     )

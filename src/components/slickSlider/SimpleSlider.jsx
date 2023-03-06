@@ -5,13 +5,14 @@ import S from "./SimpleSlider.module.css"
 import * as React from "react";
 import {PopUpTitleWithSlowUnderline} from "../common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline";
 import whiteLeftArrow from "./../../assets/whiteArrowLeft.png"
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 
 
 export const SimpleSlider = () => {
     let [currentSlide, setCurrentSlide] = useState({title:'emme',text:'Chicago',buttonName:'view Project'});
     let [showDivider, setShowDivider] = useState(true);
+
 
     const settings = {
         dots: true,
@@ -25,6 +26,7 @@ export const SimpleSlider = () => {
         arrows:true,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
+
         beforeChange: (current) => {
             setShowDivider(false);
             switch(current) {
@@ -76,9 +78,6 @@ export const SimpleSlider = () => {
                     autoPlay="autoplay" muted loop playsInline>
                     <source src="https://assets.website-files.com/5dc103431d958bfe587c36ad/5fbe76769bb83cd1b3446c00_Emme-01-transcode.mp4" type="video/mp4"/>
                 </video>
-                {/*<div className={S.videoTitle}>*/}
-                {/*    <PopUpTitleWithSlowUnderline title={'constructionVideo1'} text={'Chicago,il'} buttonName={'view Project'}/>*/}
-                {/*</div>*/}
             </div>
             <div>
                 <video
@@ -86,9 +85,6 @@ export const SimpleSlider = () => {
                     autoPlay="autoplay" muted loop playsInline>
                     <source src="https://assets.website-files.com/5dc103431d958bfe587c36ad/5eecec891b18c0b4ad9d57ee_One%20Bennett-transcode.mp4" type="video/mp4"/>
                 </video>
-                {/*<div className={S.videoTitle}>*/}
-                {/*    <PopUpTitleWithSlowUnderline title={'constructionVideo2'} text={'Chicago,il'} buttonName={'view Project'}/>*/}
-                {/*</div>*/}
             </div>
             <div>
                 <video

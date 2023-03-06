@@ -1,8 +1,6 @@
 import * as React from "react";
-import {Link, NavLink, Route} from "react-router-dom";
+import {Link} from "react-router-dom";
 import S from "./NavigationPanel.module.css"
-import {Team} from "../../pages/Team/Team";
-import App from "../../App";
 
 export default function  NavigationPanel() {
     let activeStyle = {

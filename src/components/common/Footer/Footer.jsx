@@ -1,7 +1,6 @@
 import * as React from "react";
 import S from "./Footer.module.css";
 import logo from "./../../../assets/logo.webp"
-import {CustomButton} from "../CustomButtons/CustomButton/CustomButton";
 import {FooterCustomButton} from "../CustomButtons/FooterCustomButton/FooterCustomButton";
 
 export const FooterBlock = () => {
@@ -34,4 +33,4 @@ export const FooterBlock = () => {
         </div>
     )
 }
-// #ABA0A0
+
