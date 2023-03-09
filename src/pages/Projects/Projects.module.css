@@ -98,34 +98,39 @@
 .show {
     display: block;
 }
+
 @media (max-width: 1005px) {
-    .projectTitle {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    line-height: 65px;
+    .pageTitle {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        line-height: 65px;
+    }
 }
-}
+
 
 @media (max-width: 950px) {
     .projectTitle {
         border: 2px solid grey;
         background-color: transparent;
-
+        padding-top: 20px;
+        padding-bottom: 20px;
+        line-height: 65px;
     }
 }
 
 @media (max-width: 750px) {
-    .buttonsContainer {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    .projectTitle {
+    .pageTitle {
         font-size: 45px;
         line-height: 25px;
         letter-spacing: 5px;
         width: 95%;
         background-color: transparent;
+    }
+
+    .buttonsContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 }
 

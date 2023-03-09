@@ -23,3 +23,39 @@ code {
   margin: 0;
   background-color: #a61730;
 }
+@media (max-width: 1005px) {
+  .pageTitle {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 65px;
+  }
+}
+
+
+@media (max-width: 950px) {
+  .projectTitle {
+    border: 2px solid grey;
+    background-color: transparent;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 65px;
+  }
+}
+
+@media (max-width: 750px) {
+  .buttonsContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .projectTitle {
+    font-size: 30px;
+    line-height: 42px;
+    letter-spacing: 5px;
+    width: 95%;
+    background-color: transparent;
+  }
+}
