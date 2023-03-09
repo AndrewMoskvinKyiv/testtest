@@ -5,25 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c72a8764-17d8-4c96-8bde-33881bc70f82" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/Contacts/Contacts.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavigationPanel/NavigationPanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavigationPanel/NavigationPanel.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Footer/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Footer/Footer.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/slickSlider/SimpleSlider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slickSlider/SimpleSlider.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/slickSlider/SimpleSlider.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slickSlider/SimpleSlider.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/404.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/NotFound/404.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Contacts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contacts/Contacts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProjectCard/ProjectCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectCard/ProjectCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProjectCard/ProjectCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectCard/ProjectCard.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Projects/Projects.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Projects/Projects.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Projects/Projects.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Projects/Projects.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +35,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/cash/сайт SF/Сучасний факторинг/src/views/NewsPage.vue",
+    "last_opened_file_path": "C:/cash/WORK1/my_sf_client/src/api/Rest.js",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -91,7 +80,8 @@
       <workItem from="1677500464645" duration="38932000" />
       <workItem from="1677747466148" duration="3916000" />
       <workItem from="1677753077525" duration="13918000" />
-      <workItem from="1678091485874" duration="13547000" />
+      <workItem from="1678091485874" duration="14708000" />
+      <workItem from="1678112101909" duration="17572000" />
     </task>
     <servers />
   </component>

@@ -1,24 +1,27 @@
-.topWrapper{
+.topWrapper {
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
-.videoBlockWrapper{
+
+.videoBlockWrapper {
     height: 90%;
     position: relative;
 }
-.videoBlockOverlayWrapper{
+
+.videoBlockOverlayWrapper {
     position: absolute;
     width: 100%;
     height: 100%;
     background: black;
     opacity: 60%;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     z-index: 3;
 
 }
-.projectsBlockVideoBg{
+
+.projectsBlockVideoBg {
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -26,15 +29,16 @@
     padding: 0;
     position: relative;
 }
-.projectTitle{
+
+.projectTitle {
     position: absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin-top: 40px;
     margin-bottom: 40px;
     background-color: rgba(68, 70, 64, 0.3);
-    font-family: 'Apexnewweb book',sans-serif;
+    font-family: 'Apexnewweb book', sans-serif;
     color: #f5f1f1;
     font-size: 62px;
     line-height: 35px;
@@ -45,7 +49,8 @@
     width: 70%;
     z-index: 4;
 }
-.buttonsContainer{
+
+.buttonsContainer {
     background-color: #8d9382;
     display: flex;
     justify-content: center;
@@ -54,7 +59,8 @@
     gap: 10px;
 
 }
-.projectBody{
+
+.projectBody {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -66,20 +72,65 @@
     margin-top: 20px;
 
 }
-@media (max-width: 950px){
-    .projectTitle{
-        border:2px solid grey;
+
+
+.dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown_content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+@media (max-width: 1005px) {
+    .projectTitle {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 65px;
+}
+}
+
+@media (max-width: 950px) {
+    .projectTitle {
+        border: 2px solid grey;
+        background-color: transparent;
+
     }
 }
-    @media (max-width: 750px) {
-    .buttonsContainer{
+
+@media (max-width: 750px) {
+    .buttonsContainer {
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
+    .projectTitle {
+        font-size: 45px;
+        line-height: 25px;
+        letter-spacing: 5px;
+        width: 95%;
+        background-color: transparent;
+    }
 }
-@media (max-width: 450px){
-    .projectTitle{
+
+@media (max-width: 450px) {
+    .projectTitle {
         font-size: 30px;
         line-height: 42px;
         letter-spacing: 5px;

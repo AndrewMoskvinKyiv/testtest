@@ -84,3 +84,21 @@
     transition-delay: 0.7s;
     margin-top: 30px;
 }
+
+@media (max-width: 950px) {
+    .projectCardContainer::before{
+        transform: scaleX(1);
+    }
+    .titleContainer p{
+        opacity: 100;
+    }
+    .projectContainerHover{
+        opacity: 100 !important;
+    }
+}
+@media (max-width: 730px) {
+   .projectCardContainer{
+       width: 100%;
+       height: 400px;
+   }
+}

@@ -28,7 +28,7 @@ export const ProjectCard = ({project}) => {
     };
 
     return (
-        <div className={S.projectCardContainer}
+        <div className={`${S.projectCardContainer} animate__animated animate__fadeIn`}
              style={{backgroundImage: `url(${project.mainPhoto})`}}
              onMouseOver={onProjectCardHover}
              onMouseLeave={onProjectLeaveHandler}
