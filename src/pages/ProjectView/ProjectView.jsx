@@ -9,18 +9,29 @@ import {FooterBlock} from "../../components/common/Footer/Footer";
 import {PanePanel} from "../../components/PanePanel/PanePanel";
 import {ProjectPhoto} from "../Projects/ProjectPhoto/ProjectPhoto";
 import {scrollUpFast} from "../Home/Home";
+import play1 from "./../../assets/play.png"
+import play2 from "./../../assets/play (1).png"
+import play3 from "./../../assets/play (2).png"
+import {ModalWindow} from "../../components/ModalWindow/ModalWindow";
+import {ProjectVideoModalWindow} from "../../components/ProjectVideoModal/ProjectVideoModalWindow";
 
 
 export const ProjectView = () => {
-
     const [menuView, setMenuView] = useState(false);
     const [element, setElement] = useState({});
+    const [openVideoModal, setOpenVideoModal] = useState(false);
 
     const [extendedBlock, setExtendedBlock] = useState({
         isPaneOpen: false,
         isPaneOpenLeft: false,
     });
     const {id} = useParams();
+
+
+    const onPlayClickHandler = () => {
+        setOpenVideoModal(true);
+    }
+
 
     useEffect(() => {
         scrollUpFast();
@@ -61,10 +72,32 @@ export const ProjectView = () => {
                 </section>
 
 
-
                 <section className={S.bodyWrapper}>
+                    {element.projectVideo &&
+
+                        <div className={S.projectVideo}>
+                            <img className={S.playBtnOverlay}
+                                 src={play1} alt={"playBtn"}
+                                 onClick={onPlayClickHandler}
+                                 />
+                            <h2 className={S.projectVideoPlayerOverlayTitle}>VIEW PROJECT OVERVIEW</h2>
+                            <div className={S.projectVideoPlayerOverlay}></div>
+                        <video autoPlay muted loop className={S.projectVideoPlayer}>
+                            <source src={element.projectVideo} type="video/mp4"/>
+                        </video>
+                    </div>}
+
+
+
                     {element.photos && element.photos.map((photo) => <ProjectPhoto photo={photo}/>)}
                 </section>
+                {openVideoModal &&
+                    // <div className={S.modalVideoOverlay}>
+                        <ProjectVideoModalWindow
+                            setOpenVideoModal={setOpenVideoModal}
+                            videoLink={element.projectVideo}/>
+                    // </div>
+            }
                 <FooterBlock/>
             </div>
     )

@@ -279,6 +279,7 @@ export const projects = [
             '\n' +
             'Scope: Three-story, new construction of a 24,480SF condo building that consists of 9 residential condominiums and ground floor commercial space. ',
         tags: ['Municipal', 'Small project'],
+        projectVideo: "https://apextest12.b-cdn.net/mokena%20inner%20vid.mp4",
         mainPhoto: "https://apextest12.b-cdn.net/projects/Mokena%20Community%20Park%20District/Mokena-Web-Photo-1.webp",
         photos: [
             'https://apextest12.b-cdn.net/projects/Mokena%20Community%20Park%20District/Mokena-Web-Photo-3.webp',

@@ -22,7 +22,6 @@ export const Projects = () => {
             },
         };
     }
-
     useEffect(() => {
         let password = '083cab0c-b8b8-4e5c-a56d25da9195-e4c7-44ca';
         let readOnlyPasword = 'fec22446-220b-41d4-b0bf612a367c-6144-4c10';
@@ -33,7 +32,6 @@ export const Projects = () => {
 
     }, [])
     const dropDownHandler = () => {
-        console.log()
         setShowProjectTypeDropdown(!showProjectTypeDropdown);
     }
     return (
