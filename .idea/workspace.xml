@@ -5,35 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c72a8764-17d8-4c96-8bde-33881bc70f82" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/favicon/android-chrome-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon/android-chrome-512x512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon/browserconfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon/mstile-150x150.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon/safari-pinned-tab.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon/site.webmanifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/play (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/play (2).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProjectVideoModal/ProjectVideoModalWindow.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProjectVideoModal/ProjectVideoModalWindow.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavigationPanel/NavigationPanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavigationPanel/NavigationPanel.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PersonalCard/PersonalCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PersonalCard/PersonalCard.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProjectVideoModal/ProjectVideoModalWindow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectVideoModal/ProjectVideoModalWindow.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Contacts/Contacts.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contacts/Contacts.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Projects/Projects.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Projects/Projects.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +31,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/cash/tk_online",
+    "last_opened_file_path": "C:/Apex/apex_test",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -107,6 +82,9 @@
       <workItem from="1678112101909" duration="38758000" />
       <workItem from="1678632244010" duration="4985000" />
       <workItem from="1678701125112" duration="1547000" />
+      <workItem from="1678705613592" duration="100000" />
+      <workItem from="1678779657997" duration="481000" />
+      <workItem from="1678812323284" duration="1547000" />
     </task>
     <servers />
   </component>

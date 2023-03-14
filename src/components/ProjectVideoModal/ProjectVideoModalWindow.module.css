@@ -9,7 +9,7 @@
 }
 .modalContainer{
     position: absolute;
-    top:50%;
+    top:55%;
     left: 50%;
     right: 0;
     margin-left: auto;
@@ -71,8 +71,12 @@
 }
 .closeButton{
     position: absolute;
-    top:30px;
-    right: 30px;
+    top:0;
+    right: -60px;
     cursor: pointer;
     z-index: 10;
+    transition: all 0.5s;
+}
+.closeButton:hover{
+    rotate: z 90deg;
 }
