@@ -255,6 +255,7 @@ export const projects = [
         description: '',
         tags: ['Municipal', 'Small project'],
         mainPhoto: "https://apextest12.b-cdn.net/projects/Hollywood%20Elementary/Riverside-Website-Edit-1.webp",
+        projectVideo: 'https://apextest12.b-cdn.net/videos/progect_videos_with_music/school.mp4',
         photos: [
             'https://apextest12.b-cdn.net/projects/Hollywood%20Elementary/Riverside-Website-Edit-4.webp',
             'https://apextest12.b-cdn.net/projects/Hollywood%20Elementary/Riverside-Website-Edit-3.webp',
@@ -308,6 +309,7 @@ export const projects = [
             ' Doors, Cabinets, Appliances, Fire Place',
         tags: ['Housing'],
         mainPhoto: "https://apextest12.b-cdn.net/projects/Verandah%20Townhomes/Verandah-Web-Edit-2.webp",
+        projectVideo: 'https://apextest12.b-cdn.net/videos/progect_videos_with_music/TownHomes.mp4',
         photos: [
             'https://apextest12.b-cdn.net/projects/Verandah%20Townhomes/Verandah-Web-Edit-5.webp',
             'https://apextest12.b-cdn.net/projects/Verandah%20Townhomes/Verandah-Web-Edit-4.webp',
