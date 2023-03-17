@@ -22,7 +22,7 @@ export default function  NavigationPanel() {
                     <Link className={S.headerLink} to={`/contacts`}>contacts</Link>
                 </li>
                 <li>
-                    <Link className={S.headerLink} to={`/tasks`}>services</Link>
+                    <Link className={S.headerLink} to={`/services`}>services</Link>
                 </li>
 
             </ul>

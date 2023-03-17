@@ -2,9 +2,16 @@ import * as React from "react";
 import SlidingPane from "react-sliding-pane";
 import "react-sliding-pane/dist/react-sliding-pane.css";
 import S from "./PanePanel.css";
+import {useEffect, useState} from "react";
 
 
 export const PanePanel = ({state, setState, element}) => {
+    const windowInnerWidth = window.innerWidth - 50;
+
+
+
+
+
 const extensionInnerPanelStyles = {
     title:{
     letterSpacing: '5px',
@@ -50,10 +57,9 @@ const extensionInnerPanelStyles = {
  return(
      <SlidingPane
          closeIcon=''
-         className ={S.customPopUpStyle}
          isOpen={state.isPaneOpenLeft}
          from="left"
-         width="400px"
+         width = {`${windowInnerWidth > 400 ? '400': windowInnerWidth}px`}
          onRequestClose={() => setState({ isPaneOpenLeft: false })}>
          <div>
              <h2 style={extensionInnerPanelStyles.title}>{element.title}</h2>

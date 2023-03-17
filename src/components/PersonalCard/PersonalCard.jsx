@@ -25,15 +25,21 @@ export const PersonalCard = ({card, setOpenModal, setShowedBio}) => {
         document.body.style.overflow = 'hidden';
     }
     return (
-        <div className={S.personalCardContainer}
+        <div
+             className={S.personalCardContainer}
+             className=
+                 {`${card.position === "wide" && S.personalCardContainerWide}
+                   ${card.position === "tall" && S.personalCardContainerTall}
+                   ${card.position !== "tall" && card.position !== "wide" && S.personalCardContainer}
+                 `}
              style={{backgroundImage: `url(${card.photo})`}}
              onMouseOver={onPersonCardHover}
              onMouseLeave={onMouseLeaveHandler}
              onClick={onClickHandler}>
 
-            <div className={S.personalCardTitle}>
+            {card.name !== "general_photo" && <div className={S.personalCardTitle}>
                 {mouseOverId === card.id && <PopUpTitleWithSlowUnderline title={card.name} buttonName={'view bio'} showDivider={showTitle}/>}
-            </div>
+            </div>}
         </div>
     )
 }

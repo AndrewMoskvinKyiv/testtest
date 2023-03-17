@@ -76,6 +76,7 @@ export const projects = [
         deliverySystem: 'General Contractor',
         description: 'Modest six-story, nine-unit condo development, with 3,800 SF of ground-floor retail space is at the corner of Randolph and May.',
         tags: ['Housing', 'Retail'],
+        projectVideo: "https://apextest12.b-cdn.net/progect_internal_videos_with_music/rendalf%20with%20music.mp4",
         mainPhoto: "https://apextest12.b-cdn.net/projects/1123%20W.%20Randolph%20St.%20Chicago,%20IL%2060607/1123-randolph-exterior-1.jpg",
         photos: [
             'https://apextest12.b-cdn.net/projects/1123%20W.%20Randolph%20St.%20Chicago,%20IL%2060607/fultonmarket-22.jpg',

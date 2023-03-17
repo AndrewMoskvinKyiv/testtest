@@ -11,6 +11,6 @@ export const ProjectPhoto = ({photo}) => {
         setWidthOfProjectPhoto(possiblePhotoWidth[chooseWidthOfPhoto]);
         },[])
     return (
-        <img style={{width: `${widthOfProjectPhoto}px`}} src={photo} alt={'objectPhoto'}/>
+        <img style={{maxWidth: `${widthOfProjectPhoto}px`, width:'100%'}} src={photo} alt={'objectPhoto'}/>
     )
 }

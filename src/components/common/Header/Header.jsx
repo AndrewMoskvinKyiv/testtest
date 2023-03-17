@@ -14,7 +14,6 @@ export const Header = ({setMenuView, menuView}) => {
     }
     const onLogoClickHandler = () => {
         navigate('/');
-        // window.location.pathname = '/testtest';
     }
     return (
         <section className={S.header}>

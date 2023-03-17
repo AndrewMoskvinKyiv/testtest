@@ -9,6 +9,43 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    border:1px solid green;
+}
+.personalCardContainerWide{
+    width: 65%;
+    min-width: 350px;
+    height: 500px;
+    object-fit: cover;
+    background-size: cover;
+    margin: 0 5px 20px 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    filter: grayscale(1);
+}
+.personalCardContainerTall{
+    width: 32%;
+    min-width: 350px;
+    height: 600px;
+    object-fit: cover;
+    background-size: cover;
+    margin: 0 5px 20px 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    filter: grayscale(1);
+}
+.personalCardContainerWide:after{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+    transition: 1s;
 }
 
 .personalCardContainer:after {

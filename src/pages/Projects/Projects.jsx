@@ -23,12 +23,14 @@ export const Projects = () => {
         };
     }
     useEffect(() => {
-        let password = '083cab0c-b8b8-4e5c-a56d25da9195-e4c7-44ca';
-        let readOnlyPasword = 'fec22446-220b-41d4-b0bf612a367c-6144-4c10';
-        let apiKey = '1d10dbcb-bbee-40db-a78f-de5e5bc752eff39f74d9-1067-4707-a458-3e83f68c6392'
-        let userName = 'apextest'
+
         const session = axios.create();
-        session.get('https://ny.storage.bunnycdn.com/apextest/data.json', setAuthHeader());
+        session.get('https://ny.storage.bunnycdn.com/apextest/data.json', { headers: {
+                AccessKey: `67fbf3d6-627c-4475-a1153abb5c81-8690-4880`,
+                accept: '*/*',
+
+            },
+        });
 
     }, [])
     const dropDownHandler = () => {

@@ -16,7 +16,7 @@ export const MobileMenu = () => {
                     <Link className={S.menuLink} to={`/contacts`}>contacts</Link>
                 </li>
                 <li>
-                    <Link className={S.menuLink} to={`/tasks`}>news+awards</Link>
+                    <Link className={S.menuLink} to={`/services`}>news+awards</Link>
                 </li>
 
             </ul>

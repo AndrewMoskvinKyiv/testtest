@@ -5,10 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c72a8764-17d8-4c96-8bde-33881bc70f82" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/Services/Services.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Services/Services.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProjectVideoModal/ProjectVideoModalWindow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectVideoModal/ProjectVideoModalWindow.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MobileMenu/MobileMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MobileMenu/MobileMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavigationPanel/NavigationPanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavigationPanel/NavigationPanel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PanePanel/PanePanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PanePanel/PanePanel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PersonalCard/PersonalCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PersonalCard/PersonalCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PersonalCard/PersonalCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PersonalCard/PersonalCard.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/teamMembers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/teamMembers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Projects/ProjectPhoto/ProjectPhoto.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Projects/ProjectPhoto/ProjectPhoto.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Projects/Projects.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Projects/Projects.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Team/Team.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Team/Team.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Team/Team.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Team/Team.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/title.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/title.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +99,12 @@
       <workItem from="1678701125112" duration="1547000" />
       <workItem from="1678705613592" duration="100000" />
       <workItem from="1678779657997" duration="481000" />
-      <workItem from="1678812323284" duration="1547000" />
+      <workItem from="1678812323284" duration="2265000" />
+      <workItem from="1678879658379" duration="228000" />
+      <workItem from="1678883282583" duration="2870000" />
+      <workItem from="1678891748339" duration="91000" />
+      <workItem from="1678958068517" duration="50000" />
+      <workItem from="1678961539104" duration="18636000" />
     </task>
     <servers />
   </component>

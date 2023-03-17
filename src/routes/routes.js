@@ -6,6 +6,7 @@ import {Projects} from "../pages/Projects/Projects";
 import {Team} from "../pages/Team/Team";
 import {ProjectView} from "../pages/ProjectView/ProjectView";
 import Home from "../pages/Home/Home";
+import {Services} from "../pages/Services/Services";
 
 export const router = createHashRouter([
     {
@@ -29,6 +30,11 @@ export const router = createHashRouter([
         path: "/team",
         element: <Team />,
     },
+    {
+        path: "/services",
+        element: <Services />,
+    },
+
 
     // {
     //     path: "*",

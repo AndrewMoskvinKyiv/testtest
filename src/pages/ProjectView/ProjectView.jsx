@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 import {projects} from "../../data/projects";
 import {useEffect, useState} from "react";
 import S from "./ProjectView.module.css"
+import ST from "./../../styles/title.module.css"
 import {Header} from "../../components/common/Header/Header";
 import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
 import {FooterBlock} from "../../components/common/Footer/Footer";
@@ -12,7 +13,7 @@ import {scrollUpFast} from "../Home/Home";
 import play1 from "./../../assets/play.png"
 import play2 from "./../../assets/play (1).png"
 import play3 from "./../../assets/play (2).png"
-import {ModalWindow} from "../../components/ModalWindow/ModalWindow";
+
 import {ProjectVideoModalWindow} from "../../components/ProjectVideoModal/ProjectVideoModalWindow";
 
 
@@ -92,11 +93,11 @@ export const ProjectView = () => {
                     {element.photos && element.photos.map((photo) => <ProjectPhoto photo={photo}/>)}
                 </section>
                 {openVideoModal &&
-                    // <div className={S.modalVideoOverlay}>
+
                         <ProjectVideoModalWindow
                             setOpenVideoModal={setOpenVideoModal}
                             videoLink={element.projectVideo}/>
-                    // </div>
+
             }
                 <FooterBlock/>
             </div>
