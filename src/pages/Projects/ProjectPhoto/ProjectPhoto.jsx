@@ -7,7 +7,6 @@ export const ProjectPhoto = ({photo}) => {
     const [widthOfProjectPhoto, setWidthOfProjectPhoto] = useState(5);
     useEffect(()=> {
         const chooseWidthOfPhoto = Math.random().toFixed(1)*10;
-        console.log(chooseWidthOfPhoto, possiblePhotoWidth[chooseWidthOfPhoto]);
         setWidthOfProjectPhoto(possiblePhotoWidth[chooseWidthOfPhoto]);
         },[])
     return (

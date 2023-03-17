@@ -10,7 +10,7 @@ import {useEffect, useState} from "react";
 
 
 export const SimpleSlider = () => {
-    let [currentSlide, setCurrentSlide] = useState({title:'emme',text:'Chicago',buttonName:'view Project'});
+    let [currentSlide, setCurrentSlide] = useState({title:'verandah townhomes',text:'Chicago',buttonName:'view Project'});
     let [showDivider, setShowDivider] = useState(true);
 
 
@@ -39,7 +39,7 @@ export const SimpleSlider = () => {
 
                     break;
                 case 2:
-                    setCurrentSlide({title:'emme',text:'Chicago',buttonName:'view Project'})
+                    setCurrentSlide({title:'verandah townhomes',text:'Chicago',buttonName:'view Project'})
 
                     break;
                 default:
@@ -76,7 +76,7 @@ export const SimpleSlider = () => {
                 <video
                     className={S.myVideo}
                     autoPlay="autoplay" muted loop playsInline>
-                    <source src="https://assets.website-files.com/5dc103431d958bfe587c36ad/5fbe76769bb83cd1b3446c00_Emme-01-transcode.mp4" type="video/mp4"/>
+                    <source src="https://apextest12.b-cdn.net/videos/MainPage_videos/344%20(1).mp4" type="video/mp4"/>
                 </video>
             </div>
             <div>

@@ -22,7 +22,7 @@ export const Header = ({setMenuView, menuView}) => {
             </picture>
             <div className={S.menuNav}> <NavigationPanel/></div>
             <div className={S.menuBars}>
-                <Hamburger toggled={isOpen} toggle={onMenuBarsHandler} size={40} direction="right" color="#d70329"/>
+                <Hamburger toggled={menuView} toggle={onMenuBarsHandler} size={40} direction="right" color="#d70329"/>
             </div>
         </section>
     )

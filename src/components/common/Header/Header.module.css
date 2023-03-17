@@ -35,6 +35,7 @@
     .menuBars{
         display: flex;
         margin-bottom: 10px;
+        opacity: 50%;
     }
     .headerImg{
         max-width: 110px;

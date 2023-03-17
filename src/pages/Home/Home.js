@@ -19,7 +19,7 @@ export default function Home() {
     return (
         <div className={S.root}>
             <Header setMenuView={setMenuView} menuView={menuView}/>
-            {menuView ? <MobileMenu/> : <SimpleSlider/> }
+            {menuView ? <MobileMenu setMenuView={setMenuView}/> : <SimpleSlider/> }
         </div>)
 
 

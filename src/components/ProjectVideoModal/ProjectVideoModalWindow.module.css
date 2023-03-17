@@ -14,7 +14,7 @@
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 70%;
     transform: translate(-50%, -50%);
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -79,4 +79,24 @@
 }
 .closeButton:hover{
     rotate: z 90deg;
+}
+
+@media (max-width: 1000px) {
+    .modalContainer{
+        width: 80%;
+    }
+}
+@media (max-width: 750px) {
+    .modalContainer{
+        width: 99%;
+    }
+    .closeButton{
+        right: 20px;
+        top:10px;
+        background-color: #a61730;
+        opacity: 50%;
+    }
+    .closeButton:hover{
+        opacity: 80%;
+    }
 }
