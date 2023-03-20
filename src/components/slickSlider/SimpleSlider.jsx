@@ -10,7 +10,7 @@ import {useEffect, useState} from "react";
 
 
 export const SimpleSlider = () => {
-    let [currentSlide, setCurrentSlide] = useState({title:'verandah townhomes',text:'Chicago',buttonName:'view Project'});
+    let [currentSlide, setCurrentSlide] = useState({title:'verandah townhomes',text:'Chicago,IL',buttonName:'view Project'});
     let [showDivider, setShowDivider] = useState(true);
 
 
@@ -18,7 +18,7 @@ export const SimpleSlider = () => {
         dots: true,
         infinite: true,
         autoplay: true,
-        autoplaySpeed: 9000,
+        autoplaySpeed: 23000,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -31,7 +31,7 @@ export const SimpleSlider = () => {
             setShowDivider(false);
             switch(current) {
                 case 0:
-                    setCurrentSlide({title:'skyeng',text:'kyiv',buttonName:'view Project'})
+                    setCurrentSlide({title:'Mokena Park District',text:'Chicago,IL',buttonName:'view Project'})
 
                     break;
                 case 1:
@@ -39,7 +39,7 @@ export const SimpleSlider = () => {
 
                     break;
                 case 2:
-                    setCurrentSlide({title:'verandah townhomes',text:'Chicago',buttonName:'view Project'})
+                    setCurrentSlide({title:'verandah townhomes',text:'Chicago,IL',buttonName:'view Project'})
 
                     break;
                 default:
@@ -83,7 +83,7 @@ export const SimpleSlider = () => {
                 <video
                     className={S.myVideo}
                     autoPlay="autoplay" muted loop playsInline>
-                    <source src="https://assets.website-files.com/5dc103431d958bfe587c36ad/5eecec891b18c0b4ad9d57ee_One%20Bennett-transcode.mp4" type="video/mp4"/>
+                    <source src="https://apextest12.b-cdn.net/videos/MainPage_videos/mokena%20(1).mp4" type="video/mp4"/>
                 </video>
             </div>
             <div>
