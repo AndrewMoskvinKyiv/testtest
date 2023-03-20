@@ -10,7 +10,7 @@ import {useEffect, useState} from "react";
 
 
 export const SimpleSlider = () => {
-    let [currentSlide, setCurrentSlide] = useState({title:'verandah townhomes',text:'Chicago,IL',buttonName:'view Project'});
+    let [currentSlide, setCurrentSlide] = useState({title:'verandah townhomes',text:'Chicago,IL',buttonName:'view Project', id:1133});
     let [showDivider, setShowDivider] = useState(true);
 
 
@@ -31,7 +31,7 @@ export const SimpleSlider = () => {
             setShowDivider(false);
             switch(current) {
                 case 0:
-                    setCurrentSlide({title:'Mokena Park District',text:'Chicago,IL',buttonName:'view Project'})
+                    setCurrentSlide({title:'Mokena Park District',text:'Chicago,IL',buttonName:'view Project', id: 1132})
 
                     break;
                 case 1:
@@ -39,7 +39,7 @@ export const SimpleSlider = () => {
 
                     break;
                 case 2:
-                    setCurrentSlide({title:'verandah townhomes',text:'Chicago,IL',buttonName:'view Project'})
+                    setCurrentSlide({title:'verandah townhomes',text:'Chicago,IL',buttonName:'view Project', id: 1133})
 
                     break;
                 default:
@@ -100,6 +100,7 @@ export const SimpleSlider = () => {
         <PopUpTitleWithSlowUnderline
             title={currentSlide.title}
             text={currentSlide.text}
+            id={currentSlide.id}
             buttonName={currentSlide.buttonName}
             showDivider={showDivider}
         />

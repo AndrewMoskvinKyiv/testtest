@@ -1,7 +1,12 @@
 import S from "./PopUpTitleWithSlowUnderline.module.css"
 import 'animate.css'
+import {useNavigate} from "react-router-dom";
 
-export const PopUpTitleWithSlowUnderline = ({title, text, buttonName, showDivider}) => {
+export const PopUpTitleWithSlowUnderline = ({title, text, buttonName, showDivider, id}) => {
+    const navigate = useNavigate();
+    const onClickHandler = () => {
+        navigate(`/projects/project_view/${id}`)
+    }
     return (
         <div className={S.PopUpTitleWrapper} style={{visibility: showDivider? "visible" : "hidden"}}>
             <div className={S.title}
@@ -20,7 +25,10 @@ export const PopUpTitleWithSlowUnderline = ({title, text, buttonName, showDivide
             </p>
             <button
                 style={{opacity: showDivider ? '100' : '0'}}
-                className={S.titleBtn}>
+                className={S.titleBtn}
+            onClick={onClickHandler}
+            >
+
                  {buttonName}
             </button>
         </div>
