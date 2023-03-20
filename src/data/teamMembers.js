@@ -20,12 +20,6 @@ export const teamArr = [
     },
     {
         id: uuidv4(),
-        name: "general_photo",
-        position: "tall",
-        photo: " https://apextest12.b-cdn.net/generalPhotosApex/Rodrigo%20Martinez.jpg"
-    },
-    {
-        id: uuidv4(),
         name: "Adrian Caushi",
         position: "Vice President",
         aboutPerson: PersonDescription.AdrianCaushi,
@@ -47,20 +41,6 @@ export const teamArr = [
         aboutPerson: PersonDescription.DjordjeDjanjus,
         bottomDescription: '',
         photo: "https://apextest12.b-cdn.net/teamFaces/Djordje%20Janjus.jpg"
-    },
-    {
-        id: uuidv4(),
-        name: "general_photo",
-        position: "tall",
-        photo: " https://apextest12.b-cdn.net/generalPhotosApex/Rodrigo%20Martinez.jpg"
-    },
-
-
-    {
-        id: uuidv4(),
-        name: "general_photo",
-        position: "tall",
-        photo: " https://apextest12.b-cdn.net/generalPhotosApex/Rodrigo%20Martinez.jpg"
     },
     {
         id: uuidv4(),
@@ -95,10 +75,5 @@ export const teamArr = [
         bottomDescription:PersonBottomDescription.DharmentraChoudary,
         photo: "https://apextest12.b-cdn.net/teamFaces/Dharmendra%20Choudhary.jpg"
     },
-    {
-        id: uuidv4(),
-        name: "general_photo",
-        position: "tall",
-        photo: " https://apextest12.b-cdn.net/generalPhotosApex/Rodrigo%20Martinez.jpg"
-    },
+
 ];
