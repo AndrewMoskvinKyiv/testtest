@@ -81,6 +81,16 @@
     background: black;
     opacity: 0;
 }
+.joinTeamWrapper{
+    position: absolute;
+    bottom: 50px;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border:2px solid white;
+    font-weight: bold;
+    max-width: 350px;
+    width: 100%;
+}
 @media (max-width: 950px) {
     .teamTitle{
         font-size: 62px;

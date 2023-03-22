@@ -26,12 +26,7 @@ export const PersonalCard = ({card, setOpenModal, setShowedBio}) => {
     }
     return (
         <div
-             className={S.personalCardContainer}
-             className=
-                 {`${card.position === "wide" && S.personalCardContainerWide}
-                   ${card.position === "tall" && S.personalCardContainerTall}
-                   ${card.position !== "tall" && card.position !== "wide" && S.personalCardContainer}
-                 `}
+             className={`${S.personalCardContainer}  animate__animated animate__fadeIn`}
              style={{backgroundImage: `url(${card.photo})`}}
              onMouseOver={onPersonCardHover}
              onMouseLeave={onMouseLeaveHandler}

@@ -16,7 +16,7 @@ export const Header = ({setMenuView, menuView}) => {
         navigate('/');
     }
     return (
-        <section className={S.header}>
+        <section className={S.header} id="1212">
             <picture>
                 <img className={S.headerImg} onClick={onLogoClickHandler} src={logo} alt='ApexLogo'/>
             </picture>

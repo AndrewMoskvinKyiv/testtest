@@ -13,6 +13,8 @@ import axios from "axios";
 export const Projects = () => {
     const [menuView, setMenuView] = useState(false);
     const [showProjectTypeDropdown, setShowProjectTypeDropdown] = useState(false);
+    const [showLocationDropdown, setShowLocationDropdown] = useState(false);
+    const [filteredProjects, setFilteredProjects] = useState(projects)
 
     function setAuthHeader() {
         return {
@@ -23,7 +25,6 @@ export const Projects = () => {
         };
     }
     useEffect(() => {
-
         const session = axios.create();
         session.get('https://ny.storage.bunnycdn.com/apextest/data.json', { headers: {
                 AccessKey: `67fbf3d6-627c-4475-a1153abb5c81-8690-4880`,
@@ -33,9 +34,16 @@ export const Projects = () => {
         });
 
     }, [])
-    const dropDownHandler = () => {
+    const dropDownProjectTypeHandler = (type) => {
         setShowProjectTypeDropdown(!showProjectTypeDropdown);
     }
+    const dropLocationTypeHandler = () => {
+        setShowLocationDropdown(!showLocationDropdown);
+    }
+    const selectTypeHandler = (type) => {
+       const FProjects = projects.filter((el)=> el.tags.includes(type));
+       setFilteredProjects(FProjects);
+    };
     return (
         menuView ?
             <div className={S.projectsContainer}>
@@ -56,20 +64,34 @@ export const Projects = () => {
 
 
                     <div className={S.buttonsContainer}>
-                        <CustomButton name={'PROJECT TYPE'} color={'#8d9382'} callback={() => dropDownHandler()}/>
-                        {
-                            <div className={`${S.dropdown_content} ${showProjectTypeDropdown && S.show }`}>
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                            </div>}
-                        <CustomButton name={'LOCATION'} color={'#8d9382'}/>
+                        <div className={S.projectTypeButton}
+                             onClick={dropDownProjectTypeHandler}
+                        >
+                            PROJECT TYPE
+                            <div className={`${S.dropdown_content} ${showProjectTypeDropdown && S.show }  animate__animated animate__fadeIn`}>
+                                <div className={S.dropDownSelect} onClick={()=>selectTypeHandler('Municipal')}>munitipal</div>
+                                <div className={S.dropDownSelect} onClick={()=>selectTypeHandler('Housing')}>Housing</div>
+                                <div className={S.dropDownSelect} onClick={()=>selectTypeHandler('Office')}>Office</div>
+                                <div className={S.dropDownSelect} onClick={()=>selectTypeHandler('Small project')}>Small project</div>
+                            </div>
+                        </div>
+
+                        <div className={S.projectTypeButton} onClick={dropLocationTypeHandler}
+
+                        >
+                            LOCATION
+                            <div className={`${S.dropdown_content} ${showLocationDropdown && S.show }  animate__animated animate__fadeIn`}>
+                                <div className={S.dropDownSelect}>chicago, il</div>
+                                <div className={S.dropDownSelect}>other</div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
 
 
                 <section className={S.projectBody}>
-                    {projects.map((project) =>
+                    {filteredProjects.map((project) =>
                         <ProjectCard
                             key={project.id}
                             project={project}

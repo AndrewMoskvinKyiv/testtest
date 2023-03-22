@@ -7,7 +7,10 @@ import {useState} from "react";
 import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
 import {FooterBlock} from "../../components/common/Footer/Footer";
 import {teamArr} from "../../data/teamMembers";
-
+import {CustomButton} from "../../components/common/CustomButtons/CustomButton/CustomButton";
+import {
+    PopUpTitleWithSlowUnderline
+} from "../../components/common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline";
 
 
 export const Team = () => {
@@ -34,7 +37,7 @@ export const Team = () => {
                 <section className={S.teamTop}>
                     <div className={S.teamTopOverlay}>
                         <div className={S.shadowBar}></div>
-                        <h1 className={S.teamTitle} >The Apex team</h1>
+                        <h1 className={S.teamTitle}>The Apex team</h1>
                         <p className={S.teamTitleBottom}>
                             Every APEX project starts with a team of experienced, determined professionals.
                             These individuals are eager to develop their skills and collaborate to create
@@ -49,10 +52,14 @@ export const Team = () => {
                              src={"https://apextest12.b-cdn.net/generalPhotosApex/groupPhotoS.jpg"}
                              alt={'generalPhoto'}/>
                     </picture>
+                    <div className={S.joinTeamWrapper}>
+                        <CustomButton name={'join our team'} width={'100%'} color={'white'} bcgColor={'transparent'}/>
+                    </div>
+                    <div className={S.videoTitle}>
+                        <PopUpTitleWithSlowUnderline/>
+                    </div>
                 </section>
-                <section className={S.teamPhotos}
-                         // style={{height: `${Math.ceil(teamArr.length / 3) * 500 + 600}px`}}
-                >
+                <section className={S.teamPhotos}>
                     {teamArr.map((card) =>
                         <PersonalCard
                             key={card.id}
@@ -64,15 +71,11 @@ export const Team = () => {
 
                 </section>
                 {openModal && showedBio &&
-                    <div className={S.overlay}>
-                        <ModalWindow
+                    <ModalWindow
                             setOpenModal={setOpenModal}
                             setShowedBio={setShowedBio}
                             showedBio={showedBio}
-                            topPosition={modalPosition}
-                            winScroll={winScroll}
-                            screenHeight={screenHeight}
-                        /></div>}
+                        />}
                 <FooterBlock/>
             </div>
 
