@@ -10,7 +10,7 @@ import {useEffect, useState} from "react";
 
 
 export const SimpleSlider = () => {
-    let [currentSlide, setCurrentSlide] = useState({title:'verandah townhomes',text:'Chicago,ILrt',buttonName:'view Project', id:1133});
+    let [currentSlide, setCurrentSlide] = useState({title:'verandah townhomes',text:'Chicago,IL',buttonName:'view Project', id:1133});
     let [showDivider, setShowDivider] = useState(true);
 
 
@@ -70,9 +70,9 @@ export const SimpleSlider = () => {
     }
 
     return (
-        <div>
+        <div className={S.homePageContainer}>
         <Slider {...settings}>
-            <div>
+            <div style={{border:'2px solid green'}}>
                 <video
                     className={S.myVideo}
                     autoPlay="autoplay" muted loop playsInline>
