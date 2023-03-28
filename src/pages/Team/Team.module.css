@@ -1,15 +1,16 @@
-.teamTop{
+.teamTop {
     height: 100vh;
     background-image: url("https://apextest12.b-cdn.net/officeBcg.webp");
-    filter: grayscale(1) ;
+    filter: grayscale(1);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
 }
-.teamTopOverlay{
+
+.teamTopOverlay {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -22,11 +23,12 @@
     opacity: 80%;
     z-index: 10;
 }
-.teamTitle{
+
+.teamTitle {
     margin-top: 40px;
     margin-bottom: 40px;
     background-color: rgba(133, 190, 27, 0.3);
-    font-family: 'Apexnewweb book',sans-serif;
+    font-family: 'Apexnewweb book', sans-serif;
     color: #4b4b4b;
     font-size: 72px;
     line-height: 35px;
@@ -35,8 +37,9 @@
     letter-spacing: 20px;
     text-transform: uppercase;
 }
-.teamTitleBottom{
-    font-family: Nunito,sans-serif;
+
+.teamTitleBottom {
+    font-family: Nunito, sans-serif;
     color: #4b4b4b;
     font-size: 21px;
     line-height: 30px;
@@ -44,12 +47,14 @@
     font-weight: 700;
     max-width: 700px;
 }
-.generalPhoto{
+
+.generalPhoto {
     max-width: 1550px;
     width: 100%;
     margin-bottom: 20px;
 }
-.teamPhotos{
+
+.teamPhotos {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -59,12 +64,14 @@
     margin-right: auto;
     position: relative;
 }
-.teamPhotosMod{
+
+.teamPhotosMod {
     display: grid;
     column-gap: 50px;
     grid-template-columns: 300px  300px;
 }
-.generalPhotoContainer{
+
+.generalPhotoContainer {
     display: flex;
     max-width: 1550px;
     width: 100%;
@@ -72,47 +79,126 @@
     margin-right: auto;
     position: relative;
 }
-.joelFinder{
+
+.joelFinder {
     width: 10%;
     height: 30%;
     position: absolute;
-    top:35%;
-    left:69%;
-    background: black;
-    opacity: 0;
+    top: 35%;
+    left: 69%;
 }
-.joinTeamWrapper{
+.lauraFinder{
+    width: 10%;
+    height: 40%;
     position: absolute;
-    bottom: 50px;
-    left:50%;
+    top: 45%;
+    left: 80%;
+}
+.paolaFinder{
+    width: 10%;
+    height: 37%;
+    position: absolute;
+    top: 24%;
+    left: 55%;
+}
+.valentinoFinder{
+    width: 10%;
+    height: 27%;
+    position: absolute;
+    top: 36%;
+    left: 40%;
+}
+
+.joinTeamWrapper {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
     transform: translate(-50%, -50%);
-    border:2px solid white;
+    border: 2px solid white;
     font-weight: bold;
     max-width: 350px;
     width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 10px 30px;
+
 }
+
+.joinTeamWrapper:after {
+    background: black;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 5%;
+    z-index: 5;
+    transition: opacity 0.5s;
+
+}
+.joinTeamWrapper:hover::after{
+    opacity: 50%;
+}
+.personTitleContainer{
+    transition: opacity 0.5s;
+    opacity: 0;
+    z-index: 20;
+    width: 150px;
+    position: absolute;
+    left:0;
+    top:60%;
+}
+
+.personTitle{
+    font-family: 'Apexnewweb book', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    z-index: 50;
+}
+
+.personPosition{
+    font-family: 'Apexnewweb book', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    z-index: 50;
+}
+.joinTeamBtn {
+    color: white;
+    font-family: 'Apexnewweb book', sans-serif;
+    text-transform: uppercase;
+    align-self: center;
+    z-index: 7;
+}
+
 @media (max-width: 950px) {
-    .teamTitle{
+    .teamTitle {
         font-size: 62px;
 
     }
 }
+
 @media (max-width: 750px) {
-    .teamTitle{
-       line-height: 55px;
+    .teamTitle {
+        line-height: 55px;
 
     }
 }
+
 @media (max-width: 450px) {
     .teamTitle {
         font-size: 30px;
         line-height: 42px;
         letter-spacing: 5px;
-        padding: 10px 15px ;
+        padding: 10px 15px;
         background: transparent;
-        border:2px solid #000000;
+        border: 2px solid #000000;
     }
-    .teamTitleBottom{
+
+    .teamTitleBottom {
         font-size: 18px;
         max-width: 90%;
     }

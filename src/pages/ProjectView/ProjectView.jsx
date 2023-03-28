@@ -1,9 +1,7 @@
 import * as React from "react";
 import {useParams} from "react-router-dom";
-import {projects} from "../../data/projects";
 import {useEffect, useState} from "react";
 import S from "./ProjectView.module.css"
-import ST from "./../../styles/title.module.css"
 import {Header} from "../../components/common/Header/Header";
 import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
 import {FooterBlock} from "../../components/common/Footer/Footer";
@@ -11,13 +9,13 @@ import {PanePanel} from "../../components/PanePanel/PanePanel";
 import {ProjectPhoto} from "../Projects/ProjectPhoto/ProjectPhoto";
 import {scrollUpFast} from "../Home/Home";
 import play1 from "./../../assets/play.png"
-import play2 from "./../../assets/play (1).png"
-import play3 from "./../../assets/play (2).png"
-
 import {ProjectVideoModalWindow} from "../../components/ProjectVideoModal/ProjectVideoModalWindow";
+import {useSelector} from "react-redux";
 
 
 export const ProjectView = () => {
+    const projects = useSelector(state => state.projects);
+
     const [menuView, setMenuView] = useState(false);
     const [element, setElement] = useState({});
     const [openVideoModal, setOpenVideoModal] = useState(false);
@@ -36,9 +34,9 @@ export const ProjectView = () => {
 
     useEffect(() => {
         scrollUpFast();
-        let currentProgect = projects.find((el) => el.id === +id);
-        setElement(currentProgect)
-    }, [])
+        let currentProgect = projects.projects.find((el) => el.id === +id);
+        setElement(currentProgect);
+        }, [])
 
 
     return (

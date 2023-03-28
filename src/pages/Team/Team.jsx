@@ -7,7 +7,7 @@ import {useState} from "react";
 import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
 import {FooterBlock} from "../../components/common/Footer/Footer";
 import {teamArr} from "../../data/teamMembers";
-import {CustomButton} from "../../components/common/CustomButtons/CustomButton/CustomButton";
+
 import {
     PopUpTitleWithSlowUnderline
 } from "../../components/common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline";
@@ -17,12 +17,11 @@ export const Team = () => {
     const [menuView, setMenuView] = useState(false);
     const [openModal, setOpenModal] = useState(false);
     const [showedBio, setShowedBio] = useState({});
+    const [personTitle, setPersonTitle] = useState('')
 
-
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const screenHeight = window.screen.height
-    const modalPosition = screenHeight / 100 * 10 + winScroll
-
+    const onMouseOver = (person) => {
+        setPersonTitle(person);
+    };
 
     return (
         menuView ?
@@ -46,18 +45,53 @@ export const Team = () => {
                     </div>
                 </section>
                 <section className={S.teamPhotos}>
-                    <div className={S.joelFinder}></div>
+                    <div className={S.joelFinder}
+                         onMouseOver={()=>onMouseOver("Joel")}
+                         onMouseLeave={()=>onMouseOver("")}
+                    >
+                        <div className={S.personTitleContainer} style={{opacity: personTitle === 'Joel' && "90%" }}>
+                            <div className={S.personTitle}>Joel Spalding</div>
+                            <div className={S.personPosition}>President</div>
+                        </div>
+                    </div>
+                    <div className={S.lauraFinder}
+                         onMouseOver={()=>onMouseOver("Laura")}
+                         onMouseLeave={()=>onMouseOver("")}
+                    >
+                        <div className={S.personTitleContainer} style={{opacity: personTitle === 'Laura' && "90%" }}>
+                            <div className={S.personTitle}>Laura Koronaci</div>
+                            <div className={S.personPosition}>Contract Manager</div>
+                        </div>
+                    </div>
+                    <div className={S.paolaFinder}
+                         onMouseOver={()=>onMouseOver("Paula")}
+                         onMouseLeave={()=>onMouseOver("")}
+                    >
+                        <div className={S.personTitleContainer} style={{opacity: personTitle === 'Paula' && "90%" }}>
+                            <div className={S.personTitle}>Paola Placko</div>
+                            <div className={S.personPosition}>Lead Estimator / Architectural Designer</div>
+                        </div>
+                    </div>
+                    <div className={S.valentinoFinder}
+                         onMouseOver={()=>onMouseOver("Valentino")}
+                         onMouseLeave={()=>onMouseOver("")}
+                    >
+                        <div className={S.personTitleContainer} style={{opacity: personTitle === 'Valentino' && "90%" }}>
+                            <div className={S.personTitle}>Valentino Caushi</div>
+                            <div className={S.personPosition}>CEO</div>
+                        </div>
+                    </div>
+
+
                     <picture>
                         <img className={S.generalPhoto}
                              src={"https://apextest12.b-cdn.net/generalPhotosApex/groupPhotoS.jpg"}
                              alt={'generalPhoto'}/>
                     </picture>
                     <div className={S.joinTeamWrapper}>
-                        <CustomButton name={'join our team'} width={'100%'} color={'white'} bcgColor={'transparent'}/>
+                            <span className={S.joinTeamBtn}>Join Our Team</span>
                     </div>
-                    <div className={S.videoTitle}>
-                        <PopUpTitleWithSlowUnderline/>
-                    </div>
+
                 </section>
                 <section className={S.teamPhotos}>
                     {teamArr.map((card) =>
@@ -72,10 +106,10 @@ export const Team = () => {
                 </section>
                 {openModal && showedBio &&
                     <ModalWindow
-                            setOpenModal={setOpenModal}
-                            setShowedBio={setShowedBio}
-                            showedBio={showedBio}
-                        />}
+                        setOpenModal={setOpenModal}
+                        setShowedBio={setShowedBio}
+                        showedBio={showedBio}
+                    />}
                 <FooterBlock/>
             </div>
 

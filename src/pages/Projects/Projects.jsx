@@ -1,39 +1,20 @@
 import * as React from "react";
 import S from "./Projects.module.css"
-import {CustomButton} from "../../components/common/CustomButtons/CustomButton/CustomButton";
 import {useEffect, useState} from "react";
 import {Header} from "../../components/common/Header/Header";
 import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
 import {ProjectCard} from "../../components/ProjectCard/ProjectCard";
-import {projects} from "../../data/projects";
 import {FooterBlock} from "../../components/common/Footer/Footer";
-import axios from "axios";
-
+import {useSelector} from "react-redux";
 
 export const Projects = () => {
+    const projects = useSelector(state => state.projects);
+
     const [menuView, setMenuView] = useState(false);
     const [showProjectTypeDropdown, setShowProjectTypeDropdown] = useState(false);
     const [showLocationDropdown, setShowLocationDropdown] = useState(false);
-    const [filteredProjects, setFilteredProjects] = useState(projects)
+    const [filteredProjects, setFilteredProjects] = useState(projects.projects);
 
-    function setAuthHeader() {
-        return {
-            headers: {
-                AccessKey: `67fbf3d6-627c-4475-a1153abb5c81-8690-4880`,
-                accept: 'http://localhost:3000/'
-            },
-        };
-    }
-    useEffect(() => {
-        const session = axios.create();
-        session.get('https://ny.storage.bunnycdn.com/apextest/data.json', { headers: {
-                AccessKey: `67fbf3d6-627c-4475-a1153abb5c81-8690-4880`,
-                accept: '*/*',
-
-            },
-        });
-
-    }, [])
     const dropDownProjectTypeHandler = (type) => {
         setShowProjectTypeDropdown(!showProjectTypeDropdown);
     }
@@ -41,7 +22,7 @@ export const Projects = () => {
         setShowLocationDropdown(!showLocationDropdown);
     }
     const selectTypeHandler = (type) => {
-       const FProjects = projects.filter((el)=> el.tags.includes(type));
+       const FProjects = filteredProjects.filter((el)=> el.tags.includes(type));
        setFilteredProjects(FProjects);
     };
     return (

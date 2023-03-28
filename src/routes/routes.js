@@ -7,6 +7,7 @@ import {Team} from "../pages/Team/Team";
 import {ProjectView} from "../pages/ProjectView/ProjectView";
 import Home from "../pages/Home/Home";
 import {Services} from "../pages/Services/Services";
+import {Admin} from "../pages/Admin/Admin";
 
 export const router = createHashRouter([
     {
@@ -33,6 +34,10 @@ export const router = createHashRouter([
     {
         path: "/services",
         element: <Services />,
+    },
+    {
+        path: "/apex_admin",
+        element: <Admin />,
     },
 
 

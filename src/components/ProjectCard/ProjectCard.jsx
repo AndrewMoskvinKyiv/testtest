@@ -1,6 +1,6 @@
 import * as React from "react";
 import S from "./ProjectCard.module.css";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import 'animate.css'
 import {useNavigate} from "react-router-dom";
 
