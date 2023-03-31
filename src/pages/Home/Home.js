@@ -4,9 +4,7 @@ import {SimpleSlider} from "../../components/slickSlider/SimpleSlider";
 import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
 import {Header} from "../../components/common/Header/Header";
 import {useEffect, useState} from "react";
-import axios from "axios";
-import {actions} from "../../store/projectsReduser/projectsReducer";
-import {useDispatch} from "react-redux";
+
 export const scrollUpFast = () => {
         let t, s;
         s=document.body.scrollTop||window.pageYOffset;
@@ -14,15 +12,11 @@ export const scrollUpFast = () => {
         return!1
     }
 export default function Home() {
+    useEffect(()=> {
+        scrollUpFast();
+        } , [])
     const [menuView, setMenuView] = useState(false);
-    const dispatch = useDispatch();
-   useEffect(()=> {
-       scrollUpFast();
-       const session = axios.create();
-       session.get('https://apextest12.b-cdn.net/data(1).json').then((data)=>{
-           dispatch(actions.setAllApexProjects(data.data));
-       });
-   } , [])
+
 
     return (
         <div className={S.root}>

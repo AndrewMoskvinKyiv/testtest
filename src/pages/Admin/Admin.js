@@ -4,80 +4,172 @@ import {useState} from "react";
 import {Header} from "../../components/common/Header/Header";
 import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
 import {CustomButton} from "../../components/common/CustomButtons/CustomButton/CustomButton";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import axios from "axios";
 import {AdminElementComponent} from "../../components/AdminComponents/AdminElementComponent/AdminElementComponent";
 import {AdminModal} from "../../components/AdminComponents/AdminModal/AdminModal";
+import {v1} from "uuid";
+import {actionsTeam, teamMemberTemplate} from "../../store/teamReducer/teamReducer";
+import {actions, projectTemplate} from "../../store/projectsReducer/projectsReducer";
 
 
 export const Admin = () => {
+    const dispatch = useDispatch();
     const projects = useSelector(state => state.projects);
+    const team = useSelector(state => state.team.team);
+
     const [menuView, setMenuView] = useState(false);
     const [adminFile, setAdminFile] = useState('');
-    const [currentModificatedDataObject, setCurrentModificatedDataObject] = useState({});
-    const [modValue, setModValue] = useState({})
+    const [popUp, setPopUp] = useState(false);
 
+    const [currentModificatedDataObject, setCurrentModificatedDataObject] = useState({});
+    const [modValue, setModValue] = useState([])
 
     const projectFetching = () => {
         setAdminFile('projects');
     };
     const teamFetching = () => {
-        let objectToSend = [...projects];
+        setAdminFile('team');
+    }
+    const onAddNewProject = () => {
+        if (adminFile === "projects") {
+            setCurrentModificatedDataObject(projectTemplate)
+        } else if (adminFile === "team") {
+            setCurrentModificatedDataObject(teamMemberTemplate);
+        }
+    }
+        const onDeleteProjectPress = () => {
+            const fileToChange = adminFile === 'team' ? "apex_team.json" : "apex_projects(12).json";
+            const session = axios.create();
+            let objectToSend = adminFile === 'team' ? [...team] : [...projects.projects];
+            let positionOfReplacedElement = objectToSend.find((el) => el.id === currentModificatedDataObject.id);
+            let aa = objectToSend.indexOf(positionOfReplacedElement);
+            objectToSend.splice(aa, 1);
+            setCurrentModificatedDataObject({});
 
-        console.log('teamFetching');
-        const session = axios.create();
-        session.put('https://ny.storage.bunnycdn.com/apextest/apex_projects.json', {log: 'залупа'}, {
-            headers: {
-                AccessKey: '67fbf3d6-627c-4475-a1153abb5c81-8690-4880',
-                accept: '*/*'
+            adminFile === 'team' ? dispatch(actionsTeam.deletePersonalCardInfo(objectToSend)):
+                dispatch(actions.deleteExactProjectCard(objectToSend));
+            session.put(`https://ny.storage.bunnycdn.com/apextest/${fileToChange}`, objectToSend, {
+                headers: {
+                    AccessKey: '67fbf3d6-627c-4475-a1153abb5c81-8690-4880',
+                    accept: '*/*'
+                }
+            }).then((data) => {
+                if (data.status === 201) {
+                    setPopUp(true);
+                    let timer = setTimeout(() => {
+                        setPopUp(false);
+                        clearTimeout(timer);
+                    }, 3000)
+                }
+            })
+        }
+        const choseObjectForModificationChoosen = (chosenProject) => {
+            setCurrentModificatedDataObject(chosenProject)
+        }
+        const onSaveProjectsFilePress = () => {
+        const fileToChange = adminFile === 'team' ? "apex_team.json" : "apex_projects(12).json";
+            const session = axios.create();
+            let objectToSend = adminFile === 'team' ? [...team] : [...projects.projects];
+            let positionOfReplacedElement = objectToSend.find((el) => el.id === currentModificatedDataObject.id);
+
+            if (positionOfReplacedElement) {
+                let aa = objectToSend.indexOf(positionOfReplacedElement);
+                objectToSend[aa] = currentModificatedDataObject;
+                setCurrentModificatedDataObject({})
+            } else {
+                objectToSend.push(currentModificatedDataObject)
+                setCurrentModificatedDataObject({})
             }
-        })
-    }
-    const choseObjectForModificationChoosen = (chosenProject) => {
-        setCurrentModificatedDataObject(chosenProject)
-    }
-
-    return (
-        menuView ?
-            <div className={S.projectsContainer}>
-                <Header setMenuView={setMenuView} menuView={menuView}/>
-                <MobileMenu/>
-            </div>
-            :
-            <div>
-                <Header setMenuView={setMenuView} menuView={menuView}/>
-                <div className={S.admin_home}>
-                    <div className={S.linksWrapper}>
-                        <CustomButton name={'projects'} callback={projectFetching}/>
-                        <CustomButton name={'Team Members'} callback={teamFetching}/>
-                    </div>
-                    <div className={S.contentWrapper}>
-                        <div className={S.projectTitleWrapper}>
-                        {adminFile === 'projects' ?
-                            projects.projects.map((project) =>
-
-                                    <div className={S.projectWrapper} key={project.id} onClick={()=> choseObjectForModificationChoosen(project)}>
-                                        <div className={S.projectTitle}>{project.title}</div>
-                                    </div>
+            adminFile === 'team' ? dispatch(actionsTeam.updatePersonalCardInfo(objectToSend)):
+                dispatch(actions.updateProjectCardInfo(objectToSend));
+            session.put(`https://ny.storage.bunnycdn.com/apextest/${fileToChange}`, objectToSend, {
+                headers: {
+                    AccessKey: '67fbf3d6-627c-4475-a1153abb5c81-8690-4880',
+                    accept: '*/*'
+                }
+            }).then((data) => {
+                if (data.status === 201) {
+                    setPopUp(true);
+                    let timer = setTimeout(() => {
+                        setPopUp(false);
+                        clearTimeout(timer);
+                    }, 3000)
+                }
+            })
 
 
-                            )
+        }
 
-                            :
-                            <span>choose subject for change!</span>
-                        }
-                        </div>
-                        <div className={S.projectTitleWrapper}>
-                            <AdminElementComponent project={currentModificatedDataObject} setModValue={setModValue}/>
-                        </div>
-                    </div>
+        return (
+            menuView ?
+                <div className={S.projectsContainer}>
+                    <Header setMenuView={setMenuView} menuView={menuView}/>
+                    <MobileMenu/>
                 </div>
-                {Object.keys(modValue).length !== 0   &&
-                    <AdminModal
-                        setModValue={setModValue}
-                        modValue={modValue}
-                    />}
+                :
+                <div>
+                    <Header setMenuView={setMenuView} menuView={menuView}/>
+                    <div className={S.admin_home}>
+                        <div className={S.linksWrapper}>
+                            <CustomButton name={'projects'} callback={projectFetching}/>
+                            <CustomButton name={'Team Members'} callback={teamFetching}/>
+                        </div>
+                        <div className={S.contentWrapper}>
+                            <div className={S.projectTitleWrapper}>
+                                {adminFile === 'projects' &&
+                                    projects.projects.map((project) =>
+                                        <div className={S.projectWrapper} key={project.id}
+                                             onClick={() => choseObjectForModificationChoosen(project)}>
+                                            <div className={S.projectTitle}>{project.title}</div>
+                                        </div>)}
+                                {adminFile === 'team' &&
+                                    team.map((team) =>
+                                        <div className={S.projectWrapper} key={team.id}
+                                             onClick={() => choseObjectForModificationChoosen(team)}>
+                                            <div className={S.projectTitle}>{team.name}</div>
+                                        </div>)}
 
-            </div>
-    )
-}
+                                {adminFile === '' &&
+                                    <div className={S.chooseSubjectText}>choose subject for change!</div>}
+
+
+                            </div>
+
+
+                            {adminFile !== '' && Object.keys(currentModificatedDataObject).length < 1 &&
+                                <div className={S.projectTitleWrapper}>
+                                    <CustomButton name={`add new ${adminFile === 'projects' ? "project": "team member"}`} callback={onAddNewProject}/>
+                                </div>}
+
+
+                            <div className={S.projectTitleWrapper}>
+                                <AdminElementComponent project={currentModificatedDataObject} setModValue={setModValue}
+                                                       projectTemplate={adminFile === 'projects'? projectTemplate : teamMemberTemplate}/>
+                            </div>
+                            <div className={S.adminButtonsContainer}>
+                                {Object.keys(currentModificatedDataObject).length > 1 &&
+                                    <CustomButton name={'Save changes'} callback={onSaveProjectsFilePress}/>}
+                                {Object.keys(currentModificatedDataObject).length > 1 &&
+                                    <CustomButton name={'delete item'} callback={onDeleteProjectPress}/>}
+                                {Object.keys(currentModificatedDataObject).length > 1 &&
+                                    <CustomButton name={'leave without changes'}
+                                                  callback={() => setCurrentModificatedDataObject({})}/>}
+
+                            </div>
+                        </div>
+                        {popUp && <div className={`${S.popupWindowInfo} animate__bounceInDown animate__animated`}>
+                            <div style={{color: 'green', fontWeight: "bold"}}>Success!!!</div>
+                            <div>Data was changed!;)</div>
+                        </div>}
+                    </div>
+                    {Object.keys(modValue).length > 0 &&
+                        <AdminModal
+                            setModValue={setModValue}
+                            modValue={modValue}
+                            setCurrentModificatedDataObject={setCurrentModificatedDataObject}
+                        />}
+
+                </div>
+        )
+    }

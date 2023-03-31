@@ -3,21 +3,31 @@ import {Header} from "../../components/common/Header/Header";
 import S from "./Team.module.css"
 import {PersonalCard} from "../../components/PersonalCard/PersonalCard";
 import {ModalWindow} from "../../components/ModalWindow/ModalWindow";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
 import {FooterBlock} from "../../components/common/Footer/Footer";
-import {teamArr} from "../../data/teamMembers";
-
-import {
-    PopUpTitleWithSlowUnderline
-} from "../../components/common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline";
+import {useDispatch, useSelector} from "react-redux";
+import {getAllTeamMembersTC} from "../../store/teamReducer/teamReducer";
+import {scrollUpFast} from "../Home/Home";
+import {useNavigate} from "react-router-dom";
 
 
 export const Team = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const teamArr = useSelector(state => state.team.team);
+
     const [menuView, setMenuView] = useState(false);
     const [openModal, setOpenModal] = useState(false);
     const [showedBio, setShowedBio] = useState({});
-    const [personTitle, setPersonTitle] = useState('')
+    const [personTitle, setPersonTitle] = useState('');
+
+    useEffect(()=> {
+        dispatch(getAllTeamMembersTC());
+        scrollUpFast();
+    },[])
+
+
 
     const onMouseOver = (person) => {
         setPersonTitle(person);
@@ -54,15 +64,7 @@ export const Team = () => {
                             <div className={S.personPosition}>President</div>
                         </div>
                     </div>
-                    <div className={S.lauraFinder}
-                         onMouseOver={()=>onMouseOver("Laura")}
-                         onMouseLeave={()=>onMouseOver("")}
-                    >
-                        <div className={S.personTitleContainer} style={{opacity: personTitle === 'Laura' && "90%" }}>
-                            <div className={S.personTitle}>Laura Koronaci</div>
-                            <div className={S.personPosition}>Contract Manager</div>
-                        </div>
-                    </div>
+
                     <div className={S.paolaFinder}
                          onMouseOver={()=>onMouseOver("Paula")}
                          onMouseLeave={()=>onMouseOver("")}
@@ -88,19 +90,22 @@ export const Team = () => {
                              src={"https://apextest12.b-cdn.net/generalPhotosApex/groupPhotoS.jpg"}
                              alt={'generalPhoto'}/>
                     </picture>
-                    <div className={S.joinTeamWrapper}>
+                    <div className={S.joinTeamWrapper} onClick={()=> navigate(`/contacts/careers`)}>
                             <span className={S.joinTeamBtn}>Join Our Team</span>
                     </div>
 
                 </section>
                 <section className={S.teamPhotos}>
                     {teamArr.map((card) =>
-                        <PersonalCard
+                            <PersonalCard
                             key={card.id}
                             card={card}
                             setOpenModal={setOpenModal}
                             setShowedBio={setShowedBio}
-                            openModal={openModal}/>)
+                            showedBio={showedBio}
+                            openModal={openModal}/>
+
+                        )
                     }
 
                 </section>
@@ -111,6 +116,7 @@ export const Team = () => {
                         showedBio={showedBio}
                     />}
                 <FooterBlock/>
+
             </div>
 
     )

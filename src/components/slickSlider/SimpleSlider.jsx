@@ -6,13 +6,18 @@ import * as React from "react";
 import {PopUpTitleWithSlowUnderline} from "../common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline";
 import whiteLeftArrow from "./../../assets/whiteArrowLeft.png"
 import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 
 
 export const SimpleSlider = () => {
+    const navigate = useNavigate();
     let [currentSlide, setCurrentSlide] = useState({title:'verandah townhomes',text:'Chicago,IL',buttonName:'view Project', id:1133});
     let [showDivider, setShowDivider] = useState(true);
-
+    useEffect(() => {
+        document.body.style.overflow = "hidden";
+        return ()=> { document.body.style.overflow = "auto"}
+    },[])
 
     const settings = {
         dots: true,
@@ -61,6 +66,9 @@ export const SimpleSlider = () => {
             <img className={S.nextArrow} src={whiteLeftArrow} onClick={onClick}/>
         );
     }
+    const redirectToProjectHandler = () => {
+        navigate(`/projects/project_view/${currentSlide.id}`);
+    }
 
     function SamplePrevArrow(props) {
         const { onClick } = props;
@@ -72,11 +80,11 @@ export const SimpleSlider = () => {
     return (
         <div className={S.homePageContainer}>
         <Slider {...settings}>
-            <div style={{border:'2px solid green'}}>
+            <div >
                 <video
                     className={S.myVideo}
                     autoPlay="autoplay" muted loop playsInline>
-                    <source src="https://apextest12.b-cdn.net/videos/MainPage_videos/344%20(1).mp4" type="video/mp4"/>
+                    <source src="https://apextest12.b-cdn.net/videos/MainPage_videos/1.mp4" type="video/mp4"/>
                 </video>
             </div>
             <div>
@@ -100,9 +108,9 @@ export const SimpleSlider = () => {
         <PopUpTitleWithSlowUnderline
             title={currentSlide.title}
             text={currentSlide.text}
-            id={currentSlide.id}
             buttonName={currentSlide.buttonName}
             showDivider={showDivider}
+            callbackFunk={redirectToProjectHandler}
         />
     </div>
     </div>

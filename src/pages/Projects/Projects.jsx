@@ -5,15 +5,24 @@ import {Header} from "../../components/common/Header/Header";
 import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
 import {ProjectCard} from "../../components/ProjectCard/ProjectCard";
 import {FooterBlock} from "../../components/common/Footer/Footer";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {actions, getAllProjectsTC, getFilteredProjectsTC} from "../../store/projectsReducer/projectsReducer";
+import {scrollUpFast} from "../Home/Home";
+
 
 export const Projects = () => {
+    const dispatch = useDispatch();
     const projects = useSelector(state => state.projects);
 
     const [menuView, setMenuView] = useState(false);
     const [showProjectTypeDropdown, setShowProjectTypeDropdown] = useState(false);
     const [showLocationDropdown, setShowLocationDropdown] = useState(false);
-    const [filteredProjects, setFilteredProjects] = useState(projects.projects);
+
+
+    useEffect(()=> {
+        dispatch(getAllProjectsTC());
+        scrollUpFast();
+    },[])
 
     const dropDownProjectTypeHandler = (type) => {
         setShowProjectTypeDropdown(!showProjectTypeDropdown);
@@ -22,8 +31,7 @@ export const Projects = () => {
         setShowLocationDropdown(!showLocationDropdown);
     }
     const selectTypeHandler = (type) => {
-       const FProjects = filteredProjects.filter((el)=> el.tags.includes(type));
-       setFilteredProjects(FProjects);
+        dispatch(getFilteredProjectsTC(type));
     };
     return (
         menuView ?
@@ -72,7 +80,7 @@ export const Projects = () => {
 
 
                 <section className={S.projectBody}>
-                    {filteredProjects.map((project) =>
+                    {projects.projects.map((project) =>
                         <ProjectCard
                             key={project.id}
                             project={project}

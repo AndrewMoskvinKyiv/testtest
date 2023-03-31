@@ -4,6 +4,7 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   position: relative;
 }
 .linksWrapper{
    padding-top: 10px;
@@ -16,7 +17,6 @@
 .contentWrapper{
    max-width: 1450px;
    width: 100%;
-   /*border-: 2px solid green;*/
    display: flex;
    justify-content: space-between;
    margin-top: 30px;
@@ -28,6 +28,7 @@
    display: flex;
    flex-direction: column;
    justify-content: space-around;
+   align-items: center;
 
 }
 .projectWrapper{
@@ -46,4 +47,35 @@
    align-self: center;
    text-align: center;
    cursor: pointer;
+}
+.chooseSubjectText{
+   font-family: Nunito, sans-serif;
+   font-size: 16px;
+   line-height: 22px;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+.popupWindowInfo{
+   position: absolute;
+   top:40%;
+   left: 40%;
+   height: 200px;
+   max-width: 450px;
+   width: 100%;
+   background: #e6e8ee;
+   box-shadow: 0 45px 65px rgba(0,0,0,0.50), 0 35px 22px rgba(0,0,0,0.16);
+   font-family: Nunito, sans-serif;
+   font-size: 28px;
+   line-height: 42px;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;
+   border-radius: 25px;
+   text-transform: uppercase;
+}
+.adminButtonsContainer{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
 }

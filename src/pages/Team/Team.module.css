@@ -57,7 +57,7 @@
 .teamPhotos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
     max-width: 1550px;
     width: 100%;
     margin-left: auto;
@@ -111,7 +111,7 @@
 
 .joinTeamWrapper {
     position: absolute;
-    bottom: 100px;
+    bottom: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: 2px solid white;
@@ -184,7 +184,11 @@
 @media (max-width: 750px) {
     .teamTitle {
         line-height: 55px;
-
+    }
+    .joelFinder,
+    .lauraFinder,
+    .paolaFinder {
+        display: none;
     }
 }
 

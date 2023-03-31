@@ -1,4 +1,3 @@
-import {v4 as uuidv4} from "uuid";
 
 export const PersonDescription = {
     ValentinoCaushi : "Valentino’s passion for building is the foundation of APEX’s" +
@@ -108,22 +107,3 @@ export const PersonDescription = {
 
  }
 
- export const videoBgArray = [{
-     id: uuidv4(),
-     videoUrl: "https://assets.website-files.com/5dc103431d958bfe587c36ad/5fbe76769bb83cd1b3446c00_Emme-01-transcode.mp4",
-     videoDuration: 9000,
-     videoTitle: 'Waterfall',
-     videoText: 'Chicago,Il'
- }, {
-     id: uuidv4(),
-     videoUrl: "https://apextest12.b-cdn.net/vid4.mp4",
-     videoDuration: 25000,
-     videoTitle: 'emme',
-     videoText: 'Simferopol,Il'
- }, {
-     id: uuidv4(),
-     videoUrl: "https://assets.website-files.com/5dc103431d958bfe587c36ad/5eecec891b18c0b4ad9d57ee_One%20Bennett-transcode.mp4",
-     videoDuration: 22000,
-     videoTitle: 'Bennet',
-     videoText: 'Kiev,Il'
- }];

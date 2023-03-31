@@ -1,3 +1,8 @@
+import {WebsiteAPI} from "../../API/WebsiteApi";
+import {log} from "video.js";
+import {v1} from "uuid";
+
+
 let initialState = {
    projects:[
        {
@@ -43,6 +48,13 @@ const projectsReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'projectsReducer/SET_PROJECTS':
             return {...state, projects: action.projects };
+        case 'projectsReducer/UPDATE_PROJECTS':
+            return {...state, projects: action.projects };
+        case 'projectsReducer/DELETE_EXACT_PROJECT':
+            return {...state, projects: action.projects };
+        case 'projectsReducer/GET_FILTERED_PROJECTS':
+            console.log(action.tag)
+            return {...state, projects: [ ...state.projects.filter((el)=> el.tags.includes(action.tag))] };
         default:
             return state;
 
@@ -50,6 +62,41 @@ const projectsReducer = (state = initialState, action) => {
 }
 export let actions = {
     setAllApexProjects: (projects) => ({type: 'projectsReducer/SET_PROJECTS', projects}),
+    updateProjectCardInfo: (projects) => ({type: 'projectsReducer/UPDATE_PROJECTS', projects}),
+    deleteExactProjectCard: (projects) => ({type: 'projectsReducer/DELETE_EXACT_PROJECT', projects}),
+    getFilteredProjectCards: (tag) => ({type: 'projectsReducer/GET_FILTERED_PROJECTS', tag}),
 }
 
+
+export const getAllProjectsTC = () => {
+    return async (dispatch) => {
+        const response = await WebsiteAPI.getAllProjects();
+        dispatch(actions.setAllApexProjects(response));
+    }
+};
+export const getFilteredProjectsTC = (tag) => {
+    return async (dispatch) => {
+        const response = await WebsiteAPI.getAllProjects();
+        dispatch(actions.setAllApexProjects(response))
+        dispatch(actions.getFilteredProjectCards(tag));
+    }
+
+};
 export default projectsReducer;
+export const projectTemplate = {
+    id: v1(),
+    title: "",
+    client: "",
+    address: "",
+    locationCity: "",
+    locationState: "",
+    owner: "",
+    architect: "",
+    sf: "",
+    deliverySystem: "",
+    description: "",
+    tags: [],
+    projectVideo: "",
+    mainPhoto: "",
+    photos: []
+};

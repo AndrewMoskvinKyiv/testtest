@@ -7,6 +7,7 @@ import {PopUpTitleWithSlowUnderline} from "../common/PopUpTiTleWithSlowUnderline
 export const PersonalCard = ({card, setOpenModal, setShowedBio}) => {
     const [mouseOverId, setMouseOverId] = useState("");
     const [showTitle, setShowTitle] = useState(false);
+
     const onPersonCardHover = () => {
         setMouseOverId(card.id);
         let timer = setTimeout(()=> {
@@ -18,6 +19,11 @@ export const PersonalCard = ({card, setOpenModal, setShowedBio}) => {
     const onMouseLeaveHandler = () => {
         setMouseOverId("");
         setShowTitle(false);
+        let id = window.setTimeout(function() {}, 0);
+
+        while (id--) {
+            window.clearTimeout(id); // will do nothing if no timeout with id is present
+        }
     }
     const onClickHandler = () => {
         setOpenModal(true);
@@ -30,10 +36,12 @@ export const PersonalCard = ({card, setOpenModal, setShowedBio}) => {
              style={{backgroundImage: `url(${card.photo})`}}
              onMouseOver={onPersonCardHover}
              onMouseLeave={onMouseLeaveHandler}
-             onClick={onClickHandler}>
+             onClick={onClickHandler}
 
-            {card.name !== "general_photo" && <div className={S.personalCardTitle}>
-                {mouseOverId === card.id && <PopUpTitleWithSlowUnderline title={card.name} buttonName={'view bio'} showDivider={showTitle}/>}
+        >
+
+            {<div className={S.personalCardTitle}>
+                {mouseOverId === card.id && <PopUpTitleWithSlowUnderline title={card.name} callbackFunk={onClickHandler} buttonName={'view bio'} showDivider={showTitle}/>}
             </div>}
         </div>
     )

@@ -3,12 +3,29 @@ import ST from "./../../styles/title.module.css"
 import {Header} from "../../components/common/Header/Header";
 import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
 import * as React from "react";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {FooterBlock} from "../../components/common/Footer/Footer";
 import {CustomButton} from "../../components/common/CustomButtons/CustomButton/CustomButton";
+import {scrollUpFast} from "../Home/Home";
+import {useParams} from "react-router-dom";
 
 export default function Contacts() {
     const [menuView, setMenuView] = useState(false);
+    const [chosenTheme, setChosenTheme] = useState('general')
+
+    const {exact} = useParams();
+
+    const onChangeHandler = () => {
+        // eslint-disable-next-line no-restricted-globals
+        let value = event.target.value;
+        setChosenTheme(value);
+    }
+    useEffect(()=> {
+        if(exact !== undefined) {
+            setChosenTheme(exact);
+        }
+        scrollUpFast();
+    } , [])
     return (
         menuView ?
             <div>
@@ -41,10 +58,10 @@ export default function Contacts() {
 
                         </div>
                         <div className={S.topInputsContainer}>
-                            <select className={S.stringInput}>
-                                <option>General</option>
-                                <option>Careers</option>
-                                <option>Press</option>
+                            <select className={S.stringInput} value={chosenTheme} onChange={onChangeHandler}>
+                                <option value={'general'}>General</option>
+                                <option  value={'careers'}>Careers</option>
+                                <option  value={'press'}>Press</option>
                             </select>
                             <div className={S.form__group}>
                                 <input type="input" autoComplete= 'no' className={S.form__field} placeholder="Email" name="email" id='email'

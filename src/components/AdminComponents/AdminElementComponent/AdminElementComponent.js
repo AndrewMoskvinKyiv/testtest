@@ -1,33 +1,18 @@
 import * as React from "react";
 import S from "./AdminElementComponent.module.css"
 import {useEffect, useState} from "react";
-import {v1} from "uuid";
 
 
-export const AdminElementComponent = ({project, setModValue}) => {
+
+export const AdminElementComponent = ({project, setModValue, projectTemplate}) => {
     const [projectForCorrection, setProjectForCorrection] = useState({});
-    const projectTemplate = {
-        id: v1(),
-        title: "",
-        client: "",
-        address: "sdf",
-        locationCity: "",
-        locationState: "",
-        owner: "",
-        architect: "",
-        sf: "",
-        deliverySystem: "",
-        description: "",
-        tags: [],
-        projectVideo: "",
-        mainPhoto: "",
-        photos: []
-    };
+
     useEffect(() => {
         setProjectForCorrection(project);
     }, [project]);
-    const setModValueHandler = (el) => {
-        setModValue(el);
+    const setModValueHandler = ({el, modifiedObj}) => {
+
+        setModValue([el, modifiedObj]);
     }
     const modElementLenghtCutter = (valueString) => {
         if (typeof valueString === "string" && valueString.length > 20) {
@@ -41,8 +26,8 @@ export const AdminElementComponent = ({project, setModValue}) => {
     return (
         <div className={S.projectViewContainer}>
 
-            {Object.keys(projectTemplate).map((el) =>
-                <div className={S.modElement} onClick={setModValueHandler(el)}>
+            {Object.keys(project).length > 1 && Object.keys(projectTemplate).map((el) =>
+                <div key={el.id} className={S.modElement}  onClick={()=>setModValueHandler({el:el, modifiedObj: projectForCorrection})}>
                     <div className={S.modElementTitle}>{el}:</div>
                     {modElementLenghtCutter(projectForCorrection[el])}
                 </div>)}

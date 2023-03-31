@@ -20,6 +20,10 @@ export const router = createHashRouter([
         element: <Contacts />,
     },
     {
+        path: "/contacts/:exact",
+        element: <Contacts />,
+    },
+    {
         path: "/projects/project_view/:id",
         element: <ProjectView/>,
     },

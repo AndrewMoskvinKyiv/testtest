@@ -44,29 +44,8 @@
     padding: 20px;
     background-image: linear-gradient(90deg,#fff,hsla(0,0%,100%,.7));
     overflow-y: scroll;
-
-}
-.body {
-    flex: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    animation-delay: 500ms;
-
 }
 
-.title{
-    font-family: Nunito, sans-serif;
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #8d9382;
-    font-weight: 100;
-    text-align: left;
-    background-color: transparent;
-}
 .modalText{
     font-family: Nunito,sans-serif;
     font-size: 16px;
@@ -75,9 +54,15 @@
     text-transform: none;
     color: #8d9382;
 }
-.modalContainerInner{
-    display: flex;
-    flex-direction: column;
+.dataInput{
+    font-family: Nunito,sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: #2a1919;
+    width: 70%;
+    height: 200px;
 }
 .closeButton{
     position: absolute;
