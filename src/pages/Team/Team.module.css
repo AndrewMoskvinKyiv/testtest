@@ -184,15 +184,21 @@
 @media (max-width: 750px) {
     .teamTitle {
         line-height: 55px;
+
     }
     .joelFinder,
-    .lauraFinder,
     .paolaFinder {
         display: none;
     }
 }
 
 @media (max-width: 450px) {
+    .teamTop{
+        height: 60vh;
+    }
+    .teamTopOverlay{
+        height: 60vh;
+    }
     .teamTitle {
         font-size: 30px;
         line-height: 42px;
@@ -200,6 +206,7 @@
         padding: 10px 15px;
         background: transparent;
         border: 2px solid #000000;
+        margin-top: 0;
     }
 
     .teamTitleBottom {

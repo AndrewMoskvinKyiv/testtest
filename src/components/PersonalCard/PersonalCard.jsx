@@ -2,6 +2,7 @@ import * as React from "react";
 import S from "./PersonalCard.module.css"
 import {useState} from "react";
 import {PopUpTitleWithSlowUnderline} from "../common/PopUpTiTleWithSlowUnderline/PopUpTitleWithSlowUnderline";
+import noAccPhoto from "./../../assets/no-profile-picture-icon.webp"
 
 
 export const PersonalCard = ({card, setOpenModal, setShowedBio}) => {
@@ -33,11 +34,10 @@ export const PersonalCard = ({card, setOpenModal, setShowedBio}) => {
     return (
         <div
              className={`${S.personalCardContainer}  animate__animated animate__fadeIn`}
-             style={{backgroundImage: `url(${card.photo})`}}
+             style={card.photo ? {backgroundImage: `url(${card.photo})`}: {backgroundImage: `url(${noAccPhoto})`} }
              onMouseOver={onPersonCardHover}
              onMouseLeave={onMouseLeaveHandler}
              onClick={onClickHandler}
-
         >
 
             {<div className={S.personalCardTitle}>

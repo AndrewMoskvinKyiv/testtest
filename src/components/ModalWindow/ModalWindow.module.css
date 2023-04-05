@@ -4,6 +4,7 @@
     position: fixed;
     left: 0; top: 0; right: 0; bottom: 0;
     z-index: 6;
+
 }
 .modalOverlay{
     position: absolute;
@@ -31,6 +32,7 @@
     flex-direction: column;
     z-index: 15;
     filter: grayscale(1);
+
 
     background-size: cover;
     background-repeat: no-repeat;
@@ -78,6 +80,8 @@
 .modalContainerInner{
     display: flex;
     flex-direction: column;
+
+
 }
 .closeButton{
     position: absolute;
@@ -85,11 +89,24 @@
     right: 30px;
     cursor: pointer;
     z-index: 10;
+
 }
 @media (max-width: 750px) {
     .modalContainer{
         top:0;
         height: 100%;
         z-index: 150 !important;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: 1px;
+        background-position-y: 1px;
+    }
+    .modalContainerInner{
+        margin-top: 100px;
+
+    }
+    .closeButton{
+        top: 100px;
     }
 }
