@@ -13,6 +13,14 @@
    justify-content: center;
    gap: 20px;
    align-items: center;
+   width: 90%;
+   position: relative;
+}
+.goAwayBtn{
+   position: absolute;
+   top:0;
+   right: 10px;
+   cursor: pointer;
 }
 .contentWrapper{
    max-width: 1450px;

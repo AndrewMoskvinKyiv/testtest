@@ -71,7 +71,7 @@
 }
 .closeButton{
     position: absolute;
-    top:0;
+    top:20px;
     right: -60px;
     cursor: pointer;
     z-index: 10;

@@ -1,5 +1,4 @@
 import {WebsiteAPI} from "../../API/WebsiteApi";
-import {log} from "video.js";
 import {v1} from "uuid";
 
 
@@ -72,7 +71,9 @@ export const getAllProjectsTC = () => {
     return async (dispatch) => {
         const response = await WebsiteAPI.getAllProjects();
         dispatch(actions.setAllApexProjects(response));
+        return response;
     }
+
 };
 export const getFilteredProjectsTC = (tag) => {
     return async (dispatch) => {

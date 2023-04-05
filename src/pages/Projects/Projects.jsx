@@ -6,9 +6,8 @@ import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
 import {ProjectCard} from "../../components/ProjectCard/ProjectCard";
 import {FooterBlock} from "../../components/common/Footer/Footer";
 import {useDispatch, useSelector} from "react-redux";
-import {actions, getAllProjectsTC, getFilteredProjectsTC} from "../../store/projectsReducer/projectsReducer";
+import {getAllProjectsTC, getFilteredProjectsTC} from "../../store/projectsReducer/projectsReducer";
 import {scrollUpFast} from "../Home/Home";
-
 
 export const Projects = () => {
     const dispatch = useDispatch();
@@ -17,6 +16,7 @@ export const Projects = () => {
     const [menuView, setMenuView] = useState(false);
     const [showProjectTypeDropdown, setShowProjectTypeDropdown] = useState(false);
     const [showLocationDropdown, setShowLocationDropdown] = useState(false);
+
 
 
     useEffect(()=> {

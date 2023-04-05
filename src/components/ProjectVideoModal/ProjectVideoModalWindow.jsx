@@ -10,7 +10,7 @@ export const ProjectVideoModalWindow = ({setOpenVideoModal, videoLink}) => {
           <div className={S.modalOverlay}>
             <div className={S.modalContainer}>
                 <img className={S.closeButton} src={closeBtn} onClick={onCloseClickHandler} alt='closeButton'/>
-                <video controls className={S.modalVideoPlayer}>
+                <video controls autoPlay className={S.modalVideoPlayer}>
                     <source src={videoLink} type="video/mp4"/>
                 </video>
             </div>

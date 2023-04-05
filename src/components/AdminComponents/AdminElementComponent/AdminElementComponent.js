@@ -1,6 +1,7 @@
 import * as React from "react";
 import S from "./AdminElementComponent.module.css"
 import {useEffect, useState} from "react";
+import {v4 as uuidv4} from "uuid";
 
 
 
@@ -27,7 +28,7 @@ export const AdminElementComponent = ({project, setModValue, projectTemplate}) =
         <div className={S.projectViewContainer}>
 
             {Object.keys(project).length > 1 && Object.keys(projectTemplate).map((el) =>
-                <div key={el.id} className={S.modElement}  onClick={()=>setModValueHandler({el:el, modifiedObj: projectForCorrection})}>
+                <div key={uuidv4()} className={S.modElement}  onClick={()=>setModValueHandler({el:el, modifiedObj: projectForCorrection})}>
                     <div className={S.modElementTitle}>{el}:</div>
                     {modElementLenghtCutter(projectForCorrection[el])}
                 </div>)}

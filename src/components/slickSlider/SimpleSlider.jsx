@@ -24,7 +24,7 @@ export const SimpleSlider = () => {
         infinite: true,
         autoplay: true,
         autoplaySpeed: 23000,
-        speed: 500,
+        speed: 20,
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,

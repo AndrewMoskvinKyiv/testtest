@@ -10,11 +10,14 @@ import {ProjectPhoto} from "../Projects/ProjectPhoto/ProjectPhoto";
 import {scrollUpFast} from "../Home/Home";
 import play1 from "./../../assets/play.png"
 import {ProjectVideoModalWindow} from "../../components/ProjectVideoModal/ProjectVideoModalWindow";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {getAllProjectsTC} from "../../store/projectsReducer/projectsReducer";
+import {v4 as uuidv4} from "uuid";
 
 
 export const ProjectView = () => {
-    const projects = useSelector(state => state.projects);
+    const projects = useSelector(state => state.projects.projects);
+    const dispatch = useDispatch();
 
     const [menuView, setMenuView] = useState(false);
     const [element, setElement] = useState({});
@@ -34,10 +37,16 @@ export const ProjectView = () => {
 
     useEffect(() => {
         scrollUpFast();
-        let currentProgect = projects.projects.find((el) => el.id === +id);
-        setElement(currentProgect);
-        }, [])
-
+        if (projects.length < 2) {
+            dispatch(getAllProjectsTC()).then((data)=> {
+               const currentProgect = data.find((el) => el.id === +id);
+                setElement(currentProgect);
+            });
+        } else {
+            const currentProgect = projects.find((el) => el.id === +id);
+            setElement(currentProgect);
+        }
+        }, []);
 
     return (
         menuView ?
@@ -46,9 +55,12 @@ export const ProjectView = () => {
                 <MobileMenu/>
             </div>
             :
+
             <div className={S.projectViewContainer}>
 
-                <Header setMenuView={setMenuView} menuView={menuView}/>
+                {Object.keys(element).length > 0 ?
+                    <div>
+                    <Header setMenuView={setMenuView} menuView={menuView}/>
                 <div className={S.detailBlockExtention}
                      onClick={() => setExtendedBlock({isPaneOpenLeft: true})}>Details
                 </div>
@@ -88,7 +100,7 @@ export const ProjectView = () => {
 
 
 
-                    {element.photos && element.photos.map((photo) => <ProjectPhoto photo={photo}/>)}
+                    {element.photos && element.photos.map((photo) => <ProjectPhoto key={uuidv4()} photo={photo}/>)}
                 </section>
                 {openVideoModal &&
 
@@ -98,6 +110,6 @@ export const ProjectView = () => {
 
             }
                 <FooterBlock/>
-            </div>
+                    </div> : <span>PRELOADER!!!</span>}</div>
     )
 }

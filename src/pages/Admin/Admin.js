@@ -1,6 +1,6 @@
 import * as React from "react";
 import S from "./Admin.module.css"
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Header} from "../../components/common/Header/Header";
 import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
 import {CustomButton} from "../../components/common/CustomButtons/CustomButton/CustomButton";
@@ -8,28 +8,41 @@ import {useDispatch, useSelector} from "react-redux";
 import axios from "axios";
 import {AdminElementComponent} from "../../components/AdminComponents/AdminElementComponent/AdminElementComponent";
 import {AdminModal} from "../../components/AdminComponents/AdminModal/AdminModal";
-import {v1} from "uuid";
 import {actionsTeam, teamMemberTemplate} from "../../store/teamReducer/teamReducer";
 import {actions, projectTemplate} from "../../store/projectsReducer/projectsReducer";
+import {PageForAuthorization} from "../PageForAuthorization/PageForAuthorization";
+import goAway from "./../../assets/icons8-emergency-exit-50.png"
 
 
 export const Admin = () => {
     const dispatch = useDispatch();
     const projects = useSelector(state => state.projects);
     const team = useSelector(state => state.team.team);
+    const [isAuthorized, setAuthorized] = useState(false);
+
+
 
     const [menuView, setMenuView] = useState(false);
     const [adminFile, setAdminFile] = useState('');
     const [popUp, setPopUp] = useState(false);
-
-    const [currentModificatedDataObject, setCurrentModificatedDataObject] = useState({});
     const [modValue, setModValue] = useState([])
+    const [currentModificatedDataObject, setCurrentModificatedDataObject] = useState({});
+
+    useEffect(()=> {
+        if (localStorage.getItem('isAdminAuthorized') === 'true'){
+            setAuthorized(true);
+        }
+    },[])
 
     const projectFetching = () => {
         setAdminFile('projects');
     };
     const teamFetching = () => {
         setAdminFile('team');
+    }
+    const goAwayBtnHandler = () => {
+        localStorage.clear('isAdminAuthorized');
+        window.location.hash = '/'
     }
     const onAddNewProject = () => {
         if (adminFile === "projects") {
@@ -109,11 +122,14 @@ export const Admin = () => {
                 </div>
                 :
                 <div>
+                <div>
                     <Header setMenuView={setMenuView} menuView={menuView}/>
+                    {!isAuthorized ? <PageForAuthorization setAuthorized={setAuthorized}/> :
                     <div className={S.admin_home}>
                         <div className={S.linksWrapper}>
                             <CustomButton name={'projects'} callback={projectFetching}/>
                             <CustomButton name={'Team Members'} callback={teamFetching}/>
+                            <img className={S.goAwayBtn} src={goAway} onClick={goAwayBtnHandler}/>
                         </div>
                         <div className={S.contentWrapper}>
                             <div className={S.projectTitleWrapper}>
@@ -162,7 +178,7 @@ export const Admin = () => {
                             <div style={{color: 'green', fontWeight: "bold"}}>Success!!!</div>
                             <div>Data was changed!;)</div>
                         </div>}
-                    </div>
+                    </div>}
                     {Object.keys(modValue).length > 0 &&
                         <AdminModal
                             setModValue={setModValue}
@@ -171,5 +187,6 @@ export const Admin = () => {
                         />}
 
                 </div>
+                    </div>
         )
     }

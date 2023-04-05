@@ -9,7 +9,10 @@ import {CustomButton} from "../../components/common/CustomButtons/CustomButton/C
 import {scrollUpFast} from "../Home/Home";
 import {useParams} from "react-router-dom";
 
+
+
 export default function Contacts() {
+
     const [menuView, setMenuView] = useState(false);
     const [chosenTheme, setChosenTheme] = useState('general')
 
@@ -21,11 +24,12 @@ export default function Contacts() {
         setChosenTheme(value);
     }
     useEffect(()=> {
+
         if(exact !== undefined) {
             setChosenTheme(exact);
         }
         scrollUpFast();
-    } , [])
+    } , [exact])
     return (
         menuView ?
             <div>
