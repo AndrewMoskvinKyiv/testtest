@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c72a8764-17d8-4c96-8bde-33881bc70f82" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/useIntersection/useIntersection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/slickSlider/SimpleSlider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slickSlider/SimpleSlider.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Contacts/Contacts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contacts/Contacts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Projects/Projects.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Projects/Projects.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MobileMenu/MobileMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MobileMenu/MobileMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MobileMenu/MobileMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MobileMenu/MobileMenu.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PersonalCard/PersonalCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PersonalCard/PersonalCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PersonalCard/PersonalCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PersonalCard/PersonalCard.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProjectView/ProjectView.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Team/Team.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Team/Team.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +35,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/cash/tk_online&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Apex/testtest&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -49,11 +53,11 @@
       <recent name="C:\Apex\apex_test\src\assets\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Apex\testtest\src\assets" />
       <recent name="C:\Apex\apex_test\src\assets" />
       <recent name="C:\Apex\apex_test\src\pages\Home" />
       <recent name="C:\Apex\apex_test\src\pages\NotFound" />
       <recent name="C:\Apex\apex_test\src\pages\Contacts" />
-      <recent name="C:\Apex\apex_test\src\fonts" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -102,6 +106,8 @@
       <workItem from="1679565460229" duration="21686000" />
       <workItem from="1679905313767" duration="14164000" />
       <workItem from="1680391057750" duration="4984000" />
+      <workItem from="1680525250064" duration="29935000" />
+      <workItem from="1680772937050" duration="3911000" />
     </task>
     <servers />
   </component>

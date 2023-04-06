@@ -33,7 +33,7 @@
     -webkit-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
     font-family: 'Apexnewweb book',sans-serif;
-    color: #e31313;
+    color: #fa0303;
     font-weight: 500;
     letter-spacing: 4px;
     text-decoration: none;
@@ -42,6 +42,10 @@
     font-size: 42px;
     line-height: 48px;
     text-align: center;
+}
+
+:root {
+    --animate-delay: 0.1s;
 }
 @media (max-width: 550px) {
     .menuLink{

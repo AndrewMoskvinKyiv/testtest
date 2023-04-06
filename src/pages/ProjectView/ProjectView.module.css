@@ -194,7 +194,9 @@
 @media (max-width: 750px) {
     .topTitle{
         line-height: 55px;
-
+    }
+    .topBlockTextWrapper{
+        width: 95%;
     }
 }
 @media (max-width: 450px) {

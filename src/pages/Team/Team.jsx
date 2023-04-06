@@ -12,6 +12,9 @@ import {scrollUpFast} from "../Home/Home";
 import {useNavigate} from "react-router-dom";
 
 
+
+
+
 export const Team = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -22,13 +25,11 @@ export const Team = () => {
     const [showedBio, setShowedBio] = useState({});
     const [personTitle, setPersonTitle] = useState('');
 
+
     useEffect(()=> {
         dispatch(getAllTeamMembersTC());
         scrollUpFast();
     },[])
-
-
-
     const onMouseOver = (person) => {
         setPersonTitle(person);
     };
@@ -95,8 +96,9 @@ export const Team = () => {
                     </div>
 
                 </section>
+
                 <section className={S.teamPhotos}>
-                    {teamArr.map((card) =>
+                    {teamArr.map((card,i) =>
                             <PersonalCard
                             key={card.id}
                             card={card}
