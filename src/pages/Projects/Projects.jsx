@@ -43,12 +43,16 @@ export const Projects = () => {
             <div>
                 <Header setMenuView={setMenuView} menuView={menuView}/>
                 <div className={S.topWrapper}>
+
+
                     <div className={S.videoBlockWrapper}>
                         <div className={S.videoBlockOverlayWrapper}></div>
                         <video autoPlay muted loop className={S.projectsBlockVideoBg}>
                             <source src="https://apextest12.b-cdn.net/newEnglandstreched.mp4" type="video/mp4"/>
                         </video>
                     </div>
+
+
                     <h1 className={S.projectTitle}>ALL PROJECTS</h1>
 
 

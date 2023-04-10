@@ -80,6 +80,15 @@
     align-self: center;
     text-align: center;
 }
+.bodySection{
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #8d9382;
+}
+.servicesImg{
+    width: 120px;
+}
 @media (max-width: 950px) {
     .servicesTitle{
         font-size: 62px;
