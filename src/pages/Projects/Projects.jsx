@@ -8,6 +8,7 @@ import {FooterBlock} from "../../components/common/Footer/Footer";
 import {useDispatch, useSelector} from "react-redux";
 import {getAllProjectsTC, getFilteredProjectsTC} from "../../store/projectsReducer/projectsReducer";
 import {scrollUpFast} from "../Home/Home";
+import Slider from "react-slick";
 
 export const Projects = () => {
     const dispatch = useDispatch();
@@ -17,7 +18,17 @@ export const Projects = () => {
     const [showProjectTypeDropdown, setShowProjectTypeDropdown] = useState(false);
     const [showLocationDropdown, setShowLocationDropdown] = useState(false);
 
-
+    const settings = {
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2300000,
+        speed: 20,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        arrows:false,
+    };
 
     useEffect(()=> {
         dispatch(getAllProjectsTC());
@@ -47,9 +58,15 @@ export const Projects = () => {
 
                     <div className={S.videoBlockWrapper}>
                         <div className={S.videoBlockOverlayWrapper}></div>
-                        <video autoPlay muted loop className={S.projectsBlockVideoBg}>
-                            <source src="https://apextest12.b-cdn.net/newEnglandstreched.mp4" type="video/mp4"/>
-                        </video>
+                        <Slider {...settings}>
+                            <div >
+                                <video
+                                    className={S.projectsBlockVideoBg}
+                                    autoPlay="autoplay" muted loop playsInline>
+                                    <source src="https://apextest12.b-cdn.net/newEnglandstreched.mp4" type="video/mp4"/>
+                                </video>
+                            </div>
+                        </Slider>
                     </div>
 
 
