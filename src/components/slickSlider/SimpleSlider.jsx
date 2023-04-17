@@ -98,7 +98,7 @@ export const SimpleSlider = () => {
                 <video
                     className={S.myVideo}
                     autoPlay="autoplay" muted loop playsInline>
-                    <source src="https://apextest12.b-cdn.net/vid4.mp4" type="video/mp4"/>
+                    <source src="https://apextest12.b-cdn.net/projects/A%20top%20projects%20video/SchoolShort_Long%20ss.mp4" type="video/mp4"/>
                 </video>
 
             </div>

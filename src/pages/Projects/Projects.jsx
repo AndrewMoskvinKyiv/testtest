@@ -56,21 +56,29 @@ export const Projects = () => {
                 <div className={S.topWrapper}>
 
 
-                    <div className={S.videoBlockWrapper}>
+
+
+
+
+                    <div className={S.videoBlockWrapper}
+
+                    >
+
                         <div className={S.videoBlockOverlayWrapper}></div>
                         <Slider {...settings}>
-                            <div >
+                            <div>
                                 <video
                                     className={S.projectsBlockVideoBg}
                                     autoPlay="autoplay" muted loop playsInline>
-                                    <source src="https://apextest12.b-cdn.net/newEnglandstreched.mp4" type="video/mp4"/>
+                                    <source src="https://apextest12.b-cdn.net/projects/A%20top%20projects%20video/proj_top1.mp4" type="video/mp4"/>
                                 </video>
                             </div>
                         </Slider>
+                        <h1 className={S.projectTitle}>ALL PROJECTS</h1>
                     </div>
 
 
-                    <h1 className={S.projectTitle}>ALL PROJECTS</h1>
+
 
 
                     <div className={S.buttonsContainer}>
