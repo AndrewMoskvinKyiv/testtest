@@ -16,13 +16,13 @@ export default function  NavigationPanel() {
                     <Link className={S.headerLink} to={`/projects`}>projects</Link>
                 </li>
                 <li>
-                    <Link className={S.headerLink} to={`/team`}>about</Link>
+                    <Link className={S.headerLink} to={`/team`}>team</Link>
                 </li>
                 <li>
                     <Link className={S.headerLink} to={`/contacts`}>contacts</Link>
                 </li>
                 <li>
-                    <Link className={S.headerLink} to={`/services`}>services</Link>
+                    <Link className={S.headerLink} to={`/services`}>about apex + services</Link>
                 </li>
 
             </ul>

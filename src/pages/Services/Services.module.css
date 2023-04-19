@@ -9,10 +9,11 @@
     background-size: cover;
     position: relative;
 }
+
 .topWrapper:after {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: black;
@@ -20,6 +21,7 @@
     filter: contrast(200%);
     content: '';
 }
+
 .servicesTitle {
     margin-top: 80px;
     margin-bottom: 40px;
@@ -35,7 +37,8 @@
     width: 70%;
     z-index: 4;
 }
-.textTitleContainer{
+
+.textTitleContainer {
     max-width: 90%;
     width: 100%;
     z-index: 4;
@@ -44,18 +47,21 @@
     justify-content: center;
     align-items: center;
 }
-.topWrapper_servicesTitle{
+
+.topWrapper_servicesTitle {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
+
 .topBlockHr {
     height: 1px;
     width: 35%;
     background-color: #b6bdab;
 }
-.servicesInnerTitle{
+
+.servicesInnerTitle {
     font-family: 'Apexnewweb book', sans-serif;
     width: 50%;
     margin-right: 10px;
@@ -67,7 +73,8 @@
     font-size: 16px;
     line-height: 20px;
 }
-.servicesText{
+
+.servicesText {
     margin-top: 0;
     width: 100%;
     margin-bottom: 30px;
@@ -80,37 +87,164 @@
     align-self: center;
     text-align: center;
 }
-.bodySection{
-    height: 120vh;
+
+.bodySection {
+    display: flex;
+    height: 100vh;
+}
+
+.bodyContainer {
+    width: 100%;
+    background: url("https://apextest12.b-cdn.net/generalPhotosApex/iStock-1028568006.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.bodyContainerOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f3f3ef;
+    opacity: 80%;
+    z-index: 8;
+    filter: grayscale(0);
+
+}
+
+.bodyContainerTextPart {
+    z-index: 100;
+    width: 30%;
+    background: #465644;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #8d9382;
+    justify-content: space-around;
+    padding-left: 30px;
+    padding-right: 30px;
 }
-.servicesImg{
-    width: 120px;
-}
-@media (max-width: 950px) {
-    .servicesTitle{
-        font-size: 62px;
 
-    }
+.bodyContainerContentPart {
+    z-index: 100;
+    width: 60%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
 }
+
+.bodyContainerTitle {
+    font-family: 'Apexnewweb book', sans-serif;
+    color: #6c6262;
+    font-size: 60px;
+    line-height: 25px;
+    font-weight: 600;
+    position: relative;
+    text-align: left;
+    padding: 20px 10px 20px 10px;
+
+
+}
+.bodyContainerTitle:after{
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    height: 3px;
+    width: 400px;
+    background: #6c6262;
+}
+
+.servicesTitles {
+    font-family: 'Apexnewweb book', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 42px;
+    text-transform: uppercase;
+    font-weight: 300;
+    position: relative;
+    text-align: center;
+    border: 4px solid #e7dfe0;
+    border-radius: 10px;
+    padding: 20px 10px 20px 10px;
+
+}
+.servicesDescriptionText{
+    font-family: 'Apexnewweb book', sans-serif;
+    color: #696262;
+    text-align: left;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 600;
+    position: relative;
+}
+
+@media (max-width: 950px) {
+    .bodyContainerTextPart{
+        z-index: 100;
+        width: 100%;
+        background: #465644;
+        position: absolute;
+        left: 0;
+        top: 75%;
+        height: 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .servicesTitles{
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        font-weight: 300;
+        position: relative;
+        text-align: center;
+        border: 2px solid #e7dfe0;
+        border-radius: 10px;
+        padding: 10px 50px 10px 50px;
+    }
+    .servicesTitle {
+        font-size: 62px;
+    }
+    .bodyContainerContentPart {
+        width: 100%;
+        right: 0;
+        top: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+}
+
 @media (max-width: 750px) {
-    .servicesTitle{
+    .servicesTitle {
         line-height: 55px;
 
     }
 }
+
 @media (max-width: 450px) {
     .servicesTitle {
         font-size: 30px;
         line-height: 42px;
         letter-spacing: 5px;
-        padding: 10px 15px ;
+        padding: 10px 15px;
         background: transparent;
-        border:2px solid #d0c9c9;
+        border: 2px solid #d0c9c9;
     }
-    .servicesText{
+
+    .servicesText {
         font-size: 18px;
         max-width: 100%;
     }

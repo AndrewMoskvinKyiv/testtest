@@ -52,7 +52,7 @@ export const Admin = () => {
         }
     }
         const onDeleteProjectPress = () => {
-            const fileToChange = adminFile === 'team' ? "apex_team.json" : "apex_projects(12).json";
+            const fileToChange = adminFile === 'team' ? "apexTeam.json" : "apexProjects.json";
             const session = axios.create();
             let objectToSend = adminFile === 'team' ? [...team] : [...projects.projects];
             let positionOfReplacedElement = objectToSend.find((el) => el.id === currentModificatedDataObject.id);
@@ -62,7 +62,7 @@ export const Admin = () => {
 
             adminFile === 'team' ? dispatch(actionsTeam.deletePersonalCardInfo(objectToSend)):
                 dispatch(actions.deleteExactProjectCard(objectToSend));
-            session.put(`https://ny.storage.bunnycdn.com/apextest/${fileToChange}`, objectToSend, {
+            session.put(`https://apextest12.b-cdn.net/apex_data/${fileToChange}`, objectToSend, {
                 headers: {
                     AccessKey: '67fbf3d6-627c-4475-a1153abb5c81-8690-4880',
                     accept: '*/*'
@@ -81,7 +81,7 @@ export const Admin = () => {
             setCurrentModificatedDataObject(chosenProject)
         }
         const onSaveProjectsFilePress = () => {
-        const fileToChange = adminFile === 'team' ? "apex_team.json" : "apex_projects(12).json";
+        const fileToChange = adminFile === 'team' ? "apexTeam.json" : "apex_projects(12).json";
             const session = axios.create();
             let objectToSend = adminFile === 'team' ? [...team] : [...projects.projects];
             let positionOfReplacedElement = objectToSend.find((el) => el.id === currentModificatedDataObject.id);
@@ -96,7 +96,7 @@ export const Admin = () => {
             }
             adminFile === 'team' ? dispatch(actionsTeam.updatePersonalCardInfo(objectToSend)):
                 dispatch(actions.updateProjectCardInfo(objectToSend));
-            session.put(`https://ny.storage.bunnycdn.com/apextest/${fileToChange}`, objectToSend, {
+            session.put(`https://apextest12.b-cdn.net/${fileToChange}`, objectToSend, {
                 headers: {
                     AccessKey: '67fbf3d6-627c-4475-a1153abb5c81-8690-4880',
                     accept: '*/*'

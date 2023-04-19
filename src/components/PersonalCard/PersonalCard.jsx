@@ -21,11 +21,6 @@ export const PersonalCard = ({card, setOpenModal, setShowedBio}) => {
     const onMouseLeaveHandler = () => {
         setMouseOverId("");
         setShowTitle(false);
-        // let id = window.setTimeout(function() {}, 0);
-        //
-        // while (id--) {
-        //     window.clearTimeout(id); // will do nothing if no timeout with id is present
-        // }
     }
     const onClickHandler = () => {
         setOpenModal(true);

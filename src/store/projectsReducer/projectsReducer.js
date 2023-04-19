@@ -98,6 +98,7 @@ export const projectTemplate = {
     description: "",
     tags: [],
     projectVideo: "",
+    projectPanorama: "",
     mainPhoto: "",
     photos: []
 };

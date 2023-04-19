@@ -45,7 +45,7 @@
 }
 
 :root {
-    --animate-delay: 0.1s;
+    --animate-delay: 0.1s !important;
 }
 @media (max-width: 550px) {
     .menuLink{

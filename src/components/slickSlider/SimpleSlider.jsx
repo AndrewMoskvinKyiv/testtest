@@ -34,20 +34,25 @@ export const SimpleSlider = () => {
 
         beforeChange: (current) => {
             setShowDivider(false);
+            console.log(current);
             switch(current) {
                 case 0:
                     setCurrentSlide({title:'Mokena Park District',text:'Chicago,IL',buttonName:'view Project', id: 1132})
 
                     break;
                 case 1:
-                    setCurrentSlide({title:'rocks',text:'someplace',buttonName:'view Project'})
+                    setCurrentSlide({title:'1123 W. RANDOLPH',text:'Chicago,IL',buttonName:'view Project',id: 1125})
 
                     break;
                 case 2:
+                    setCurrentSlide({title:'HOLLYWOOD ELEMENTARY',text:'Chicago,IL',buttonName:'view Project', id: 1131})
+
+                    break;
+                case 3:
                     setCurrentSlide({title:'verandah townhomes',text:'Chicago,IL',buttonName:'view Project', id: 1133})
 
                     break;
-                default:
+                    default:
                     setCurrentSlide({title:'some_progect',text:'somewhere',buttonName:'view Project'})
 
             }
@@ -98,7 +103,14 @@ export const SimpleSlider = () => {
                 <video
                     className={S.myVideo}
                     autoPlay="autoplay" muted loop playsInline>
-                    <source src="https://apextest12.b-cdn.net/projects/A%20top%20projects%20video/SchoolShort_Long%20ss.mp4" type="video/mp4"/>
+                    <source src="https://apextest12.b-cdn.net/videos/MainPage_videos/Rendalf.mp4" type="video/mp4"/>
+                </video>
+            </div>
+            <div>
+                <video
+                    className={S.myVideo}
+                    autoPlay="autoplay" muted loop playsInline>
+                    <source src=" https://apextest12.b-cdn.net/videos/MainPage_videos/elementary.mp4" type="video/mp4"/>
                 </video>
 
             </div>

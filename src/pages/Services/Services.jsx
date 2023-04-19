@@ -2,15 +2,36 @@ import React, {useState} from "react";
 import {Header} from "../../components/common/Header/Header";
 import {MobileMenu} from "../../components/MobileMenu/MobileMenu";
 import S from "./Services.module.css"
-import ST from "./../../styles/title.module.css"
 import {FooterBlock} from "../../components/common/Footer/Footer";
-import preConstruction from "./../../assets/architect.png"
-import generalContructing from "./../../assets/agreement.png"
-import constructionManagement from "./../../assets/engineering.png"
-import designBuilding from "./../../assets/sketch.png"
+import {v4 as uuidv4} from "uuid";
+
 
 export const Services = () => {
     const [menuView, setMenuView] = useState(false);
+    const servicesArray = ['Pre Construction', 'General Contracting', 'Construction Management', 'Design Build'];
+    const [typeOfService, setTypeOfService] = useState('Pre Construction');
+    const servicesTexts = {
+        'Pre Construction': "Our Preconstruction Services provide our client with an upfront peace of mind by resolving potential project challenges prior to construction, reducing project risks, and identifying areas for cost savings.\n" +
+            "\n" +
+            "APEX’s, Preconstruction Services are a critical component and lends to the success  of the owners project. Our PC services are offered in the development, design and construction phases. <br/><br/><strong>APEX offers:</strong>\n" +
+            "\n<ul >" +
+            "<li style='list-style: square'>Design Direction\n</li>" +
+            "<li style='list-style: square'>Value Engineering\n</li>" +
+            "<li style='list-style: square'>Refined Scheduling\n</li>" +
+            "<li style='list-style: square'>Zoning & Permitting Management\n</li>" +
+            "<li style='list-style: square'>Constructability Analysis</li>" +
+            "</ul>",
+
+        'General Contracting': "APEX is one of the top General Contractors in the Chicagoland area. As a leading GC, we have created innovative systems and retained skilled professionals responsible for the day-to-day oversight of our client’s construction project.\n" +
+            "\n" +
+            "Our team provides successful management of vendors and trades, and the communication of information to all involved parties throughout the course of a building project. It is our sole responsibility to keep the quality, schedule, and budget in line with the client’s goals for their project.",
+        'Construction Management': "APEX offers meticulous Construction Management services where we  that use specialized, project management techniques to oversee the planning, design, and construction of  our clients projects, from its beginning to its end.",
+        'Design Build': "APEX’s Design-Build delivery system manages the designer and contractor work together from the beginning, as a team, providing unified project recommendations to fit the Owner’s schedule and budget, leading to collaborative problem-solving and innovation."
+
+    }
+    const onServiceClick = (type) => {
+        setTypeOfService(type);
+    }
     return (
         menuView ?
             <div>
@@ -23,36 +44,63 @@ export const Services = () => {
                 <div className={S.topWrapper}
                      style={{backgroundImage: `url(https://apextest12.b-cdn.net/projects/Oakbrook%20Office/wasPSD.jpg)`}}>
                     <div className={S.textTitleContainer}>
-                        <h1 className={S.servicesTitle}>services</h1>
+                        <h1 className={S.servicesTitle}>DISCOVER APEX</h1>
                         <div className={S.topWrapper_servicesTitle}>
                             <div className={S.topBlockHr}></div>
-                            <p className={S.servicesInnerTitle}>Value-added services on every project!</p>
+                            <p className={S.servicesInnerTitle}>APEX is dedicated to providing a superior building
+                                experience to our clients.</p>
                             <div className={S.topBlockHr}></div>
                         </div>
-                        <p className={S.servicesText}>Whether serving as a General Contractor, Construction Manager or
-                            Design-Builder,
-                            APEX Construction Group offers full-service construction capabilities through all phases of
-                            development,
-                            from feasibility to commissioning.
+                        <p className={S.servicesText}>Our goal is to ensure your building project meets and receives the
+                            highest level of client satisfaction.
 
-                            Verticle construction projects typically involve structures that house a wide range of
-                            functions and
-                            facilities. Our innovated approach allows us to provide value-design, value-engineering and
-                            lean construction
-                            of your building.
+                            And APEX has put in the time and resources to ensure we deliver on our promise by employing
+                            and retaining experienced, qualified Project Management professionals, investing in building
+                            systems technology ensuring quality, lean construction, identifying and maintaining a
+                            diverse pool of top performing subcontractors, integrating top-level executives to oversee
+                            all projects, and by providing a stringent Site Safety Manager and the top safety consulting
+                            firms to monitor safety procedures.
 
-                            Our hard-won reputation for successful project completions is a direct outcome of our
-                            superior ability
-                            to manage the schedule, the scope, the contractors and the total quality of the project.
+                            Apex has been defined by our repeat clients, as a company with a desire to build strong
+                            relationships, built on trust, consistency, and the overall goal of saving money, time and
+                            peace of mind for our clients.
+
+                            Successful building projects come from good people, working with great companies that donate
+                            hard-working, qualified professionals to their client’s projects.
+
+                            APEX Construction Group, good people, building for great clients.
                         </p>
                     </div>
                 </div>
+
+
                 <section className={S.bodySection}>
-                    <img className={S.servicesImg} src={preConstruction}/>
-                    <img className={S.servicesImg} src={generalContructing}/>
-                    <img className={S.servicesImg} src={constructionManagement}/>
-                    <img className={S.servicesImg} src={designBuilding}/>
+
+                    <div className={S.bodyContainer}>
+                        <div className={S.bodyContainerOverlay}></div>
+                        <div className={S.bodyContainerTextPart}>
+                            {servicesArray.map((el) =>
+                                <div key={uuidv4()}>
+                                    <h2 className={S.servicesTitles}
+                                        onClick={() => onServiceClick(el)}
+                                        style={{
+                                            marginLeft: typeOfService === el && '10px',
+                                            boxShadow: typeOfService === el && 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px'
+                                        }}>
+                                        {el}
+                                    </h2>
+                                </div>)}
+                        </div>
+                        <div className={S.bodyContainerContentPart}>
+                            <h1 className={S.bodyContainerTitle}>Our Services</h1>
+                            <p className={S.servicesDescriptionText}  dangerouslySetInnerHTML={{__html: servicesTexts[typeOfService]}}>
+
+                            </p>
+                        </div>
+                    </div>
+
                 </section>
+
                 <FooterBlock/>
             </div>
     )

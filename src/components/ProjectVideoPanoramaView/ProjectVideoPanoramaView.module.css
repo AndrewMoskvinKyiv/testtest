@@ -28,10 +28,6 @@
     background-position-y: -70px;
     background-color: #1f0b0b;
 }
-.panoramaContainer{
-    position: relative;
-    height: 100%;
-}
 .modalContainerInnerOverlay{
     width: 100%;
     height: 100%;
@@ -40,14 +36,17 @@
     overflow-y: scroll;
 
 }
- .body {
+.panoramaContainer{
+    width: 100%;
+    border:2px solid red;
+}
+.body {
     flex: 50%;
     display: flex;
-     flex-direction: column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     animation-delay: 500ms;
-
 }
 
 .title{
@@ -73,39 +72,18 @@
     display: flex;
     flex-direction: column;
 }
-.closeButtonPanorama{
+.closeButton{
     position: absolute;
-    top:-10px;
-    right: 20px;
+    top:20px;
+    right: -60px;
     cursor: pointer;
-    z-index: 1000 ;
+    z-index: 10;
     transition: all 0.5s;
-}
-.closeButtonPanorama:hover{
-    rotate: z 90deg;
 }
 .closeButton:hover{
     rotate: z 90deg;
 }
-.modeSwither{
-    color: white;
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-.switherContainer{
-    visibility: hidden;
-}
-.toggleLink {
-    font-family: 'Apexnewweb book',sans-serif;
-    color: white;
-    font-size: 16px;
-    line-height: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-}
+
 @media (max-width: 1000px) {
     .modalContainer{
         width: 80%;

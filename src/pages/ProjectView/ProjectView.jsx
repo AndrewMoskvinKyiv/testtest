@@ -15,6 +15,7 @@ import {getAllProjectsTC} from "../../store/projectsReducer/projectsReducer";
 import {v4 as uuidv4} from "uuid";
 
 
+
 export const ProjectView = () => {
     const projects = useSelector(state => state.projects.projects);
     const dispatch = useDispatch();
@@ -84,19 +85,30 @@ export const ProjectView = () => {
 
 
                 <section className={S.bodyWrapper}>
-                    {element.projectVideo &&
-
+                    {element.projectVideo  &&
                         <div className={S.projectVideo}>
                             <img className={S.playBtnOverlay}
                                  src={play1} alt={"playBtn"}
                                  onClick={onPlayClickHandler}
                                  />
-                            <h2 className={S.projectVideoPlayerOverlayTitle}>VIEW PROJECT OVERVIEW</h2>
+                            <h2 className={S.projectVideoPlayerOverlayTitle} dangerouslySetInnerHTML={{__html: element.projectPanorama ? 'VIEW PROJECT OVERVIEW<br/> + <br/> realtime panoramic view' : 'VIEW PROJECT OVERVIEW' }}></h2>
                             <div className={S.projectVideoPlayerOverlay}></div>
                         <video autoPlay muted loop className={S.projectVideoPlayer}>
                             <source src={element.projectVideo} type="video/mp4"/>
                         </video>
                     </div>}
+                    {element.projectPanorama && !element.projectVideo  &&
+                        <div className={S.projectVideo}>
+                            <img className={S.playBtnOverlay}
+                                 src={play1} alt={"playBtn"}
+                                 onClick={onPlayClickHandler}
+                            />
+                            <h2 className={S.projectVideoPlayerOverlayTitle}>realtime panoramic project view</h2>
+                            <div className={S.projectVideoPlayerOverlay}></div>
+                            <video autoPlay muted loop className={S.projectVideoPlayer}>
+                                <source src="https://apextest12.b-cdn.net/projects/A%20top%20projects%20video/proj_top1.mp4" type="video/mp4"/>
+                            </video>
+                        </div>}
 
 
 
@@ -104,11 +116,14 @@ export const ProjectView = () => {
                 </section>
                 {openVideoModal &&
 
-                        <ProjectVideoModalWindow
-                            setOpenVideoModal={setOpenVideoModal}
-                            videoLink={element.projectVideo}/>
 
-            }
+                    <ProjectVideoModalWindow
+                            setOpenVideoModal={setOpenVideoModal}
+                            videoLink={element.projectVideo}
+                            panoramaLink={element.projectPanorama}
+                    />
+
+                }
                 <FooterBlock/>
                     </div> : <span>PRELOADER!!!</span>}</div>
     )
