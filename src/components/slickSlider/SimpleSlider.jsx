@@ -34,7 +34,6 @@ export const SimpleSlider = () => {
 
         beforeChange: (current) => {
             setShowDivider(false);
-            console.log(current);
             switch(current) {
                 case 0:
                     setCurrentSlide({title:'Mokena Park District',text:'Chicago,IL',buttonName:'view Project', id: 1132})

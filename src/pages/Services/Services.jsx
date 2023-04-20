@@ -59,14 +59,14 @@ export const Services = () => {
                             systems technology ensuring quality, lean construction, identifying and maintaining a
                             diverse pool of top performing subcontractors, integrating top-level executives to oversee
                             all projects, and by providing a stringent Site Safety Manager and the top safety consulting
-                            firms to monitor safety procedures.
+                            firms to monitor safety procedures.<br/><br/>
 
                             Apex has been defined by our repeat clients, as a company with a desire to build strong
                             relationships, built on trust, consistency, and the overall goal of saving money, time and
-                            peace of mind for our clients.
+                            peace of mind for our clients.<br/><br/>
 
                             Successful building projects come from good people, working with great companies that donate
-                            hard-working, qualified professionals to their client’s projects.
+                            hard-working, qualified professionals to their client’s projects.<br/><br/>
 
                             APEX Construction Group, good people, building for great clients.
                         </p>
@@ -77,10 +77,9 @@ export const Services = () => {
                 <section className={S.bodySection}>
 
                     <div className={S.bodyContainer}>
-                        <div className={S.bodyContainerOverlay}></div>
                         <div className={S.bodyContainerTextPart}>
                             {servicesArray.map((el) =>
-                                <div key={uuidv4()}>
+                                <div key={uuidv4()} >
                                     <h2 className={S.servicesTitles}
                                         onClick={() => onServiceClick(el)}
                                         style={{
