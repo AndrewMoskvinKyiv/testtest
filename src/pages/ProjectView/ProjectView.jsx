@@ -13,17 +13,21 @@ import {ProjectVideoModalWindow} from "../../components/ProjectVideoModal/Projec
 import {useDispatch, useSelector} from "react-redux";
 import {getAllProjectsTC} from "../../store/projectsReducer/projectsReducer";
 import {v4 as uuidv4} from "uuid";
+import ResponsiveGallery from 'react-responsive-gallery';
 
 
 
 export const ProjectView = () => {
     const projects = useSelector(state => state.projects.projects);
     const dispatch = useDispatch();
-
     const [menuView, setMenuView] = useState(false);
     const [element, setElement] = useState({});
     const [openVideoModal, setOpenVideoModal] = useState(false);
 
+    const photoSizeNumber = [1,2,3,4,5,6,5,4,3,2];
+
+
+    const [photosArr, setPhotosArr] = useState([]);
     const [extendedBlock, setExtendedBlock] = useState({
         isPaneOpen: false,
         isPaneOpenLeft: false,
@@ -36,18 +40,33 @@ export const ProjectView = () => {
     }
 
 
+
     useEffect(() => {
         scrollUpFast();
         if (projects.length < 2) {
             dispatch(getAllProjectsTC()).then((data)=> {
                const currentProgect = data.find((el) => el.id === +id);
                 setElement(currentProgect);
+                photoArrHandler(currentProgect.photos)
+
             });
         } else {
             const currentProgect = projects.find((el) => el.id === +id);
             setElement(currentProgect);
+            photoArrHandler(currentProgect.photos)
+
         }
         }, []);
+    const photoArrHandler = (photos) => {
+        let arr = [];
+        photos.forEach((photoLink) => arr.push({
+            src: photoLink,
+            orderS: photoSizeNumber[Math.ceil(Math.random()*10).toFixed()],
+            orderM: photoSizeNumber[Math.ceil(Math.random()*10).toFixed()],
+            orderL: photoSizeNumber[Math.ceil(Math.random()*10).toFixed()],}))
+        return setPhotosArr(arr)
+    }
+
 
     return (
         menuView ?
@@ -112,7 +131,13 @@ export const ProjectView = () => {
 
 
 
-                    {element.photos && element.photos.map((photo) => <ProjectPhoto key={uuidv4()} photo={photo}/>)}
+                    {
+                        // element.photos && element.photos.map((photo) => <ProjectPhoto key={uuidv4()} photo={photo}/>)
+                        <ResponsiveGallery
+                            imagesMaxWidth={{xs: 100,s: 100,m: 100,l: 100,xl: 100,xxl:100}}
+                            numOfImagesPerRow={{xs: 1,s: 2,m: 3,l: 3,xl: 4, xxl:3}}
+                            useLightBox images={photosArr}/>
+                    }
                 </section>
                 {openVideoModal &&
 
