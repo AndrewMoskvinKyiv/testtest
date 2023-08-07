@@ -20,13 +20,17 @@ export const PopUpTitleWithSlowUnderline = ({title, text, buttonName, showDivide
                style={{opacity: showDivider ? '100' : '0'}}>
                 {text}
             </p>
-            <button
+
+            {buttonName.length > 1 ?  <button
                 style={{opacity: showDivider ? '100' : '0'}}
                 className={S.titleBtn}
                 onClick={callbackFunk}
             >
                 {buttonName}
-            </button>
+            </button> : null}
+
+
+
         </div>
     )
 }

@@ -12,7 +12,7 @@ import {useNavigate} from "react-router-dom";
 
 export const SimpleSlider = () => {
     const navigate = useNavigate();
-    let [currentSlide, setCurrentSlide] = useState({title:'verandah townhomes',text:'Chicago,IL',buttonName:'view Project', id:1133});
+    let [currentSlide, setCurrentSlide] = useState({title:'Kankakee Metro Centre',text:'Bourbonnais,IL',buttonName:'', id:1133});
     let [showDivider, setShowDivider] = useState(true);
     useEffect(() => {
         document.body.style.overflow = "hidden";
@@ -35,20 +35,20 @@ export const SimpleSlider = () => {
         beforeChange: (current) => {
             setShowDivider(false);
             switch(current) {
+                // case 0:
+                //     setCurrentSlide({title:'Mokena Park District',text:'Chicago,IL',buttonName:'view Project', id: 1132})
+                //
+                //     break;
                 case 0:
-                    setCurrentSlide({title:'Mokena Park District',text:'Chicago,IL',buttonName:'view Project', id: 1132})
+                    setCurrentSlide({title:'8900 Archer Ave.',text:'Willow Springs,IL',buttonName:'view Project',id: 1125})
 
                     break;
                 case 1:
-                    setCurrentSlide({title:'1123 W. RANDOLPH',text:'Chicago,IL',buttonName:'view Project',id: 1125})
+                    setCurrentSlide({title:'913 W. School St. ',text:'Chicago,IL',buttonName:'', id: 1131})
 
                     break;
                 case 2:
-                    setCurrentSlide({title:'HOLLYWOOD ELEMENTARY',text:'Chicago,IL',buttonName:'view Project', id: 1131})
-
-                    break;
-                case 3:
-                    setCurrentSlide({title:'verandah townhomes',text:'Chicago,IL',buttonName:'view Project', id: 1133})
+                    setCurrentSlide({title:'Kankakee Metro Centre',text:'Bourbonnais,IL',buttonName:'', id: 1133})
 
                     break;
                     default:
@@ -88,28 +88,28 @@ export const SimpleSlider = () => {
                 <video
                     className={S.myVideo}
                     autoPlay="autoplay" muted loop playsInline>
-                    <source src="https://apextest12.b-cdn.net/videos/MainPage_videos/1.mp4" type="video/mp4"/>
+                    <source src="https://apextest12.b-cdn.net/videos/MainPage_videos/Apex_Kankakee%2031.mp4" type="video/mp4"/>
+                </video>
+            </div>
+            {/*<div>*/}
+            {/*    <video*/}
+            {/*        className={S.myVideo}*/}
+            {/*        autoPlay="autoplay" muted loop playsInline>*/}
+            {/*        <source src="https://apextest12.b-cdn.net/videos/MainPage_videos/mokena%20(1).mp4" type="video/mp4"/>*/}
+            {/*    </video>*/}
+            {/*</div>*/}
+            <div>
+                <video
+                    className={S.myVideo}
+                    autoPlay="autoplay" muted loop playsInline>
+                    <source src="https://apextest12.b-cdn.net/videos/MainPage_videos/Apex%20-%20Willow%20Springs%2038.mp4" type="video/mp4"/>
                 </video>
             </div>
             <div>
                 <video
                     className={S.myVideo}
                     autoPlay="autoplay" muted loop playsInline>
-                    <source src="https://apextest12.b-cdn.net/videos/MainPage_videos/mokena%20(1).mp4" type="video/mp4"/>
-                </video>
-            </div>
-            <div>
-                <video
-                    className={S.myVideo}
-                    autoPlay="autoplay" muted loop playsInline>
-                    <source src="https://apextest12.b-cdn.net/videos/MainPage_videos/Rendalf.mp4" type="video/mp4"/>
-                </video>
-            </div>
-            <div>
-                <video
-                    className={S.myVideo}
-                    autoPlay="autoplay" muted loop playsInline>
-                    <source src="https://apextest12.b-cdn.net/videos/MainPage_videos/elementary_reduced.mp4" type="video/mp4"/>
+                    <source src="https://apextest12.b-cdn.net/videos/MainPage_videos/Apex%20-%20913WSchool%2029.mp4" type="video/mp4"/>
                 </video>
 
             </div>
