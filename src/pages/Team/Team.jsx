@@ -66,15 +66,15 @@ export const Team = () => {
                         </div>
                     </div>
 
-                    <div className={S.paolaFinder}
-                         onMouseOver={()=>onMouseOver("Paula")}
-                         onMouseLeave={()=>onMouseOver("")}
-                    >
-                        <div className={S.personTitleContainer} style={{opacity: personTitle === 'Paula' && "90%" }}>
-                            <div className={S.personTitle}>Paola Placko</div>
-                            <div className={S.personPosition}>Lead Estimator / Architectural Designer</div>
-                        </div>
-                    </div>
+                    {/*<div className={S.paolaFinder}*/}
+                    {/*     onMouseOver={()=>onMouseOver("Paula")}*/}
+                    {/*     onMouseLeave={()=>onMouseOver("")}*/}
+                    {/*>*/}
+                    {/*    <div className={S.personTitleContainer} style={{opacity: personTitle === 'Paula' && "90%" }}>*/}
+                    {/*        <div className={S.personTitle}>Paola Placko</div>*/}
+                    {/*        <div className={S.personPosition}>Lead Estimator / Architectural Designer</div>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                     <div className={S.valentinoFinder}
                          onMouseOver={()=>onMouseOver("Valentino")}
                          onMouseLeave={()=>onMouseOver("")}
