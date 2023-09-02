@@ -16,14 +16,25 @@ import {useNavigate} from "react-router-dom";
 
 
 export const Team = () => {
+    const creators = ['Valentino Caushi', 'Joel Spalding'];
+    const excellence = ['Adrian Caushi', 'Rodrigo Martinez', 'Scott Rosengren', 'Kim Verduzco','Djordje Djanjus', 'Noah Morkunas', 'Bashkim Tafilaj',
+        'Gezim Qelaj', 'Matt Shafer', 'Kyle Grunewald', 'Dharmentra Choudary','Kevin Smith'];
+    const sparks  = ['Nickole Lynch', 'Alesia Hushaw', 'Taylor Vestuto','Giovanna Caushi', 'Bela Kuminja', 'Elyse Jansma','Entela Sadikaj'];
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const teamArr = useSelector(state => state.team.team);
+
 
     const [menuView, setMenuView] = useState(false);
     const [openModal, setOpenModal] = useState(false);
     const [showedBio, setShowedBio] = useState({});
     const [personTitle, setPersonTitle] = useState('');
+
+
+    const creatorsArr = teamArr.filter((card)=> creators.includes(card.name));
+    const excellenceArr = teamArr.filter((card)=> excellence.includes(card.name));
+    const sparksArr = teamArr.filter((card)=> sparks.includes(card.name));
+
 
 
     useEffect(()=> {
@@ -97,20 +108,87 @@ export const Team = () => {
 
                 </section>
 
-                <section className={S.teamPhotos}>
-                    {teamArr.map((card,i) =>
+
+
+                <section className={S.teamBlock}>
+                    <h3 className={S.teamBlockTitle}>The Creators behind Apex</h3>
+                <div className={S.teamPhotos}>
+
+                    {creatorsArr.map((card,i) =>
+
                             <PersonalCard
                             key={card.id}
                             card={card}
                             setOpenModal={setOpenModal}
                             setShowedBio={setShowedBio}
                             showedBio={showedBio}
-                            openModal={openModal}/>
+                            openModal={openModal}
+                            lessContent={true}/>
+                    )
+                    }
+                </div>
+                </section>
+
+                <section className={S.teamBlock}>
+                    <h3 className={S.teamBlockTitle}>The Creators behind Apex</h3>
+                    <div className={S.teamPhotos}>
+
+                        {creatorsArr.map((card,i) =>
+
+                            <PersonalCard
+                                key={card.id}
+                                card={card}
+                                setOpenModal={setOpenModal}
+                                setShowedBio={setShowedBio}
+                                showedBio={showedBio}
+                                openModal={openModal}
+                                lessContent={false}/>
+                        )
+                        }
+                    </div>
+                </section>
+
+
+                <section className={S.teamBlock}>
+                    <h3 className={S.teamBlockTitle}>The team that provides the Excellence to Apex</h3>
+                    <div className={S.teamPhotos}>
+
+                        {excellenceArr.map((card,i) =>
+
+                            <PersonalCard
+                                key={card.id}
+                                card={card}
+                                setOpenModal={setOpenModal}
+                                setShowedBio={setShowedBio}
+                                showedBio={showedBio}
+                                openModal={openModal}/>
 
                         )
-                    }
+                        }
 
+                    </div>
                 </section>
+                <section className={S.teamBlock}>
+                    <h3 className={S.teamBlockTitle}>The Team that sparks the light for Success to Apex</h3>
+                    <div className={S.teamPhotos}>
+
+                        {sparksArr.map((card,i) =>
+
+                            <PersonalCard
+                                key={card.id}
+                                card={card}
+                                setOpenModal={setOpenModal}
+                                setShowedBio={setShowedBio}
+                                showedBio={showedBio}
+                                openModal={openModal}/>
+
+                        )
+                        }
+
+                    </div>
+                </section>
+
+
                 {openModal && showedBio &&
                     <ModalWindow
                         setOpenModal={setOpenModal}

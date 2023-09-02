@@ -6,7 +6,7 @@ import noAccPhoto from "./../../assets/no-profile-picture-icon.webp"
 import {Waypoint} from "react-waypoint";
 
 
-export const PersonalCard = ({card, setOpenModal, setShowedBio}) => {
+export const PersonalCard = ({card, setOpenModal, setShowedBio, lessContent}) => {
     const [mouseOverId, setMouseOverId] = useState("");
     const [showTitle, setShowTitle] = useState(false);
 
@@ -40,7 +40,8 @@ const leavePersonCardFromView = () => {
     return (
 
         <div
-             className={`${S.personalCardContainer}  animate__animated animate__fadeIn`}
+             // className={`${S.personalCardContainer}  animate__animated animate__fadeIn`}
+             className={`${lessContent ? S.personalCardContainerCreators : S.personalCardContainer}  animate__animated animate__fadeIn`}
              style={card.photo ? {backgroundImage: `url(${card.photo})`}: {backgroundImage: `url(${noAccPhoto})`} }
              onMouseOver={onPersonCardHover}
              onMouseLeave={onMouseLeaveHandler}
