@@ -25,8 +25,8 @@ export const Services = () => {
         'General Contracting': "APEX is one of the top General Contractors in the Chicagoland area. As a leading GC, we have created innovative systems and retained skilled professionals responsible for the day-to-day oversight of our client’s construction project.\n" +
             "\n" +
             "Our team provides successful management of vendors and trades, and the communication of information to all involved parties throughout the course of a building project. It is our sole responsibility to keep the quality, schedule, and budget in line with the client’s goals for their project.",
-        'Construction Management': "APEX offers meticulous Construction Management services where we  that use specialized, project management techniques to oversee the planning, design, and construction of  our clients projects, from its beginning to its end.",
-        'Design Build': "APEX’s Design-Build delivery system manages the designer and contractor work together from the beginning, as a team, providing unified project recommendations to fit the Owner’s schedule and budget, leading to collaborative problem-solving and innovation."
+        'Construction Management': "APEX offers meticulous Construction Management services where we use specialized, project management techniques to oversee the planning, design, and construction of  our clients projects, from its beginning to its end.",
+        'Design Build': "APEX’s Design-Build delivery system manages the designer and contractor work together from beginning, as a team, providing unified project recommendations to fit the Owner’s schedule and budget, leading to collaborative problem-solving and innovation."
 
     }
     const onServiceClick = (type) => {
