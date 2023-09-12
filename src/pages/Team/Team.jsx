@@ -17,7 +17,7 @@ import {useNavigate} from "react-router-dom";
 
 export const Team = () => {
     const creators = ['Valentino Caushi', 'Joel Spalding'];
-    const excellence = ['Adrian Caushi', 'Rodrigo Martinez', 'Scott Rosengren', 'Kim Verduzco','Djordje Djanjus', 'Noah Morkunas', 'Bashkim Tafilaj',
+    const excellence = ['Valentino Caushi', 'Joel Spalding','Adrian Caushi', 'Rodrigo Martinez', 'Scott Rosengren', 'Kim Verduzco','Djordje Djanjus', 'Noah Morkunas', 'Bashkim Tafilaj',
         'Gezim Qelaj', 'Matt Shafer', 'Kyle Grunewald', 'Dharmentra Choudary','Kevin Smith'];
     const sparks  = ['Nickole Lynch', 'Alesia Hushaw', 'Taylor Vestuto','Giovanna Caushi', 'Bela Kuminja', 'Elyse Jansma','Entela Sadikaj'];
     const dispatch = useDispatch();
@@ -110,43 +110,43 @@ export const Team = () => {
 
 
 
-                <section className={S.teamBlock}>
-                    <h3 className={S.teamBlockTitle}>The Creators behind Apex</h3>
-                <div className={S.teamPhotos}>
+                {/*<section className={S.teamBlock}>*/}
+                {/*    <h3 className={S.teamBlockTitle}>The Creators behind Apex</h3>*/}
+                {/*<div className={S.teamPhotos}>*/}
 
-                    {creatorsArr.map((card,i) =>
+                {/*    {creatorsArr.map((card,i) =>*/}
 
-                            <PersonalCard
-                            key={card.id}
-                            card={card}
-                            setOpenModal={setOpenModal}
-                            setShowedBio={setShowedBio}
-                            showedBio={showedBio}
-                            openModal={openModal}
-                            lessContent={true}/>
-                    )
-                    }
-                </div>
-                </section>
+                {/*            <PersonalCard*/}
+                {/*            key={card.id}*/}
+                {/*            card={card}*/}
+                {/*            setOpenModal={setOpenModal}*/}
+                {/*            setShowedBio={setShowedBio}*/}
+                {/*            showedBio={showedBio}*/}
+                {/*            openModal={openModal}*/}
+                {/*            lessContent={true}/>*/}
+                {/*    )*/}
+                {/*    }*/}
+                {/*</div>*/}
+                {/*</section>*/}
 
-                <section className={S.teamBlock}>
-                    <h3 className={S.teamBlockTitle}>The Creators behind Apex</h3>
-                    <div className={S.teamPhotos}>
+                {/*<section className={S.teamBlock}>*/}
+                {/*    <h3 className={S.teamBlockTitle}>The Creators behind Apex</h3>*/}
+                {/*    <div className={S.teamPhotos}>*/}
 
-                        {creatorsArr.map((card,i) =>
+                {/*        {creatorsArr.map((card,i) =>*/}
 
-                            <PersonalCard
-                                key={card.id}
-                                card={card}
-                                setOpenModal={setOpenModal}
-                                setShowedBio={setShowedBio}
-                                showedBio={showedBio}
-                                openModal={openModal}
-                                lessContent={false}/>
-                        )
-                        }
-                    </div>
-                </section>
+                {/*            <PersonalCard*/}
+                {/*                key={card.id}*/}
+                {/*                card={card}*/}
+                {/*                setOpenModal={setOpenModal}*/}
+                {/*                setShowedBio={setShowedBio}*/}
+                {/*                showedBio={showedBio}*/}
+                {/*                openModal={openModal}*/}
+                {/*                lessContent={false}/>*/}
+                {/*        )*/}
+                {/*        }*/}
+                {/*    </div>*/}
+                {/*</section>*/}
 
 
                 <section className={S.teamBlock}>
