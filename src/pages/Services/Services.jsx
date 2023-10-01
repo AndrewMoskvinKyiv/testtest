@@ -8,17 +8,19 @@ import {v4 as uuidv4} from "uuid";
 
 export const Services = () => {
     const [menuView, setMenuView] = useState(false);
-    const servicesArray = ['Pre Construction', 'General Contracting', 'Construction Management', 'Design Build'];
-    const [typeOfService, setTypeOfService] = useState('Pre Construction');
+    const servicesArray = ['Pre-Construction', 'General Contracting', 'Construction Management', 'Design Build'];
+    const [typeOfService, setTypeOfService] = useState('Pre-Construction');
     const servicesTexts = {
-        'Pre Construction': "Our Preconstruction Services provide our client with an upfront peace of mind by resolving potential project challenges prior to construction, reducing project risks, and identifying areas for cost savings.\n" +
+        'Pre-Construction': "Our Pre-construction Services provide our client with an upfront peace of mind by resolving" +
+            " potential project challenges prior to construction, reducing project risks, and identifying areas for cost savings.\n" +
             "\n" +
-            "APEX’s, Preconstruction Services are a critical component and lends to the success  of the owners project. Our PC services are offered in the development, design and construction phases. <br/><br/><strong>APEX offers:</strong>\n" +
+            "Apex’s, Pre-construction Services are a critical component and lends to the success  of the owner’s project." +
+            " Our PC services are offered in the development, design, and construction phases. <br/><br/><strong>Apex  offers:</strong>\n" +
             "\n<ul >" +
-            "<li style='list-style: square'>Design Direction\n</li>" +
-            "<li style='list-style: square'>Value Engineering\n</li>" +
-            "<li style='list-style: square'>Refined Scheduling\n</li>" +
-            "<li style='list-style: square'>Zoning & Permitting Management\n</li>" +
+            "<li style='list-style: square'>Design Direction</li>" +
+            "<li style='list-style: square'>Value Engineering</li>" +
+            "<li style='list-style: square'>Refined Scheduling</li>" +
+            "<li style='list-style: square'>Zoning & Permitting Management</li>" +
             "<li style='list-style: square'>Constructability Analysis</li>" +
             "</ul>",
 
@@ -51,24 +53,26 @@ export const Services = () => {
                                 experience to our clients.</p>
                             <div className={S.topBlockHr}></div>
                         </div>
-                        <p className={S.servicesText}>Our goal is to ensure your building project meets and receives the
-                            highest level of client satisfaction.
+                        <p className={S.servicesText}>
 
-                            And APEX has put in the time and resources to ensure we deliver on our promise by employing
-                            and retaining experienced, qualified Project Management professionals, investing in building
-                            systems technology ensuring quality, lean construction, identifying and maintaining a
-                            diverse pool of top performing subcontractors, integrating top-level executives to oversee
+
+                            Our goal is to ensure your building project meets and receives the
+                            highest level of client satisfaction.
+                            Apex has put in the time and resources to ensure we deliver on our promise by employing
+                            and retaining experienced, qualified Project Management professionals. Apex focuses on investing in building
+                            systems technology ensuring quality, lean construction, identifying and maintaining
+                            a diverse pool of top performing subcontractors, integrating top-level executives to oversee
                             all projects, and by providing a stringent Site Safety Manager and the top safety consulting
                             firms to monitor safety procedures.<br/><br/>
 
-                            Apex has been defined by our repeat clients, as a company with a desire to build strong
+                            Apex has been defined by our repeat clients as a company with a desire to build strong
                             relationships, built on trust, consistency, and the overall goal of saving money, time and
                             peace of mind for our clients.<br/><br/>
 
-                            Successful building projects come from good people, working with great companies that donate
+                            Successful building projects come from good people, working with great companies that delivers
                             hard-working, qualified professionals to their client’s projects.<br/><br/>
 
-                            APEX Construction Group, good people, building for great clients.
+                            Apex Construction Group.  Good people, building for great clients.
                         </p>
                     </div>
                 </div>

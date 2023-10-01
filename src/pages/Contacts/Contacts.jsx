@@ -93,7 +93,7 @@ export default function Contacts() {
                         </div>
                     </div>
                 </div>
-                <h1 className={`${S.contactsTitle} ${ST.pageTitle}`}>contact</h1>
+                <h1 className={`${S.contactsTitle} ${ST.pageTitle}`}>CONTACT US</h1>
 
                 <FooterBlock/>
             </div>

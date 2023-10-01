@@ -60,7 +60,7 @@ export const Team = () => {
                         <div className={S.shadowBar}></div>
                         <h1 className={S.teamTitle}>The Apex team</h1>
                         <p className={S.teamTitleBottom}>
-                            Every APEX project starts with a team of experienced, determined professionals.
+                            Every Apex project starts with a team of experienced, determined professionals.
                             These individuals are eager to develop their skills and collaborate to create
                             seamless building projects for our clients.
                         </p>

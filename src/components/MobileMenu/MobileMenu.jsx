@@ -20,7 +20,7 @@ export const MobileMenu = ({setMenuView}) => {
                     <Link className={`${S.menuLink}  animate__animated animate__fadeIn animate__delay-2s`} to={`/team`}>about</Link>
                 </li>
                 <li>
-                    <Link className={`${S.menuLink}  animate__animated animate__fadeIn animate__delay-3s`} to={`/contacts`}>contacts</Link>
+                    <Link className={`${S.menuLink}  animate__animated animate__fadeIn animate__delay-3s`} to={`/contacts`}>CONTACT US</Link>
                 </li>
                 <li>
                     <Link className={`${S.menuLink}  animate__animated animate__fadeIn animate__delay-4s`} to={`/services`}>services</Link>

@@ -87,7 +87,7 @@ export const Projects = () => {
                         >
                             PROJECT TYPE
                             <div className={`${S.dropdown_content} ${showProjectTypeDropdown && S.show }  animate__animated animate__fadeIn`}>
-                                <div className={S.dropDownSelect} onClick={()=>selectTypeHandler('Municipal')}>munitipal</div>
+                                <div className={S.dropDownSelect} onClick={()=>selectTypeHandler('Municipal')}>Municipal</div>
                                 <div className={S.dropDownSelect} onClick={()=>selectTypeHandler('Housing')}>Housing</div>
                                 <div className={S.dropDownSelect} onClick={()=>selectTypeHandler('Office')}>Office</div>
                                 <div className={S.dropDownSelect} onClick={()=>selectTypeHandler('Small project')}>Small project</div>

@@ -19,7 +19,7 @@ export default function  NavigationPanel() {
                     <Link className={S.headerLink} to={`/team`}>team</Link>
                 </li>
                 <li>
-                    <Link className={S.headerLink} to={`/contacts`}>contacts</Link>
+                    <Link className={S.headerLink} to={`/contacts`}>CONTACT US</Link>
                 </li>
                 <li>
                     <Link className={S.headerLink} to={`/services`}>about apex + services</Link>

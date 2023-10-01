@@ -20,7 +20,7 @@ export const FooterBlock = () => {
             <div className={S.footerNavButtonsBlock}>
                 <FooterCustomButton name={"projects"} callback={()=> redirectHandler(`/projects`)}/>
                 <FooterCustomButton name={"team"}  callback={()=> redirectHandler(`/team`)}/>
-                <FooterCustomButton name={"contact"} callback={()=> redirectHandler(`/contacts`)}/>
+                <FooterCustomButton name={"CONTACT US"} callback={()=> redirectHandler(`/contacts`)}/>
                 <FooterCustomButton name={"about apex + services"}  callback={()=> redirectHandler(`/services`)}/>
             </div>
             <div className={S.footerDevider}></div>
