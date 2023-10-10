@@ -5,7 +5,7 @@ const session = axios.create();
 
 export const WebsiteAPI = {
     getAllProjects() {
-        return session.get('https://apextest12.b-cdn.net/apex_data/apexProjects01.10.2023.json').then(response => {
+        return session.get('https://apextest12.b-cdn.net/apex_data/apexProjects10.10.2023.json').then(response => {
             return response.data
         })
     },
