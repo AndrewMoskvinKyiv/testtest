@@ -10,7 +10,7 @@ export const WebsiteAPI = {
         })
     },
     getAllTeam() {
-        return session.get('https://apextest12.b-cdn.net/apex_data/apexTeam01.10.2023(1).json').then(response => {
+        return session.get('https://apextest12.b-cdn.net/apex_data/apexTeam16.11.2023(2).json').then(response => {
             return response.data
         })
     },

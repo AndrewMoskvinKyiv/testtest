@@ -19,7 +19,7 @@ export const ModalWindow = ({setOpenModal, setShowedBio, showedBio}) => {
                     <div className={S.modalContainerInner}>
 
                         <div className={`${S.title} animate__animated animate__fadeInUp`}>
-                            <h2>{showedBio.name}</h2>
+                            <h3>{showedBio.name}</h3>
                         </div>
                         <div className={`${S.body} animate__animated animate__fadeInUp`} >
                             <p className={S.modalText}>{showedBio.aboutPerson}</p>
