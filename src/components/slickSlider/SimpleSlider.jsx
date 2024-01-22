@@ -40,15 +40,15 @@ export const SimpleSlider = () => {
                 //
                 //     break;
                 case 0:
-                    setCurrentSlide({title:'8900 Archer Ave.',text:'Willow Springs,IL',buttonName:'view Project',id: 1125})
+                    setCurrentSlide({title:'8900 Archer Ave.',text:'Willow Springs,IL',buttonName:'view Project',id: 1126})
 
                     break;
                 case 1:
-                    setCurrentSlide({title:'913 W. School St. ',text:'Chicago,IL',buttonName:'', id: 1131})
+                    setCurrentSlide({title:'913 W. School St. ',text:'Chicago,IL',buttonName:'view Project', id: 1134})
 
                     break;
                 case 2:
-                    setCurrentSlide({title:'Kankakee Metro Centre',text:'Bourbonnais,IL',buttonName:'', id: 1133})
+                    setCurrentSlide({title:'Kankakee Metro Centre',text:'Bourbonnais,IL',buttonName:'view Project', id: 1135})
 
                     break;
                     default:
